@@ -1,0 +1,509 @@
+\documentclass[10pt, twoside]{book}
+
+%%%%%%%%%
+% Babel %
+%%%%%%%%%
+
+\usepackage[nil,bidi=basic-r]{babel}
+\babelprovide[import=he,main]{hebrew}
+\babelprovide[import=en-GB]{english}
+
+% For some reason Babel’s `\babelfont` doesn’t work
+\babelfont[hebrew]{rm}{Open Sans Hebrew}
+
+\newcommand{\texthebrew}[1]{\foreignlanguage{hebrew}{#1}}
+\newcommand{\nikud}[1]{$\mbox{\H{#1}}$}
+\newcommand{\textenglish}[1]{\foreignlanguage{english}{#1}}
+\newcommand{\LR}[1]{{‏\textdir TLT #1}}
+
+%%%%%%%%%
+% Maths %
+%%%%%%%%%
+
+\usepackage{math-fonts}
+\usepackage{math-graphics}
+\usepackage{math-symbols}
+\usepackage{math-theorems-heb}
+
+%%%%%%%%%
+% Title %
+%%%%%%%%%
+
+\title{רשימות הרצאה לחבורות לי \\ \large{חורף 2020, הטכניון}}
+\author{הרצאותיו של מקס גורביץ' \\ \large \small{הוקלדו על ידי אלעד צורני}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\chapter{מבוא}
+
+\section{מבוא היסטורי}
+
+\subsection{חבורות לי}
+
+בנורבגיה, סביב שנת 1870, מתמטיקאי בשם סופוס לי, שחקר משוואות דיפרנציאליות, שם לב להופעה של מה שנקרא
+\textenglish{\emph{``transformation groups''}}.
+
+\begin{description}
+\item[באופן לוקלי,]
+נניח כי נתון שדה וקטורי חלק
+\[\text{.} x \colon \mbb{R}^n \to \mbb{R}^n\]
+נחפש פתרון למשוואה
+\begin{align*}
+y'\prs{t} &= x\prs{y\prs{t}} \\
+y\prs{0} &= y_0
+\end{align*}
+עבור
+$y \colon \mbb{R} \to \mbb{R}^n$.
+לפי משפט קיום ויחידות של מד"ר, קיים פתרון יחיד
+$y\prs{t}$
+שמוגדר עבור
+$t \in \prs{-\eps, \eps}$
+עבור
+$\eps > 0$
+כלשהו.
+
+נגדיר
+$\phi_x\prs{t} \prs{y_0} \ceq y\prs{t}$
+לכל
+$y_0 \in \mbb{R}^n$.
+אז
+\[\phi_X\prs{t} \colon \mbb{R}^n \to \mbb{R}^n\]
+אוטומורפיזם של
+$\mbb{R}^n$.
+זאת משפחה של אופרטורים שמשתנה באופן חלק כתלות ב־%
+$t$.
+
+מתקיים
+\[\phi_x\prs{0} = \id\]
+ומיחידות הפתרונות,
+\[ \text{.} \phi_x\prs{t} \circ \phi_x\prs{s} = \phi_x\prs{t+s}\]
+התמונה
+$\im\phi_x$
+נקראת
+\emph{חבורה חד־פרמטרית}.
+אז
+\[\phi_x \colon \mbb{R} \to \aut\prs{\mbb{R}^n}\]
+הומומורפיזם של חבורות.
+זה לא מדויק, $\phi_x$ אולי לא מוגדר תמיד.
+
+\item[באופן גלובלי,]
+קיימות משוואות שהפתרונות שלהן אינווריאנטיים לפעולה של חבורה כלשהי. למשל
+\[\text{.} \mcal{O}_n\prs{\mbb{R}} \ceq \set{A \in M_n\prs{\mbb{R}}}{A^t A = I}\]
+
+נסתכל על הלפלסיאן
+\[\text{.} \Delta = \sum_{i \in [n]} \del_{x_i, x_i}\]
+אם
+$y \colon \mbb{R}^n \to \mbb{R}$
+מקיימת
+$\Delta\prs{y} = 0$
+אז
+$y \circ g = y$
+לכל
+$g \in \mcal{O}_n\prs{\mbb{R}}$.
+\end{description}
+
+סופוס לי חקר חבורות חלקות כאלו, ולמעשה הגדיר חשבון דיפרנציאלי של חבורות.
+כדי לחקור פונקציה חלקה
+$f \colon \mbb{R}^n \to \mbb{R}^m$
+אנו מסתכלים על הנגזרת של
+$f$
+בנקודה, שהיא העתקה לינארית
+\[\text{.} T \colon \mbb{R}^n \to \mbb{R}^m\]
+האנלוג לחבורות הוא
+\emph{חבורת לי}
+שהיא חבורה שאותה אפשר
+.``לגזור''
+פורמלית, זאת חבורה עם מבנה של יריעה חלקה, או במילים אחרות, אוביקט חבורה בקטגוריה של יריעות חלקות.
+
+``נגזרת''
+של חבורת לי נקראת
+\emph{אלגברת לי}
+$\mrm{Lie}\prs{G}$.
+זהו מרחב וקטורי עם מבנה מסוים.
+תורת לי בסיסית היא הבנת ההתאמה בין חבורות לי לאלגבראות לי שלהן.
+
+\begin{examples*}
+\enumthm
+\begin{enumerate}
+\item $\mrm{Lie}\prs{\mrm{GL}_n\prs{\mbb{R}}} = M_n\prs{\mbb{R}}$.
+\item $\mrm{Lie}\prs{\mrm{GL}_n\prs{\mbb{C}}} = M_n\prs{\mbb{C}}$.
+\item $\mrm{Lie}\prs{\mcal{O}_n\prs{k}} = \mfrak{so}_n\prs{k} \ceq \set{A \in M_n\prs{k}}{A^t = -A}$.
+\item $\mrm{Lie}\prs{\mrm{SL}_n\prs{k}} = \mfrak{sl}_n\prs{k} \ceq \set{A \in M_n\prs{k}}{\tr\prs{A} = 0}$.
+\item נגדיר
+\[\mrm{Sp}_{2n}\prs{k} = \set{A \in M_{2n}\prs{k}}{A^t J A = J}\]
+עבור
+\[J = \pmat{0 & I_n \\ -I_n & 0} \text{.}\]
+זאת נקראת
+\emph{החבורה הסימפלקטית}.
+אז
+\[\mrm{Lie}\prs{\mrm{Sp}_{2n}\prs{k}} = \mfrak{sp}_{2n}\prs{k} \ceq \set{A \in M_{2n}\prs{k}}{A^tJ = -J A} \text{.}\]
+\end{enumerate}
+\end{examples*}
+
+באופן כללי, אם ניקח חבורת לי
+$G \leq \mrm{GL}_n\prs{k}$
+אז
+$\mrm{Lie}\prs{G} \leq M_n\prs{k}$
+וזאת תהיה אלגברה יחד עם הפעולה של הקומוטטור
+\[\text{.} \brs{A,B} = AB - BA\]
+
+בקורס זה נעשה "קירוב" של התאמת לי על ידי לקיחת
+\emph{כל}
+תת־חבורה
+$G \leq \mrm{GL}_n\prs{\mbb{R}}$
+ובניית
+$\mrm{Lie}\prs{G} \leq M_n\prs{\mbb{R}}$.
+
+\subsection{סיווג של חבורות לי}
+
+חבורות לי מופיעות במגוון מקומות בטבע ובמתמטיקה.
+הרבה חבורות סימטריה בטבע הינן חבורות לי. אנו רוצים להבין בין השאר מסיבות אלו את המבנה של חבורות לי ולנסות לסווג אותן.
+
+תחילה נבין את הקשר בין
+$G_1, G_2$
+כך ש־%
+$\mrm{Lie}\prs{G_1} \cong \mrm{Lie}\prs{G_2}$.
+התשובה לשאלה זאת תיעזר בחבורות כיסוי.
+נקבל מכך שמספיק להשיג סיווג של אלגבראות לי. למעשה, מספיק לסווג אלגבראות לי מעל
+$\mbb{C}$.
+
+נצמצם לפעמים את הדיון לחבורות לי
+\emph{פשוטות}
+שהן חבורות לי קשירות ללא תת־חבורות נורמליות קשירות לא טריוויאליות.
+דוגמאות לחבורות לי פשוטות הן
+$\mrm{SO}_n = \mrm{SL}_n \cap \mcal{O}_n, \mrm{Sp}_{2n}, \mrm{SL}_n$.
+מהן ניתן, במובן מסוים, לבנות כל חבורת לי.
+עבור
+$G$
+חבורת לי פשוטה,
+$\mrm{Lie}\prs{G}$
+היא אלגברת לי פשוטה.
+לכן, מספיק לסווג אלגבראות לי פשוטות.
+
+סביב שנת 1890, \textenglish{Cartan} ו־%
+\textenglish{Killing}
+סיווגו באופן מלא אלגבראות לי פשוטות מעל
+$\mbb{C}$,
+שהן "אבני הבניין של הסימטריה של הטבע".
+
+%date 26.10.2020
+
+יש משפחות של אלגבראות לי פשוטות, שנקראות אלגבראות קלאסיות. הן
+$\mfrak{sl}_n\prs{\mbb{C}}, \mfrak{so}_n\prs{\mbb{C}}, \mfrak{sp}_{2n}\prs{\mbb{C}}$
+שהגדרנו מקודם.
+חבורות לי שאלו הן אלגבראות לי שלהן נקראות חבורות קלאסיות.
+התברר שלמעט המשפחות הקלאסיות יש עוד בדיוק 5 אלגבראות לי פשוטות, שנקראות מיוחדות
+\textenglish{exceptional}.
+הן מסומנות
+$G_2, F_4, E_6, E_7, E_8$.
+הכי קטנה מהן היא
+$G_2$
+בעלת מימד
+$14$,
+והכי גדולה היא
+$E_8$
+בעלת מימד
+$248$.
+לצורך הבנת התוצאה, נדרשת התעמקות אלגברית במבנה של אלגבראות לי, מה שדורש זמן.
+
+\subsection{חבורות קומפקטיות}
+
+חבורות לי הן חבורות שהן יריעות חלקות.
+מתברר שאם הן קומפקטיות, יש הרבה מה להגיד עליהן.
+חבורות לי קומפקטיות הן למשל
+\begin{align*}
+\mcal{O}\prs{n} &\equiv \mcal{O}_n\prs{\mbb{R}} \ceq \set{A \in \mrm{GL}_n\prs{\mbb{R}}}{A^t A = I} \\
+\text{.} U\prs{n} &\ceq \set{A \in \mrm{GL}_n\prs{\mbb{C}}}{\bar{A}^t A = I}
+\end{align*}
+כאשר המבנה שלהן מושרה מזה של
+$M_n\prs{k} \cong k^{n^2}$.
+
+\subsection{תורת ההצגות}
+
+בתורת לי הגיעו להבנה שניתן ללמוד הרבה על חבורה ע"י הבנת הפעולה שלה על מרחבים וקטוריים. זוהי תורת ההצגות. עבור חבורות קומפקטיות יש מבנה נחמד לתורת ההצגות.
+
+\subsection{חבורות רדוקטיביות ואלגבריות}
+
+משפט שנחתור אליו הוא שכל חבורת לי קומפקטית קשירה היא חבורה אלגברית של מטריצות ממשיות.
+מסקנה ממשפט זה תהיה שלכל חבורת לי קומקפטית ניתן להגדיר קומפלקסיפיקציה על ידי הרחבת סקלרים. זאת מוגדרת על ידי השורשים המרוכבים של אותם פולינומים.
+חבורות שנקבל מקומפלקסיפיקציה נקראות
+\emph{רדוקטיביות}
+ומהוות משפחה גדולה.
+
+בשנת 1920 פיתח הרמן וייל
+\textenglish{(Weyl)}
+את המבנה וההצגות של חבורות לי רדוקטיביות על סמך חבורות קומפקטיות.
+
+בשנת 1940 קלוד שיבליי
+\textenglish{(Chevalley)}
+הראה שניתן לתאר כל חבורת לי פשוטה כחבורה אלגברית.
+מסקנה של כך היא ש"לא צריך" אנליזה כדי לחקור תורת לי.
+אפשר גם להגדיר אנלוגית של חבורות לי מעל כל שדה.
+
+\subsection{התפתחות מודרנית של התחום}
+
+חבורות לי התפתחו לנושאים מאוחרים שמופיעים בהרבה תחומים.
+
+\begin{itemize}
+\item
+אחד התחומים הוא חבורות אלגבריות. תחום אחר הוא חבורות סופיות מסוג לי
+\textenglish{(Lie Type)}
+שהן חבורות אלגבריות מעל שדה סופי. אלו אבני יסוד בסיווג של חבורות סופיות פשוטות.
+
+\item
+נושא אחר הוא מרחבים סימטריים. אלו מרחבים טבעיים עם פעולה של חבורת לי. למשל
+$S^3$
+הוא מרחב סימטרי עם הפעולה של
+$\mcal{O}\prs{3}$.
+
+\item
+חבורות לי גם הפכו לכלי מרכזי בחקר של תבניות אוטומורפיות ותורת המספרים. הן מתקשרות למשפט
+\textenglish{Harish-Chandra}%
+ולתוכנית
+\textenglish{Laglands}.
+
+\item
+חבורות לי מתקשרות גם לאנליזה הרמונית.
+
+\item נחקרת היום גם תורת הצגות אינסוף־מימדיות של חבורות לי ופעולות של חבורות לי על מרחבי פונקציות.
+בין השאר נחקרות פעולות על מרחבי פונקציות שמקודדים תוכן של תורת מספרים.
+
+\item
+נחקרות גם היום, משנת 1985, חבורות קוונטיות, שהן דפורמציות של חבורות לי.
+
+\item נחקרות גם חבורות ואלגבראות אינסוף־מימדיות שנקראות
+אלגבראות
+\textenglish{Kac-Moody}.
+
+\item ישנן תורת לי קטגורית ותורת לי גיאומטרית. הראשונה עוסקת למשל בקטגוריות שמוגדרות באופן דומה לחבורות לי.
+
+\end{itemize}
+
+\section{חבורות לי}
+
+\subsection{אקספוננט של מטריצות}
+
+נעבוד מעל שדה
+$k \in \set{\mbb{R}, \mbb{C}}$.
+
+נסמן ב־%
+\[M \equiv M_n \equiv M_n\prs{k}\]
+מטריצות
+$n \times n$
+מעל
+$k$
+עם הנורמה האוקלידית המושרית מ־%
+$k^{n^2}$.
+
+\begin{proposition}[עקרון ההצבה]
+יהי
+\[F\prs{z} = \sum_{n=0}^{\infty} a_n z^n\]
+עבור
+$a_n \in k$
+טור חזקות עם רדיוס התכנסות
+$r$.
+
+לכל
+$A \in M_n$
+עבורה
+$\norm{A} < r$
+הטור
+$F\prs{A} = \sum_{n=0}^{\infty} a_n A^n$
+מגדיר טור מטריצות מתכנס בנורמה.
+\end{proposition}
+
+\begin{proof}
+הנורמה מקיימת
+\begin{align*}
+\norm{X+Y} &\leq \norm{X} + \norm{Y} \\
+\text{.} \norm{X \cdot Y} &\leq \norm{X} \cdot \norm{Y}
+\end{align*}
+לכן
+\begin{align*}
+\norm{\sum_{n=k}^\ell a_n A^n} &\leq \sum_{n=k}^\ell \abs{a_n}\norm{A^n}
+\\&\leq
+\sum_{n=k}^\ell \abs{a_n}\norm{A}^n
+\\&<
+\sum_{n=k}^\ell \abs{a_n}\prs{r-\eps}^n
+\\&\xrightarrow[k,\ell \to \infty]{} 0
+\end{align*}
+ולפי קריטריון קושי נקבל שיש לסדרה
+$\norm{\sum_{n=1}^N a_n A^n}$
+גבול.
+\end{proof}
+
+אם
+$F\prs{z}$
+טור חזקות עם רדיוס התכנסות
+$\rho$
+ו־%
+$G\prs{z}$
+עם רדיוס התכנסות
+$\sigma$,
+אז
+\begin{align*}
+\prs{F+G}\prs{A} = F\prs{A} + G\prs{A} \\
+\prs{FG}\prs{A} = F\prs{A} \cdot G\prs{A}
+\end{align*}
+עבור
+$A$
+עם
+$\norm{A} < \min\set{\rho,\sigma}$.
+אם
+$G\prs{0} = 0$
+אז
+$F \circ G$
+הוא טור חזקות, ועבור מטריצה
+$A$
+כך ש־%
+$\norm{A} < \sigma$
+וגם
+$\norm{G\prs{A}} < \rho$
+הטור
+\[\prs{F \circ G}\prs{A} = F\prs{G\prs{A}}\]
+מתכנס.
+
+
+
+\begin{definition}[אקספוננט של מטריצה]
+עבור
+$z \in k$
+נגדיר
+\[\exp\prs{z} \ceq \sum_{n = 0}^{\infty} \frac{1}{n!} \cdot z^n\]
+ועבור
+$z \in k$
+עם
+$\abs{z} < 1$
+נגדיר
+\[\text{.} \log\prs{1+z} = \sum_{n=0}^{\infty} \frac{\prs{-1}^{n-1}}{n} \cdot z^n\]
+
+מכאן, לכל מטריצה
+$X \in M$
+ניתן להגדיר
+\[\exp\prs{X} = \sum_{n=0}^{\infty} \frac{1}{n!} X\]
+ועבור
+$X \in M$
+עבורה
+$\norm{X - I} < 1$
+נגדיר
+\[\text{.} \log\prs{x} \ceq \log\prs{1+\prs{X-I}}\]
+\end{definition}
+
+\begin{corollary}
+\begin{enumerate}
+\item לכל מטריצה
+$X \in M$
+מתקיים
+\[\exp\prs{X} \cdot \exp\prs{-X} = I\]
+וגם
+$\exp\prs{X} \in \mrm{GL}_n\prs{k}$.
+
+\item כאשר
+$\norm{X - I} < 1$
+מתקיים
+\[\text{.} \exp\prs{\log\prs{X}} = X\]
+
+\item עבור
+$X \in M$
+המקיימת
+$\norm{X} < \log 2$
+מתקיים
+\[\text{.} \log\prs{\exp\prs{X}} = X\]
+
+אכן
+מתקיים
+\begin{align*}
+\norm{\exp\prs{X} - I} &= \norm{\sum_{n=1}^{\infty} \frac{1}{n!} X^n}
+\\&\leq
+\sum_{n=1}^{\infty} \frac{1}{n!} \norm{X}^n
+\\&= \exp\prs{\norm{X}} - 1
+\\&< 2 - 1
+\\\text{.} \hphantom{\norm{\exp\prs{X} - I}} &= 1
+\end{align*}
+\end{enumerate}
+\end{corollary}
+
+\begin{exercise}
+כאשר
+$XY = YX$
+מתקיים
+\begin{align*}
+\text{.} \exp\prs{X} \cdot \exp\prs{Y} = \sum_{n=0}^{\infty} \frac{1}{n!} \prs{X+Y}^n = \exp\prs{X+Y}
+\end{align*}
+בפרט, עבור
+$t,s \in k$
+מתקיים
+\[\text{.} \exp\prs{tX} \cdot \exp\prs{sX} = \exp\prs{\prs{t+s}X}\]
+לכן
+\begin{align*}
+a_X \colon k &\to \mrm{GL}_n\prs{k} \\
+t &\mapsto \exp\prs{tX}
+\end{align*}
+הומומורפיזם של חבורות.
+\end{exercise}
+
+\begin{proposition}
+\begin{enumerate}
+\item $a_x$ הוא הפתרון היחיד למשוואה
+\begin{align*}
+a'\prs{t} = a\prs{t} \cdot X \\
+a\prs{0} = I
+\end{align*}
+או למשוואה
+\begin{align*}
+a'\prs{t} = X \cdot a\prs{t} \\
+a\prs{0} = I
+\end{align*}
+עבור
+\[ \text{.} a \colon k \to \mrm{GL}_n\prs{k}\]
+
+\item 
+$a_X$
+הוא ההומומורפיזם החלק היחיד
+\[a \colon k \to \mrm{GL}_n\prs{k}\]
+שמקיים
+$a'\prs{0} = X$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item $a_X$
+פתרון למשוואה. מתקיים
+\begin{align*}
+\frac{\diff}{\diff t}\prs{a_X\prs{t}} &= \sum_{n=1}^\infty \frac{\diff}{\diff t} \prs{\frac{1}{n!} \prs{tX}^n}
+\\&=
+\sum_{n=1}^{\infty} \frac{t^{n-1}}{\prs{n-1}!} X^n
+\\ &=
+\exp\prs{tX} \cdot X
+\\ \text{.} \hphantom{\frac{\diff}{\diff t}\prs{a_X\prs{t}}} &=
+X \cdot \exp\prs{tX}
+\end{align*}
+יחידות נובעת ממשפט קיום ויחידות למד"ר.
+
+\item אם
+$a$
+הוא הומומורפיזם כלשהו, כמו שנתון, מתקיים
+\begin{align*}
+a'\prs{t} &= \left. \frac{\diff}{\diff s} \prs{a\prs{t+s}} \right|_{s=0}
+\\&=
+\left. \frac{\diff}{\diff s}\prs{a \prs{t} \cdot a\prs{s}} \right|_{s=0}
+\\&=
+a\prs{t} \cdot a'\prs{0}
+\\&=
+a\prs{t} \cdot X
+\end{align*}
+ומ־%
+$1$
+נובע
+$a = a_X$.
+\end{enumerate}
+\end{proof}
+
+%TODO fill in last part
+
+\end{document}
