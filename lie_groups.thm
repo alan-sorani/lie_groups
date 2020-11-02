@@ -1,8 +1,30 @@
-\contentsline {examples*}{{דוגמאות}{1}{}}{6}%
-\contentsline {proposition}{{טענה}{1.2.{1}}{עקרון ההצבה}}{8}%
-\contentsline {proof}{{הוכחה}{1}{}}{9}%
-\contentsline {definition}{{הגדרה}{1.2.{2}}{אקספוננט של מטריצה}}{9}%
-\contentsline {corollary}{{מסקנה}{1.2.{3}}{}}{10}%
-\contentsline {exercise}{{תרגיל}{1}{}}{10}%
-\contentsline {proposition}{{טענה}{1.2.{4}}{}}{10}%
-\contentsline {proof}{{הוכחה}{2}{}}{11}%
+\contentsline {examples*}{{דוגמאות}{1}{}}{6}{examples*.1}%
+\contentsline {proposition}{{טענה}{1.2.{1}}{עקרון ההצבה}}{7}{theorem.1.2.1}%
+\contentsline {proof}{{הוכחה}{1}{}}{7}{proof.1}%
+\contentsline {definition}{{הגדרה}{1.2.{2}}{אקספוננט של מטריצה}}{8}{theorem.1.2.2}%
+\contentsline {corollary}{{מסקנה}{1.2.{3}}{}}{8}{theorem.1.2.3}%
+\contentsline {exercise}{{תרגיל}{1}{}}{8}{exercise.1}%
+\contentsline {proposition}{{טענה}{1.2.{4}}{}}{9}{theorem.1.2.4}%
+\contentsline {proof}{{הוכחה}{2}{}}{9}{proof.2}%
+\contentsline {example}{{דוגמה}{1.2.{5}}{}}{9}{theorem.1.2.5}%
+\contentsline {definition}{{הגדרה}{1.2.{6}}{אופרטור ההצמדה}}{9}{theorem.1.2.6}%
+\contentsline {notation}{{סימון}{1.2.{7}}{}}{10}{theorem.1.2.7}%
+\contentsline {notation}{{סימון}{1.2.{8}}{}}{10}{theorem.1.2.8}%
+\contentsline {remark}{{הערה}{1.2.{9}}{}}{10}{theorem.1.2.9}%
+\contentsline {exercise}{{תרגיל}{2}{}}{10}{exercise.2}%
+\contentsline {corollary}{{מסקנה}{1.2.{10}}{}}{10}{theorem.1.2.10}%
+\contentsline {definition}{{הגדרה}{1.2.{11}}{הקומוטטור}}{10}{theorem.1.2.11}%
+\contentsline {definition}{{הגדרה}{1.2.{12}}{}}{10}{theorem.1.2.12}%
+\contentsline {proposition}{{טענה}{1.2.{13}}{}}{10}{theorem.1.2.13}%
+\contentsline {proof}{{הוכחה}{3}{}}{10}{proof.3}%
+\contentsline {proposition}{{טענה}{1.2.{14}}{נוסחת \textenglish {Campbell-Baker-Hausdorff}}}{11}{theorem.1.2.14}%
+\contentsline {remark}{{הערה}{1.2.{15}}{}}{11}{theorem.1.2.15}%
+\contentsline {definition}{{הגדרה}{1.2.{16}}{אלגברת לי של מטריצות}}{11}{theorem.1.2.16}%
+\contentsline {corollary}{{מסקנה}{1.2.{17}}{}}{11}{theorem.1.2.17}%
+\contentsline {exercise}{{תרגיל}{3}{}}{11}{exercise.3}%
+\contentsline {proposition}{{טענה}{1.2.{18}}{נוסחת \textenglish {Duhamel}}}{11}{theorem.1.2.18}%
+\contentsline {proof}{{הוכחה}{4}{}}{11}{proof.4}%
+\contentsline {notation}{{סימון}{1.2.{19}}{}}{12}{theorem.1.2.19}%
+\contentsline {exercise}{{תרגיל}{4}{}}{12}{exercise.4}%
+\contentsline {proposition}{{טענה}{1.2.{20}}{נוסחת \textenglish {Dynkin} (1947)}}{12}{theorem.1.2.20}%
+\contentsline {proof}{{הוכחה}{5}{}}{12}{proof.5}%

@@ -1,5 +1,21 @@
 \documentclass[10pt, twoside]{book}
 
+\usepackage{hyperref}
+
+%%%%%%%%%%%%
+% Geometry %
+%%%%%%%%%%%%
+
+\RequirePackage{geometry}
+\geometry{
+	 a4paper,
+	 inner=10mm,
+	 outer=30mm,
+	 marginparwidth = 20mm,
+	 top = 20mm,
+	 bottom = 20mm
+	}
+
 %%%%%%%%%
 % Babel %
 %%%%%%%%%
@@ -504,6 +520,396 @@ $a = a_X$.
 \end{enumerate}
 \end{proof}
 
-%TODO fill in last part
+%TODO fill in last part of 2nd lecture
+
+%29.10.2020
+
+\begin{example}
+נחשב אקספוננט של מטריצה אלכסונית. נקבל
+\begin{otherlanguage}{english}
+\begin{align*}
+\exp\pmat{\lambda_1 & & \\ & \ddots & \\ & & \lambda_n}
+&=
+\sum_{k = 0}^{\infty} \frac{1}{k!} \pmat{\lambda_1 & & \\ & \ddots & \\ & & \lambda_n}^k
+\\&=
+\sum_{k=0}^{\infty} \frac{1}{k!} \pmat{\lambda_1^k & & \\ & \ddots & \\ & & \lambda_n^k}
+\\\text{.}\hphantom{\exp\pmat{\lambda_1 & & \\ & \ddots & \\ & & \lambda_n}}&=
+\pmat{\exp\prs{\lambda_1} & & \\ & \ddots & \\ & & \exp\prs{\lambda_n}}
+\end{align*}
+\end{otherlanguage}
+\end{example}
+
+\begin{definition}[אופרטור ההצמדה]
+בהינתן
+$a \in \mrm{GL}_n\prs{k}$
+נגדיר את
+\emph{אופרטור ההצמדה ב־%
+$a$}
+על ידי
+\begin{align*}
+\mrm{Ad}\prs{a} \colon M &\to M \\
+\text{.} \hphantom{\mrm{Ad}\prs{a} \colon} X &\mapsto aXa^{-1}
+\end{align*}
+\end{definition}
+
+\begin{notation}
+עבור מרחב וקטורי
+$V$
+נסמן ב־%
+$\endo\prs{V}$
+את מרחב ההעתקות הלינאריות מ־%
+$V$
+לעצמו.
+זהו מרחב וקטורי איזומורפי ל־%
+$M_{n^2}$.
+\end{notation}
+
+\begin{notation}
+עבור מרחב וקטורי
+$V$
+נסמן ב־%
+$\mrm{GL}\prs{V} \subseteq \endo\prs{V}$
+את האנדומורפיזמים ההפיכים של
+$V$.
+לעתים מסמנים זאת
+$\mrm{Aut}\prs{V}$.
+\end{notation}
+
+\begin{remark}
+מתקיים
+$\mrm{Ad}\prs{a} \in \mrm{GL}\prs{M}$
+כיוון ש־%
+\[\text{.} \mrm{Ad}\prs{a^{-1}} \prs{\mrm{Ad}\prs{a}\prs{X}} = X\]
+כמו כן,
+$\mrm{Ad}$
+הוא הומומורפיזם של חבורות
+$\mrm{GL}_n\prs{k} \to \mrm{GL}\prs{M}$
+כיוון שמתקיים
+\[\text{.} \mrm{Ad}\prs{ab}\prs{X} =  ab X \prs{ab}^{-1} = a \prs{b X b^{-1}} a^{-1} = \mrm{Ad}\prs{a} \circ \mrm{Ad}\prs{b} \prs{X}\]
+\end{remark}
+
+\begin{exercise}
+אם
+$f\prs{z} = \sum_{k=0}^{\infty} a_k z^k$
+טור חזקות, ו־%
+$X \in M_n$
+עבורה
+$f\prs{X}$
+מוגדרת, מתקיים
+\[\text{.} \mrm{Ad}\prs{a} \prs{f\prs{X}} = f\prs{\mrm{Ad}\prs{a}\prs{X}}\]
+בפרט, מתקיים
+\[\text{.} \mrm{Ad}\prs{a} \prs{\exp\prs{X}} = \exp\prs{\mrm{Ad}\prs{a}\prs{X}}\]
+\end{exercise}
+
+\begin{corollary}
+נניח כי
+$V$
+מרחב וקטורי עם בסיס
+$B$.
+יש זיהוי
+\begin{align*}
+\endo\prs{V} &\cong M_n \\
+\text{.} \hphantom{\endo\prs{.}} T &\leftrightarrow \brs{T}_B
+\end{align*}
+לכן, עבור
+$X \in \endo\prs{V}$
+אפשר להגדיר
+$\exp\prs{X} \in \mrm{GL}\prs{V}$
+כאופרטור שמקיים
+\[\brs{\exp\prs{X}}_B = \exp\prs{\brs{X}_B}\]
+ובנייה זאת לא תלויה בבחירת הבסיס
+$B$.
+\end{corollary}
+
+\begin{definition}[הקומוטטור]
+עבור
+$X,Y \in M$
+נגדיר
+\[\text{.} \brs{X,Y} = XY - YX\]
+\end{definition}
+
+\begin{definition}
+עבור
+$X \in M$
+נגדיר
+\begin{align*}
+\mrm{ad}\prs{X} \colon M &\to M \\
+\text{.} \hphantom{\mrm{ad}\prs{.} aaa} Y &\mapsto \brs{X,Y}
+\end{align*}
+\end{definition}
+
+\begin{proposition}
+עבור
+$X \in M$
+מתקיים
+\[\text{.} \mrm{Ad}\prs{\exp\prs{X}} = \exp\prs{\mrm{ad}\prs{x}}\]
+\end{proposition}
+
+\begin{proof}
+מתקיים
+\[\mrm{Ad}\prs{\exp\prs{X}}\prs{Y} = \exp\prs{X} \cdot Y \cdot \exp\prs{-X}\]
+ומצד שני
+\begin{align*}
+\text{.} \exp\prs{\mrm{ad}\prs{X}}\prs{Y} &= \sum_{k=0}^{\infty} \frac{1}{k!} \prs{\mrm{ad}\prs{X}}^k \prs{Y}
+\end{align*}
+נגדיר
+\[\text{.} A\prs{t} \ceq \mrm{Ad}\prs{\exp\prs{tX}}\]
+נחפש את
+$A\prs{t}$.
+מתקיים
+\[A\prs{0} = \mrm{Ad}\prs{I} = \id\]
+וגם
+\begin{align*}
+\frac{\diff}{\diff t}\prs{A\prs{t}\prs{Y}}
+&=
+\frac{\diff}{\diff t} \prs{\exp\prs{tX} \cdot Y \cdot \exp\prs{-tX}}
+\\&=
+\frac{\diff}{\diff t}\prs{\exp\prs{tX}} Y \exp\prs{-tX} + \exp\prs{tX}Y \frac{\diff}{\diff t} \prs{\exp\prs{-tX}}
+\\&=
+X \cdot A\prs{t}\prs{Y} + A\prs{t}\prs{Y} \cdot \prs{-X}
+\\ \text{.} \hphantom{\frac{\diff}{\diff t}\prs{A\prs{t}\prs{Y}}} &= \mrm{ad}\prs{X} \prs{A\prs{t} \prs{Y}}
+\end{align*}
+לכן
+\[\text{.} A'\prs{t} = \mrm{ad}\prs{X} \cdot A\prs{t}\]
+ראינו שזה מחייב
+\[\text{.} A\prs{t} = \mrm{exp}\prs{t \mrm{ad}\prs{X}}\]
+לכן
+$A\prs{1}$
+מה שרצינו.
+\end{proof}
+
+\subsection{נוסחת
+\textenglish{Campbell-Baker-Hausdorff}}
+
+ראינו שקיימות סביבה
+$U \subseteq M$
+של
+$0$
+וסביבה
+$V \subseteq \mrm{GL}_n\prs{k}$
+של
+$I$
+כך ש־%
+$\exp\colon U \to V$
+הוא הומאומורפיזם.
+
+עבור
+$A,B \in V$
+מספיק קרובות ל־%
+$I$
+מתקיים
+$AB \in V$.
+כלומר, אם
+$A = \exp\prs{X}$
+ו־%
+$B = \exp\prs{Y}$
+יש
+$Z \in V$
+עבורה
+\[\text{.} \exp\prs{Z} = \exp\prs{X} \cdot \exp\prs{Y}\]
+נחשוב על ההתאמה הזאת כפונקציה,
+$Z = C\prs{X,Y}$,
+שמוגדרת לפחות עבור
+$X,Y$
+קרובים מספיק ל־%
+$0$.
+
+נרצה נוסחה עבור
+$C\prs{X,Y}$,
+או לפחות תיאור כלשהו של
+$C$.
+ראינו שאם
+$XY = YX$
+אז
+$C\prs{X,Y} = X+Y$.
+
+\begin{proposition}[נוסחת
+\textenglish{Campbell-Baker-Hausdorff}]
+באופן כללי מתקיים
+\[C\prs{X,Y} = x + Y + \frac{1}{2} \brs{X,Y} + \frac{1}{12} \prs{\brs{X, \brs{X,Y}} + \brs{Y,\brs{Y,X}}} + \ldots\]
+כאשר שאר הביטויים הם קומוטטורים ארוכים יותר ב־%
+$X,Y$.
+\end{proposition}
+
+\begin{remark}
+מתקיים
+\[\text{.} C\prs{tx, ty} = t\prs{x+Y} + \frac{t^2}{2} \brs{X,Y} + o\prs{t^2}\]
+\end{remark}
+
+\begin{definition}[אלגברת לי של מטריצות]
+תת מרחב
+$\mfrak{g} \leq M$
+יקרא
+\emph{אלגברת לי של מטריצות}
+אם הוא סגור תחת הקומוטטור.
+\end{definition}
+
+\begin{corollary}
+אם
+$X,Y \in \mfrak{g}$
+ו־%
+$C\prs{X,Y}$
+מוגדרת, אז
+$C\prs{X,Y} \in \mfrak{g}$.
+\end{corollary}
+
+%2.11.2020
+
+\begin{exercise}
+לכל מטריצה
+$X \in M_n$
+מתקיים
+\[\text{.} \det\prs{\exp\prs{X}} = e^{\tr\prs{X}}\]
+\end{exercise}
+
+נביט בטורי החזקות הבאים.
+\begin{align*}
+F\prs{z} &= \sum_{n \in \mbb{N}} \frac{\prs{-1}^n}{\prs{n+1}!} z^n = \left\{ \mat{ \frac{1-\exp\prs{-z}}{z} & z \neq 0 \\ 1 & z = 0 } \right. \\
+G\prs{z} &= \sum_{n \in \mbb{N}} \frac{\prs{-1}^n}{n+1} z^n = \left\{ \mat{\frac{\log\prs{1+z}}{z} & z \neq 0 \\ 1 & z = 0} \right.
+\end{align*}
+כאשר
+$G$
+מוגדרת כשמתקיים
+$\abs{z} < 1$.
+אז
+\begin{align*}
+G\prs{\exp\prs{z} - 1} \cdot \exp\prs{z} \cdot F\prs{z} &=
+\frac{z}{\exp\prs{z} - 1} \cdot \exp\prs{z} \cdot \frac{1 - \exp\prs{-z}}{z}
+= 1
+\end{align*}
+למשל כאשר
+$\abs{z} < \log\prs{2}$.
+
+\begin{proposition}[נוסחת \textenglish{Duhamel}]
+תהי
+$x \colon \mbb{R} \to M_n$
+מסילה חלקה.
+מתקיים
+\[\text{.} \frac{\diff}{\diff t} \exp\prs{x\prs{t}} = \exp\prs{x\prs{t}} F\prs{\ad\prs{x\prs{t}} \prs{x'\prs{t}}}\]
+\end{proposition}
+
+\begin{proof}
+נגדיר
+\[\text{.} Y\prs{s,t} \ceq \exp\prs{-s x\prs{t}} \cdot \frac{\diff}{\diff t} \prs{\exp\prs{s x\prs{t}}}\]
+אז
+\[\frac{\diff}{\diff t} \prs{\exp\prs{x\prs{t}}} = \exp\prs{x\prs{t}} Y\prs{1,t}\]
+וגם
+\[\text{.} Y\prs{0,t} = 0\]
+אז
+\begin{align*}
+\frac{\del Y}{\del s} &= \exp\prs{-s x\prs{t}} \cdot \prs{-x\prs{t}} \cdot \frac{\diff}{\diff t}\prs{\exp\prs{sx\prs{t}}} + \exp\prs{-s x\prs{t}} \cdot \frac{\diff}{\diff t} \prs{x\prs{t} \exp\prs{s x\prs{t}}}
+\\&=
+\exp\prs{-sx\prs{t}} \cdot x'\prs{t} \cdot \exp\prs{sx\prs{t}}
+\\&=
+\Ad\prs{\exp\prs{-sx\prs{t}}}\prs{x'\prs{t}}
+\\&=
+\exp\prs{\ad\prs{-sx\prs{t}}} \prs{x'\prs{t}}
+\\&=
+\exp\prs{-s \ad\prs{x\prs{t}}} \prs{x'\prs{t}}
+\end{align*}
+ולכן
+\begin{align*}
+Y\prs{1,t} &=
+\int_0^1 \frac{\del Y}{\del s}\prs{s,t} \diff s
+\\&=
+\int_0^1 \sum_{n \in \mbb{N}} \frac{\prs{-1}^n s^n}{n!} \prs{\ad\prs{x\prs{t}}}^n \prs{x'\prs{t}} \diff s
+\\&=
+\sum_{n \in \mbb{N}} \int_0^1 \frac{\prs{-1}^n s^n}{n!} \prs{\ad\prs{x\prs{t}}}^n \prs{x'\prs{t}} \diff s
+\\&=
+\sum_{n \in \mbb{N}} \frac{\prs{-1}^n}{\prs{n+1}!} \prs{\ad \prs{x\prs{t}}}^n \prs{x'\prs{t}}
+\\&=
+F\prs{\ad\prs{x\prs{t}}}\prs{x'\prs{t}}
+\end{align*}
+כנדרש.
+\end{proof}
+
+\begin{notation}
+נסמן
+\[\text{.} \brs{X_1, X_2, \ldots, X_k} \ceq \brs{X_1, \ldots , \brs{X_{k+2}, \brs{X_{k+1, X_k}}}}\]
+\end{notation}
+
+\begin{exercise}
+אם
+$C\prs{X,Y}$
+מוגדר, גם
+$C\prs{tX, tY}$
+מוגדר לכל
+$t \in \prs{0,1}$.
+\end{exercise}
+
+\begin{proposition}[נוסחת
+\textenglish{Dynkin} (1947)]
+אם
+$C\prs{X,Y}$
+מוגדר אז
+\[\text{.} C\prs{X,Y} = \sum_{k \in \mbb{N}_+} \frac{\prs{-1}^{k-1}}{k} \sum_{\substack{i_1, \ldots, i_k \in \mbb{N} \\ j_1, \ldots, j_k \in \mbb{N} \\ \forall n \in \mbb{N} \colon i_n + j_n > 0}} \frac{1}{\prs{i_1 + j_1} \cdot \ldots \cdot \prs{i_k + j_k} \cdot i_1! j_1! \cdot \ldots \cdot i_k! j_k!} [\underset{i_1}{\underbrace{X, \ldots, X}}, \underset{j_1}{\underbrace{Y, \ldots, Y}}, \ldots, \underset{i_k}{\underbrace{X, \ldots, X}}, \underset{j_k}{\underbrace{Y, \ldots, Y}}]\]
+\end{proposition}
+
+\begin{proof}
+נגדיר
+\[Z\prs{t} = C\prs{tX, tY}\]
+עבור
+$t \in \prs{0,1}$,
+ונגדיר
+$Z\prs{0} = 0$.
+אז
+\[\exp Z\prs{t} = \exp\prs{tX} \cdot \exp\prs{tY}\]
+ולכן
+\begin{align*}
+\Ad\prs{\exp Z\prs{t}} &= \Ad\prs{\exp\prs{tX}} \Ad\prs{\exp\prs{tY}} \\
+\exp\prs{\ad Z\prs{t}} &= \exp\prs{\ad \prs{tX}} \exp\prs{\ad\prs{tY}}
+\\
+\text{.} \hphantom{\exp\prs{\ad Z\prs{t}}} &= \exp\prs{t \ad\prs{X}} \exp\prs{t \ad\prs{Y}}
+\end{align*}
+לכן מתקיים
+\begin{align*}
+\frac{\diff}{\diff t} \prs{\exp Z\prs{t}} &=
+X \exp \prs{Z\prs{t}} + \exp\prs{Z\prs{t}} \cdot Y
+\end{align*}
+ומצד שני
+\begin{align*}
+\text{.} \frac{\diff}{\diff t} \prs{\exp Z\prs{t}} &=
+\exp\prs{Z\prs{t}} \cdot F\prs{\ad Z\prs{t}} \prs{Z'\prs{t}}
+\end{align*}
+לכן
+\[X \exp \prs{Z\prs{t}} + \exp\prs{Z\prs{t}} \cdot Y = \exp\prs{Z\prs{t}} \cdot F\prs{\ad Z\prs{t}} \prs{Z'\prs{t}}\]
+ ולאחר פישוט נקבל
+ \begin{align*}
+ F\prs{\ad Z\prs{t}} \prs{Z'\prs{t}} &= \Ad\prs{\exp\prs{-Z\prs{t}}}\prs{X} + Y
+ \\&=
+ \exp\prs{-ad\prs{Z\prs{t}}}\prs{X} + Y
+\end{align*}
+לכן
+\begin{align*}
+Z'\prs{t} &= \prs{G\prs{\exp\prs{\ad \prs{Z\prs{t}}} - I} \exp\prs{\ad \prs{Z\prs{t}}}} \prs{\exp\prs{-ad\prs{Z\prs{t}}}\prs{X} + Y}
+\\&=
+G\prs{\exp\prs{\ad\prs{Z\prs{t}}} - I}\prs{X + \exp\prs{\ad Z\prs{t}}\prs{Y}}
+\\&=
+\sum_{k \in \mbb{N}} \frac{\prs{-1}^k}{k+1} \prs{\exp\prs{t \ad X} \exp\prs{t \ad Y} - I}^k \prs{X + \exp\prs{\ad \prs{Z\prs{t}}} \prs{Y}}
+\end{align*}
+כאשר
+\begin{align*}
+\exp\prs{t \ad \prs{Y}} \prs{Y} &= \sum_{j \in \mbb{N}} \frac{1}{j!} t^j \prs{\ad \prs{Y}}^j \prs{Y} = Y
+\end{align*}
+ולכן
+\begin{align*}
+Z'\prs{t} &= \sum_{k \in \mbb{N}} \frac{\prs{-1}^k}{k+1} \prs{\exp\prs{t \ad X} \exp\prs{t \ad Y} - I}^k \prs{X + \exp\prs{t \ad\prs{X}} \prs{Y}}
+\\\text{.} \hphantom{Z'\prs{t}} &=
+\sum_{k \in \mbb{N}} \frac{\prs{-1}^k}{k+1} \sum_{n \in \mbb{N}} t^n \brs{\text{sums of commutators in $X$ and $Y$}}
+\end{align*}
+אז
+\begin{align*}
+\text{.} C\prs{X,Y} & Z\prs{1}
+\\&=
+\int_0^1 Z'\prs{t} \diff t
+\end{align*}
+על ידי אינטגרציה איבר איבר בטור של
+$Z'$
+נגיע לנוסחה עבור
+$C\prs{X,Y}$
+ונקבל את הנדרש.
+\end{proof}
+
+
 
 \end{document}
