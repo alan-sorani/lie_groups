@@ -12,3 +12,7 @@
 \babel@toc {english}{}
 \babel@toc {hebrew}{}
 \contentsline {subsection}{\numberline {1.2.2}נוסחת \foreignlanguage {english}{Campbell-Baker-Hausdorff}}{11}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}אלגבראות לי}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}חבורות לי ואלגבראות לי}{15}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}מאלגבראות לי לחבורות לי}{15}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}מחבורות לי לאלגבראות לי}{15}{subsection.2.1.2}%

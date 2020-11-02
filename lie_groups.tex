@@ -910,6 +910,164 @@ $C\prs{X,Y}$
 ונקבל את הנדרש.
 \end{proof}
 
+\begin{remark}
+מתקיים
+\[\text{.} C\prs{X,Y} = \log\prs{\exp\prs{X}, \exp\prs{Y}}\]
+\end{remark}
 
+\chapter{אלגבראות לי}
+
+\section{חבורות לי ואלגבראות לי}
+
+\subsection{מאלגבראות לי לחבורות לי}
+
+לכל
+$V \leq M_n\prs{\mbb{R}}$
+נגדיר חבורת מטריצות
+\[\Gamma\prs{V} \ceq \set{\exp\prs{X_1} \cdot \ldots \cdot \exp\prs{X_m}}{x_1, \ldots, x_m \in V} \leq \mrm{GL}_n\prs{k}\]
+שהיא תת־חבורת מטריצות של
+$\mrm{GL}_n\prs{k}$.
+
+\subsection{מחבורות לי לאלגבראות לי}
+
+בכיוון ההפוך, עבור כל תת־חבורה
+$G \leq \mrm{GL}_n\prs{k}$
+נגדיר את
+\emph{המרחב המשיק ל־%
+$G$}
+על ידי
+\[\text{.} \mfrak{g} \ceq \mrm{Lie}\prs{G} = \set{X \in M_n}{\exists \gamma \colon \prs{-\eps, \eps} \to G \colon \substack{ \gamma \in \mscr{C}^1 \\ \gamma\prs{0} = I \\ \gamma'\prs{0} = X}}\]
+
+\begin{proposition}
+\begin{enumerate}
+\item $\mfrak{g}$
+מרחב וקטורי.
+\item עבור
+$X \in \mfrak{g}$
+ו־%
+$a \in G$
+מתקיים
+\[\text{.} \Ad\prs{a}\prs{X} \in \mfrak{g}\]
+\item $\mfrak{g}$
+אלגברת לי.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item תהיינה
+$X,Y \in \mfrak{g}$
+ויהיו
+$\alpha,\beta \in \mbb{R}$.
+נניח כי
+$a,b$
+מסילות ב־%
+$G$
+עבורן
+\begin{align*}
+a\prs{0} &= b\prs{0} = I \\
+a'\prs{0} &= X \\
+\text{.} b'\prs{0} &= Y
+\end{align*}
+נגדיר
+\begin{align*}
+c\prs{t} \ceq a\prs{\alpha t} \cdot b\prs{\beta\prs{t}} \in G \\
+\text{.} c\prs{0} = I
+\end{align*}
+אז
+\[\text{.} c'\prs{0} = \alpha a'\prs{0} b\prs{0} + \beta a\prs{0} b'\prs{0} = \alpha X + \beta Y \in \mfrak{g} \]
+\item תהי
+$\gamma$
+מסילה ב־%
+$G$
+עם
+$\gamma\prs{0} = I$
+ו־%
+$\gamma'\prs{0} = X$.
+לכל
+$t$
+בתחום ההגדרה של
+$\gamma$
+מתקיים
+\[\text{.} \delta\prs{t} \Ad\prs{a} \prs{\gamma\prs{t}} \in G\]
+אז
+\begin{align*}
+\delta\prs{0} &= \Ad\prs{a}\prs{I} = I \\
+\delta'\prs{0} &= \left.\frac{\diff}{\diff t} \prs{a \gamma\prs{t} a^{-1}}\right|_{t=0} 
+\\&=
+\Ad\prs{a} \prs{\gamma'\prs{0}}
+\\&=
+\Ad\prs{a} \prs{X}
+\end{align*}
+כנדרש.
+
+\item
+יהיו
+$X,Y \in \mfrak{g}$
+ו־%
+$a,b$
+מסילות ב־%
+$G$
+עבורן
+$a'\prs{0} = X, b'\prs{0} = Y$.
+יהי
+\[I = a\prs{t} a\prs{t}^{-1}\]
+ואז
+\[\text{.} 0 = a'\prs{0} \cdot a\prs{0}^{-1} + \left. a\prs{0} \frac{\diff}{\diff t}\prs{a\prs{t}^{-1}} \right|_{t=0}\]
+לכן
+\[\text{.} \left. \frac{\diff}{\diff t}\prs{a\prs{t}^{-1}}\right|_{t=0} = -a'\prs{0} = -X\]
+אז
+\[\gamma\prs{t} = \Ad\prs{a\prs{t}}\prs{Y} \in \mfrak{g}\]
+ומתקיים
+\begin{align*}
+\gamma'\prs{0} &= a'\prs{0} \cdot Y \cdot a\prs{0}^{-1} + a\prs{0} Y \left. \frac{\diff}{\diff t}\prs{a\prs{t}^{-1}} \right|_{t=0}
+\\&=
+X \cdot Y \cdot Y + I \cdot Y \cdot \prs{-X}
+\\&= \brs{X,Y}
+\end{align*}
+לכן
+\[\text{.} \brs{X,Y} = \gamma'\prs{0} \in \mfrak{g}\]
+\end{enumerate}
+\end{proof}
+
+נרצה להראות שתחת תנאים מתאימים, ההעתקות
+$\mrm{Lie}, \Gamma$
+הופכיות אחת לשנייה.
+כלומר,
+נרצה ליצור התאמה חח"ע בין חבורות מטריצות מסוימות לבין אלגבראות לי.
+
+ליתר דיוק, נוכיח שלושה דברים מרכזיים.
+
+\begin{enumerate}
+\item לכל אלגברת לי
+$\mfrak{g} \leq M_n$
+ממשית מתקיים
+\[\text{.} \mfrak{g} = \mrm{Lie}\prs{\Gamma\prs{\mfrak{g}}}\]
+\item עבור כל תת־חבורה
+$G \leq \mrm{GL}_n\prs{k}$
+מתקיים
+\[\text{.} \Gamma\prs{\mrm{Lie}\prs{G}} \leq G\]
+\item נחפש תנאים על
+$G$
+עבורם
+\[\text{.} \Gamma\prs{\mrm{Lie}\prs{G}} = G\]
+חבורה
+$G$
+כזאת תיקרא בהמשך
+\emph{קשירה}.
+\\
+נוכיח את משפט התת־חבורה הסגורה:
+אם
+$G \leq \mrm{GL}_n\prs{k}$
+תת־חבורה סגורה וקשירה, מתקיים
+\[\text{.} \Gamma\prs{\mrm{Lie}\prs{G}} = G\]
+\end{enumerate}
+
+\begin{remark}
+בנינו התאמה בין חבורות לי של מטריצות לאלגבראות לי של מטריצות.
+ניתן להתאים באופן כללי בין חבורות לי לאלגבראות לי (אבסטרקטיות).
+
+קיים משפט שאומר שכל אלגברת לי כזאת איזומורפית לאלגברת לי של מטריצות, ונקבל מדיון זה שחבורת לי כללית היא חבורת כיסוי של חבורות לי של מטריצות.
+\end{remark}
 
 \end{document}
