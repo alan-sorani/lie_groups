@@ -1072,4 +1072,202 @@ $G \leq \mrm{GL}_n\prs{k}$
 קיים משפט שאומר שכל אלגברת לי כזאת איזומורפית לאלגברת לי של מטריצות, ונקבל מדיון זה שחבורת לי כללית היא חבורת כיסוי של חבורות לי של מטריצות.
 \end{remark}
 
+\begin{example}
+החבורה
+$G \leq \mrm{GL}_n\prs{k}$
+של מטריצות אלכסוניות הפיכות איזומורפית ל־%
+$\prs{k^\times}^n$.
+
+מתקיים
+\[\text{.} \mrm{Lie}\prs{G} = \set{X \in M_n}{\substack{\exists \gamma \colon \prs{-\eps,\eps} \to G \\ \gamma\prs{0} = I \\ \gamma'\prs{0} = X} } \text.\]
+במקרה זה
+$\mrm{Lie}\prs{G}$
+אלגברת המטריצות האלכסוניות, שהאיזומורפית ל־%
+$k^n$.
+
+זה נכון כי לכל
+$X = \mrm{diag}\prs{x_1, \ldots, x_n}$
+נוכל להביט במסילה
+$\gamma\prs{t} = \mrm{diag}\prs{1 + t x_1, \ldots, 1+ t x_n} \in G$.
+מתקיים כאן
+\[\text{.} \brs{X,Y} = 0\]
+\end{example}
+
+\begin{definition}
+עבור
+$\mfrak{g} \leq M$
+אלגברת לי, נגדיר
+\[\text{.} \Gamma\prs{\mfrak{g}} \ceq \set{\exp\prs{X_1} \cdot \ldots \cdot \exp\prs{X_t}}{\prs{X_i}_{i \in [t]} \in \mfrak{g}} \leq \mrm{GL}_n\prs{k}\]
+\end{definition}
+
+\begin{example}
+אם
+$\mfrak{g}$
+האלגברה של מטריצות אלכסוניות נקבל
+\[ \Gamma\prs{g} = \set{\mrm{diag}\prs{e^{\lambda_1}, \ldots, e^{\lambda_n}}}{\prs{\lambda_i}_{i \in [n]} \subseteq k}\]
+כי
+$e^\lambda e^\mu = e^{\lambda + \mu}$.
+
+אם
+$k = \mbb{C} \setminus \set{0}$,
+כל
+$z$
+ניתן לכתיבה כ־%
+$e^a$.
+עבור
+$G = \prs{k^\times}^n$
+נקבל
+\[\text{.} \Gamma\prs{\mrm{Lie}\prs{G}} = G\]
+
+אם
+$k = \mbb{R}$
+נקבל כי
+$e^a$
+מכסה את המספרים החיוביים אז
+\[\text{.} \Gamma\prs{\mrm{Lie}\prs{G}} = \set{\mrm{diag}\prs{a_1, \ldots, a_n}}{\forall i \in [n] \colon a_i > 0} \cong \prs{R_{>0}}^n\]
+אם נחשוב על הטופולוגיה של
+$G$
+נגלה שהיא לא קשירה וש־%
+$\Gamma\prs{\mrm{Lie}\prs{G}}$
+רכיב קשירות של
+$G$.
+
+נסמן
+$\mfrak{g} = \mrm{Lie}\prs{G}$.
+ו־%
+$k \in \set{\mbb{R}, \mbb{C}}$.
+אז
+$\exp \colon \mfrak{g} \to G$
+הוא הומומורפיזם בין
+$\prs{\mfrak{g}, +} \cong \prs{k^n, +}$
+ל־%
+$G$.
+כאשר
+$k = \mbb{R}$
+זה איזומורפיזם
+\[\text{.} \exp \colon \mfrak{g} \riso \Gamma\prs{\mrm{Lie}\prs{G}}\]
+אם
+$k = \mbb{C}$,
+יהיה גרעין, כי
+$e^{2 \pi k i} = 1$
+עבור
+$k$
+שלם.
+עבור
+$n = 1$
+למשל, נקבל העתקת כיסוי
+\[\text{.} \exp \colon \prs{\mbb{C}, +} \to \prs{\mbb{C}^\times, \cdot}\]
+\end{example}
+
+\begin{example}
+נחשוב האם
+$\prs{k^n, +}$
+היא חבורת מטריצות, ואם כן מה אלגברת לי שלה.
+
+התשובה היא כן, מתקיים
+\[\text{.} G = \set{\pmat{1 & \cdots & 0 & \cdots & x_1 \\ \vdots & & & & \\ 0 & & \ddots & & \\ \vdots & & & & x_n \\ 0 & \cdots & 0 & \cdots & 1}}{\prs{x_i}_{i \in [n]} \subseteq k} \leq \mrm{GL}_{n+1}\prs{k}\]
+\end{example}
+
+\begin{example}
+מתקיים
+\[\mrm{Lie}\prs{G} = \set{\pmat{0 & \cdots & 0 & \cdots & x_1 \\ \vdots & & & & \\ 0 & & \ddots & & \\ \vdots & & & & x_n \\ 0 & \cdots & 0 & \cdots & 0}}{\prs{x_i}_{i \in [n]} \subseteq k} \leq \mrm{GL}_{n+1}\prs{k}\]
+ו־%
+$\exp \colon \prs{\mrm{Lie}\prs{G}, +} \riso G$
+איזומורפיזם.
+\end{example}
+
+נשים לב כי מתקיים
+\[\det\prs{\exp\prs{X}} = e^{\tr X}\]
+וניתן דוגמאות למשפחות של חבורות לי.
+
+\begin{examples*}[דוגמאות למשפחות של חבורות לי]
+\enumthm
+\begin{enumerate}
+\item \[\mrm{SL}_n\prs{k} = \set{g \in \mrm{GL}_n\prs{k}}{\det\prs{g} = 1}\]
+עם אלגברת לי
+\[* \mfrak{sl}_n\prs{k} = \set{X \in M_n}{\tr\prs{X} = 0}\]
+כפי ששנראה.
+
+
+תהי
+$X \in \mfrak{sl}_n$.
+תהי
+$\gamma\prs{t} = \exp\prs{tX} \in \mrm{SL}_n\prs{k}$.
+אז
+$\gamma\prs{0} = I$
+ו־%
+$\gamma'\prs{0} = X$.
+מתקיים
+\[\mfrak{sl}_n \subseteq \mrm{Lie}\prs{\mrm{SL}_n\prs{k}}\]
+ולמעשה יש שוויון:
+אם
+$\gamma\prs{t} \in \mrm{SL}_n\prs{k}$
+וגם
+$\gamma\prs{0} = I, \gamma'\prs{0} = X$
+מתקיים
+\[0 \underset{\brs{\gamma\prs{t} \in \mrm{SL}_n}}{=} \frac{\diff}{\diff t} \left. \prs{\det\prs{\gamma\prs{t}}}\right._{t=0} = \tr\prs{\gamma'\prs{0}} = \tr\prs{X}\]
+ולכן באמת
+$\mfrak{sl}_n = \mrm{Lie}\prs{\mrm{SL}_n\prs{k}}$.
+
+\item \[\mcal{O}\prs{n} = \set{g \in \mrm{GL}_n\prs{\mbb{R}}}{g^t \cdot g = I}\]
+\item \[SO\prs{n} = \mcal{O}\prs{n} \cap \mrm{SL}_n\prs{\mbb{R}}\]
+עם אלגברת לי
+\[\text{.} \mfrak{so}_n = \set{X \in M_n\prs{\mbb{R}}}{X^t = - X}\]
+\item \[U\prs{n} = \set{g \in \mrm{GL}_n\prs{\mbb{C}}}{\bar{g}^t \cdot g = I}\]
+עם אלגברת לי
+\[\text{.} \mfrak{u}_n = \set{X \in M_n\prs{\mbb{C}}}{\bar{X}^t = - X}\]
+\item \[\mbb{SU}\prs{n} = U\prs{n} \cap \mrm{SL}_n\prs{\mbb{C}}\]
+עם אלגברת לי
+\[\text{.} \mfrak{su}_n = \mfrak{u}_n \cap \mfrak{sl}_n\prs{\mbb{C}}\]
+\end{enumerate}
+\end{examples*}
+
+\begin{proposition}
+\begin{enumerate}
+\item%1
+ מתקיים
+\[\text{.} \mfrak{so}_n = \mrm{Lie}\prs{\mrm{SO}\prs{n}} = \mrm{Lie}\prs{\mcal{O}\prs{n}}\]
+\item%2
+מתקיים
+\[\text{.} \mfrak{su}_n = \mrm{Lie}\prs{\mrm{SU}\prs{n}}\]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item%1
+תהי
+\[\text{.} \gamma \colon \prs{-\eps, \eps} \to \mrm{SO}\prs{n}\]
+אז
+\[\text{.}\forall s \in \prs{-\eps,\eps} \colon \prs{\gamma\prs{s}}^t \gamma\prs{s} = I\]
+נגזור את המשווה ונקבל
+\[\text{.} \frac{\diff}{\diff s} \prs{\gamma\prs{s}^t}_{s = 0} \cdot \cancelto{I}{\gamma\prs{0}} + \cancelto{I}{\gamma\prs{0}^t} \cdot \gamma'\prs{0} = 0\]
+שחלוף מתחלף עם נגזרת, לכן נקבל
+\[\text{.} \gamma'\prs{0}^t + \gamma'\prs{0} = 0\]
+לכן
+$\gamma'\prs{0} \in \mfrak{so}_n$.
+
+להיפך, אם
+\begin{align*}
+\exp\prs{sX}^t &= \sum_{n \in \mbb{N}} \frac{1}{n!} s^n \prs{X^t}^n
+\\&= \exp\prs{sX^t}
+\\&= \exp\prs{-sX}
+\\\text{.} \hphantom{\exp\prs{sX}^t} &= \exp\prs{sX}^{-1}
+\end{align*}
+לכן
+$\exp\prs{sX} \in \mcal{O}\prs{n}$.
+ראינו שאם
+$X \in \mfrak{sl}_n$
+אז
+$\exp\prs{sX} \in \mrm{SL}_n\prs{\mbb{R}}$,
+לכן
+$\gamma\prs{s} = \exp\prs{sX} \in \mrm{SO}\prs{n}$.
+אכן מתקיים
+$\gamma\prs{0} = I, \gamma'\prs{0} = X$.
+
+\item%2
+ההוכחה דומה.
+\end{enumerate}
+\end{proof}
+
 \end{document}
