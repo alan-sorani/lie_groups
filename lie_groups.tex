@@ -1270,4 +1270,441 @@ $\gamma\prs{0} = I, \gamma'\prs{0} = X$.
 \end{enumerate}
 \end{proof}
 
+%9.11.2020
+
+\section{דוגמאות במימדים נמוכים}
+
+\begin{examples*}
+\enumthm
+\begin{enumerate}
+\item $\mcal{O}\prs{1} = \set{\pm 1} \cong \mbb{Z}/2\mbb{Z}$.
+\item \[\mrm{SO}\prs{2} = \set{\pmat{a & -b \\ b & a}}{a^2 + b^2 = 1} = \set{\pmat{\cos \theta & - \sin \theta \\ \sin \theta & \cos \theta}}{\theta \in \mbb{R}} \cong S^1\]
+אלו כל הסיבובים בזווית
+$\theta$.
+\item 
+מתקיים
+\[\text{.}\mcal{O}\prs{2} = \mrm{SO}\prs{2} \sqcup \pmat{0 & 1 \\ 1 & 0} \cdot \mrm{SO}\prs{2}\]
+\item מתקיים
+$\mbb{C}^\times \cong \mrm{GL}_1\prs{\mbb{C}}$.
+כמרחב ממשי
+\[\text{.} \mbb{C} = \spn\set{1,i}\]
+כל
+$z \in \mbb{C} \setminus \set{0}$
+נותן אופרטור הפיך על
+$C \cong \mbb{R}^2$
+על ידי מכפלה. אם נביט במטריצה המייצגת של אופרטור זה ביחס לבסיס
+$\prs{1,i}$
+נקבל ש־%
+$z = a + ib$
+מיוצג על ידי
+$\pmat{a & b \\ - b & a}$.
+
+נקבל שיכון
+\[\text{.} \iota \colon \mrm{GL}_1\prs{\mbb{C}} \rmono \mrm{GL}_2\prs{\mbb{R}}\]
+מתקיים
+\[\text{.} \mrm{U}\prs{1} \eq \set{z \in \mbb{C}}{z \bar{z} = 1} = S^1\]
+אז
+\[\text{.} \iota\prs{\mrm{U}\prs{1}} = \mrm{SO}\prs{2}\]
+זאת מתרחבת להעתקה לינארית
+$\mbb{C} \to M_2\prs{\mbb{R}}$.
+לכן
+$\mrm{U}\prs{1} \cong \mrm{SO}\prs{2}$.
+\item
+מתקיים
+$\mrm{Lie}\prs{\mrm{GL}_1\prs{\mbb{C}}} = \mbb{C}$.
+אם ניקח
+$z \in \mbb{C}$
+נקבל
+\[\text{.} \iota\prs{\exp\prs{z}} = \exp\prs{\iota\prs{z}}\]
+אז מתקיים
+\begin{align*}
+\mrm{Lie}\prs{i\prs{\mrm{U}\prs{1}}} &= \mrm{Lie}\prs{\mrm{SO}\prs{2}}
+\\&=
+\mfrak{so}_2
+\\&=
+\set{\pmat{0 & -\alpha \\ \alpha & 0}}{\alpha \in \mbb{R}}
+\\&=
+i \mbb{R}
+\\\text{.}\hphantom{\mrm{Lie}\prs{i\prs{\mrm{U}\prs{1}}}}&\leq
+\mbb{C}
+\end{align*}
+עבור
+$\pmat{0 & - \alpha \\ \alpha & 0} \in \mfrak{so}_2$
+אכן ניתן להגדיר
+\[\gamma_\alpha\prs{t} \ceq \pmat{\cos\prs{\alpha t} & -\sin\prs{\alpha t} \\ \sin\prs{\alpha t} & \cos\prs{\alpha t}} \in \mrm{SO}\prs{2}\]
+שמקיימת
+$\gamma_\alpha\prs{0} = I, \gamma_{\alpha}'= \pmat{0 & - \alpha \\ \alpha & 0}$.
+\end{enumerate}
+\end{examples*}
+
+\begin{theorem}[משפט הסיבוב של אוילר]
+כל איבר
+$g \in \mrm{SO}\prs{3}$
+הוא סיבוב סביב ציר נתון במרחב.
+
+כלומר, קיימת מטריצה
+$T \in \mrm{SO}\prs{3}$
+עבורה
+\[\text{.} TgT^{-1} = \pmat{\cos \theta & -\sin\theta & 0 \\ \sin \theta & \cos \theta & 0 \\ 0 & 0 & 1}\]
+\end{theorem}
+
+\begin{proof}
+מתקיים
+\begin{align*}
+\det\prs{g - I} &=
+\det\prs{g^t - I}
+\\&=
+\det\prs{g^1 - I}
+\\&=
+\det\prs{g^{-1}\prs{I-g}}
+\\&=
+\det\prs{g^{-1}} \det\prs{I - g}
+\\&=
+\det\prs{I - g}
+\\&=
+\prs{-1}^3 \det\prs{g-I}
+\\&=
+-\det\prs{g-I}
+\end{align*}
+לכן
+$\det\prs{g-I} = 0$.
+לכן
+$1$
+שורש של הפולינום האופייני של
+$g$
+לכן יש ל־%
+$g$
+וקטור עצמי
+$e_3 \in \mbb{R}^3$
+עם ערך עצמי
+$1$.
+נסמן
+$W \ceq \set{e_3}^\perp \leq \mbb{R}^3$.
+אז
+\begin{align*}
+\trs{g \cdot W, e_3} &=
+\trs{W, g^t \cdot e_3}
+\\&=
+\trs{W, g^{-1} e_3}
+\\&=
+\trs{W, e_3}
+\\&=
+\set{0}
+\end{align*}
+לכן
+$W$
+נשמר על ידי
+$g$.
+לכן קיים בסיס אורתונורמלי
+$B$
+שבו
+\[\brs{g}_B = \pmat{h & \\ & 1}\]
+עבור
+$h \in M_2\prs{\mbb{R}}$
+וקיימת
+$T \in \mrm{SO}\prs{2}$
+עבורה
+\[\text{.} T g T^{-1} = \brs{g}_B = \pmat{h & \\ & 1}\]
+לכן
+$h = \pmat{\cos \theta & - \sin\theta \\ \sin \theta & \cos\theta}$
+עבור
+$\theta \in \mbb{R}$
+כלשהי.
+\end{proof}
+
+\begin{remark}
+נכתוב
+\[\pmat{h & \\ & 1} = \exp\prs{Y}\]
+עבור
+\[\text{.} Y = \pmat{0 & \alpha & 0 \\ -\alpha & 0 & 0 \\ 0 & 0 & 0} \in \mfrak{so}_3\]
+אז
+\[g = \Ad\prs{T^{-1}}\prs{\exp\prs{Y}} = \exp\prs{\Ad\prs{T^{-1}}\prs{Y}}\]
+ומתקיים
+\[\text{.} \Ad\prs{T^{-1}}\prs{Y} \in \mfrak{so}_3\]
+אז
+\[\exp \colon \mfrak{so}_3\to\mrm{SO}\prs{3}\]
+הוא על.
+\end{remark}
+
+נזכיר כי מתקיים
+\[\text{.} \mfrak{so}_3 = \set{X \in M_3\prs{\mbb{R}}}{X^t = -X}\]
+נבחר בסיס
+\begin{align*}
+E_1 &= \pmat{0 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & 1 & 0} \\
+E_2 &= \pmat{0 & 0 & 1 \\ 0 & 0 & 0 \\ -1 & 0 & 0} \\
+\text{.} E_3 &= \pmat{0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 0}
+\end{align*}
+ל־%
+$\mfrak{so}_3$.
+נסמן את האיזומורפיזם
+\begin{align*}
+\mfrak{so}_3 &\to \mbb{R}^3 \\
+\alpha_1 E_2 + \alpha_2 E_2 + \alpha_3 E_3 &\mapsto \pmat{\alpha_1 \\ \alpha_2 \\ \alpha_3}
+\end{align*}
+על ידי
+$X \mapsto \vec{X}$.
+
+\begin{lemma}
+\begin{enumerate}
+\item מתקיים
+\[\text{.} \forall X,Y \in \mfrak{so}_3 \colon \overrightarrow{AB}{\brs{X,Y}} = X\prs{\vec{Y}}\]
+\item
+מתקיים
+\[\text{.} \overrightarrow{\Ad\prs{a}\prs{X}} = a\prs{\vec{X}}\]
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\begin{enumerate}
+\item
+מספיק לבדוק על איברי בסיס
+\[\text{.} \overrightarrow{\brs{E_i, E_j}} = E_i \prs{\vec{E_j}}\]
+\item $\exp$
+הוא על.
+נקבל
+\begin{align*}
+\overrightarrow{\Ad\prs{a} \prs{Y}}
+&=
+\overrightarrow{\exp\prs{\ad X}\prs{Y}}
+\\&=
+\overrightarrow{\sum_{n \in \mbb{N}} \frac{1}{n!} \prs{\ad X}^n\prs{Y}}
+\\&=
+\sum_{n \in \mbb{N}} \frac{1}{n!} \overrightarrow{\prs{\ad\prs{X}}^n\prs{Y}}
+\\&=
+\sum_{n \in \mbb{N}} \frac{1}{n!} X^n\prs{\vec{Y}}
+\\&=
+\exp\prs{X} \prs{\vec{Y}}
+\\\text{.} \hphantom{\overrightarrow{\Ad\prs{a} \prs{Y}}} &=
+a\prs{\vec{Y}}
+\end{align*}
+\end{enumerate}
+\end{proof}
+
+\begin{remark}
+הפעולה של
+$\mrm{SO}\prs{3}$
+על
+$\mrm{Lie}\prs{\mrm{SO}\prs{3}}$
+על ידי
+$a \cdot X = \Ad\prs{a}\prs{X}$
+איזומורפית לפעולה הסטנדרטית של
+$\mrm{SO}\prs{3}$
+על
+$\mbb{R}^3$.
+\end{remark}
+
+\begin{proposition}
+\begin{enumerate}
+\item עבור
+$X \in \mfrak{so}_3$
+המטריצה
+$\exp\prs{X}$
+היא סיבוב סביב
+$\vec{X} \in \mbb{R}^3$
+בכיוון יד ימין בזווית
+$\norm{\vec{x}}$.
+\item מתקיים
+$\exp\prs{X} = \exp\prs{Y}$
+אם ורק אם
+$X = c \cdot Y$
+עבור
+$c \in \mbb{R}$
+וגם
+\[\norm{\vec{X} - \vec{Y}} = 2 \pi k\]
+עבור
+$k \in \mbb{Z}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item יהי
+$X \in \mfrak{so}_3$.
+אז יש
+$a \in \mrm{SO}\prs{3}$
+ו־%
+$\alpha = \norm{\vec{X}}$
+עבורם
+\begin{align*}
+\vec{X} &= a \cdot \prs{\vec{E_3}}
+\\&=
+\overrightarrow{AB}{\alpha \cdot \Ad\prs{a} E_3}
+\end{align*}
+ולכן
+\[\text{.} X = \alpha \Ad\prs{a} \prs{E_3} = \Ad\prs{a} \pmat{\pmat{0 & \alpha & 0 \\ - \alpha & 0 & 0 \\ 0 & 0 & 0}}\]
+אז
+\begin{align*}
+\exp\prs{X} &=
+\exp\prs{\Ad\prs{a} \pmat{\pmat{0 & \alpha & 0 \\ - \alpha & 0 & 0 \\ 0 & 0 & 0}}}
+\\
+\text{.} \hphantom{\exp\prs{X}} &= \Ad\prs{a} \pmat{\cos\alpha & - \sin \alpha & 0 \\ \sin \alpha & \cos \alpha & 0 \\ 0 & 0 & 1}
+\end{align*}
+
+אז
+$\exp\prs{X}$
+סיבוב סביב הציר
+\[a \cdot \pmat{0 \\ 0 \\ 1} = a\prs{\vec{E_3}} = \frac{1}{\alpha} \vec{X}\]
+או סביב הציר
+$\vec{X}$.
+הזווית היא
+$\alpha = \norm{\vec{X}}$.
+
+\item
+תרגיל.
+\end{enumerate}
+\end{proof}
+
+\begin{exercise}
+חישבו על
+$\mrm{SO}\prs{2}$
+כמרחב טופולוגי כפי שמתקבל מהטענה.
+$\exp \colon \mfrak{so}_3 \to \mrm{SO}\prs{3}$
+העתקה רציפה ועל.
+\end{exercise}
+
+\begin{example}
+מתקיים
+\[\text{.} \mrm{SU}\prs{2} = \set{A \in \mrm{GL}_2\prs{\mbb{C}}}{\bar{A}^t = A^{-1}} = \set{\pmat{\alpha &- \bar{\beta} \\ \beta & \bar{\alpha}}}{\substack{\abs{\alpha}^2 + \abs{\beta}^2 = 1}}\]
+טופולוגית נוכל לזהות זאת עם
+$S^3$.
+
+מהמשפט הספקטרלי, לכל
+$a \in \mrm{SU}\prs{2}$
+יש
+$g \in \mrm{SU}\prs{2}$
+עבורה
+\[\text{.} g a g^{-1} = \pmat{z & 0 \\ 0 & z^{-1}}\]
+ידוע
+$z^{-1} = \bar{z}$
+לכן
+$z = e^{i\theta}$
+כלומר
+\[g a g^{-1} = \exp \pmat{i\theta & 0 \\ 0 & - i\theta}\]
+ואז
+\[\text{.} a = \Ad\prs{g^{-1}}\exp\pmat{i\theta & \\ & -\theta} = \exp\prs{\Ad\prs{g^{-1}} \pmat{i\theta & \\ & -i\theta}}\]
+לכן
+\[\exp \colon \mfrak{su}_2 \to \mrm{SU}\prs{2}\]
+על.
+מתקיים
+\[\mfrak{su}_2 = \set{\pmat{i \zeta_3 & \zeta_1 - i \zeta_2 \\ \zeta_1 + i\zeta_2 & -i\zeta_3}}{\zeta_i \in \mbb{R}}\]
+ואז
+$\mfrak{su}_2 \cong \mbb{R}^3$
+כשמטריצה כנ"ל מתאימה לוקטור
+$\pmat{\zeta_1 \\ \zeta_2 \\ \zeta_3}$.
+במעבר ל־%
+$\mbb{R}^3$
+מתקבלת המכפלה הפנימית הסטנדרטית.
+
+אם
+$a \in \mrm{SU}\prs{2}$
+ו־%
+$X,Y \in \mfrak{su}_2$
+נקבל
+\begin{align*}
+\trs{\Ad\prs{a}\prs{X}, \Ad\prs{a}\prs{Y}} &=
+\tr\prs{\overline{aX a^{-1}}^t a Y a^{-1}}
+\\&=
+\tr\prs{a \bar{X}^t Y a^{-1}}
+\\\text{.} \hphantom{\trs{\Ad\prs{a}\prs{X}, \Ad\prs{a}\prs{Y}}} &= \trs{X,Y}
+\end{align*}
+
+אז
+\[\Ad \colon \mrm{SU}\prs{2} \to \mrm{GL}\prs{\mfrak{su}_2} \cong \mrm{GL}_3\prs{\mbb{R}}\]
+והאיזומורפיזם נותן
+\[\text{.} \Im \Ad \subseteq \mcal{O}\prs{2}\]
+למעשה גם
+\[\text{.} \Im \Ad \subseteq \mrm{SO}\prs{2}\]
+לכן אפשר במקרה זה להסתכל על
+\[\text{.} \Ad \colon \mrm{SU}\prs{2} \to \mrm{SO}\prs{3}\]
+
+אם
+$Z \in \mfrak{su}_2$
+מתקיים
+\[\text{.} \forall X,Y \in \mfrak{su}_2 \colon \trs{\ad\prs{Z}\prs{X}, Y} = \trs{X, -\ad\prs{Z}\prs{Y}}\]
+אז
+\[\ad \colon \mfrak{su}_2 \to \endo\prs{\mfrak{su}_2} \cong M_3\prs{\mbb{R}}\]
+והמשוואה נותנת בזיהוי זה ש־%
+$\ad\prs{Z}^t = - \ad\prs{Z}$.
+לכן נוכל לחשוב על
+$\ad$
+כהעתקה
+\[\text{.} \ad \colon \mfrak{su}_2 \to \mfrak{so}_2\]
+\end{example}
+
+\begin{proposition}
+\begin{enumerate}
+\item
+\[\ad \colon \mfrak{su}_2 \to \mfrak{so}_3\]
+איזומורפיזם של אלגבראות לי.
+\item
+\[\Ad \colon \mrm{SU}\prs{2} \to \mrm{SO}\prs{3}\]
+היא על ומתקיים
+\[\text{.} \ker \Ad = \set{\pm 1}\]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item משוויון מימדים, מספיק להראות שמתקיים
+\[\text{.} \ker \prs{\ad} = \set{0}\]
+נניח כי
+$X \in \ker \prs{\ad}$
+כלומר
+\[\text{.} \forall Y \in \mfrak{su}_2 \colon \brs{X,Y} = 0\]
+תהי
+$Z \in M_2\prs{\mbb{C}}$.
+אפשר לכתוב
+$Z = U + iV + \alpha I$
+עבור סקלר
+$\alpha \in \mbb{C}$
+ועבור
+$U,V \in \mfrak{su}_2$.
+נקבל
+\begin{otherlanguage}{english}
+\[\text{.} \brs{X, Z} = \brs{X, U} + i \brs{X,V} + \brs{X, \alpha I} = 0+0+0 = 0\]
+\end{otherlanguage}
+
+לכן
+$\brs{X,Z} = 0$
+ולכן
+$X$
+מתחלף עם
+$M_2\prs{\mbb{C}}$.
+לכן יש
+$\beta \in \mbb{C}$
+עבורה
+$X = \beta I$.
+ידוע
+$\tr X = 0$
+לכן
+$\beta = 0$
+ולכן
+$X = 0$.
+
+\item
+חישוב
+$\ker \Ad$
+דומה מאוד לסעיף הקודם.
+$g \in \ker \Ad$
+מתחלפת עם מטריצות כי
+$g a g^{-1} = a$.
+כדי להראות ש־%
+$\Ad$
+יהיה על נשים לב כי
+$\Ad \circ \exp = \exp \circ \ad$
+כאשר
+$\exp, \ad$
+שתיהן על.
+\end{enumerate}
+\end{proof}
+
+\begin{theorem}
+לכל
+$G \leq \mrm{GL}_n\prs{k}$
+ולכן
+$X \in \mrm{Lie}\prs{G}$
+מתקיים
+$\exp\prs{X} \in G$.
+\end{theorem}
+
 \end{document}
