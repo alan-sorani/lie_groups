@@ -1698,13 +1698,674 @@ $\exp, \ad$
 \end{enumerate}
 \end{proof}
 
+%12.11.2020
+
 \begin{theorem}
-לכל
+לכל חבורה
 $G \leq \mrm{GL}_n\prs{k}$
-ולכן
+מתקיים
+$\Gamma\prs{\mrm{Lie}\prs{G}} \leq G$.
+
+במילים אחרות, לכל
+$G \leq \mrm{GL}_n\prs{k}$
+ולכל
 $X \in \mrm{Lie}\prs{G}$
 מתקיים
 $\exp\prs{X} \in G$.
 \end{theorem}
+
+\begin{proof}
+תהי
+$G \leq \mrm{GL}_n\prs{k}$
+ותהי
+$X \in \mrm{Lie}\prs{G}$.
+נוכיח שמתקיים
+$\exp\prs{tX} \in G$
+עבור
+$\abs{t}$
+מספיק קטן.
+אם זה מספיק עבור
+$\abs{t} < \eps$,
+עבור
+$k \in \mbb{Z}$
+עבורו
+$\frac{1}{k}$
+נקבל
+\[\text{.} \exp\prs{\frac{1}{k} X} \in G \implies \exp\prs{X} = \exp\prs{\frac{1}{k}X}^k \in G\]
+
+תהי
+$\mfrak{g} = \mrm{Lie}\prs{G}$
+ונבחר בסיס
+$\prs{X_i}_{i \in [k]}$
+עבור
+$\mfrak{g}$
+כמרחב וקטורי.
+קיימות מסילות
+$a_i\prs{t} \in G$
+כך שמתקיים
+$a_i\prs{0} = I$
+וגם
+$a_i'\prs{0} = X_i$.
+נגדיר
+\[g \colon \mfrak{g} \to G\]
+על ידי
+\[\text{.} g\prs{t_1 X_1 + \ldots + t_k X_k} = a_1\prs{t_1} \cdot \ldots \cdot a_k\prs{t_k}\]
+יהי
+$S$
+תת־מרחב משלים ל־%
+$\mfrak{g}$
+בתוך
+$M_n$.
+
+תהי
+\begin{align*}
+h \colon S &\to M \\
+\text{,} Y &\mapsto I + Y
+\end{align*}
+כך שמתקיים
+$f = g\cdot h$.
+אז
+\begin{align*}
+\prs{\diff h}_0\prs{Y} &= Y \\
+\text{.} \prs{\diff g}_0\prs{X} &= X
+\end{align*}
+
+נגדיר
+\[\text{.} f = g \cdot h \colon M_n \to M_n\]
+אז
+\[\prs{\diff f}_0 = \id, \quad f\prs{0} = I\]
+ובפרט
+$\prs{\diff f}_0$
+הפיכה.
+לכן, לפי משפט הפונקציה ההפוכה
+$f$
+הפיכה מקומית ב־%
+$0$.
+כלומר, קיימות סביבה
+$W_1$
+של
+$I$,
+סביבה
+$W_2$
+של
+$0$,
+והעתקה
+\[f^{-1} \colon W_1 \to W_2 \subseteq M_n = \mfrak{g} \oplus S\]
+שהפכית ל־%
+$f$.
+כיוון שהעתקה לסכום ישר היא סכום העתקות (כי סכום ישר הוא קו־מכפלה) נוכל לכתוב
+$f^{-1} = U+V$
+כאשר
+$U,V$
+העתקות מ־%
+$W_1$
+ל־%
+$\mfrak{g}, S$
+בהתאמה.
+
+נרצה להראות שמתקיים
+$V\prs{\exp\prs{tX}} = 0$
+כיוון שאז נקבל
+\[f^{-1}\prs{\exp\prs{tX}} = g\]
+%TODO fill in
+מספיק להראות
+\[\frac{\diff}{\diff t} \prs{V \prs{\exp\prs{tX}}} = 0\]
+וכיוון שמתקיים
+$a\prs{t} = \exp\prs{tX}$
+צריך לשם כך להראות
+\[\diff V_{a\prs{t}} \cdot X \cdot a\prs{t} = \prs{\diff V}_{a\prs{t}} \cdot a'\prs{t} = \frac{\diff}{\diff t} \prs{V \prs{\exp \prs{tX}}} = 0 \text{.}\]
+נרצה לכן להראות
+\[\prs{\diff V}_a \cdot X \cdot a = 0\]
+לכל מטריצה בסביבת
+$I$
+ולכל
+$X \in \mfrak{g}$.
+מתקיים
+$V \colon M_n \to S$
+ולכן
+$\diff V_a \colon M_n \to S$.
+כעת
+\begin{align*}
+a &= f\prs{X_a, Y_a}
+\\&=
+g\prs{X_a} \cdot h\prs{Y_a}
+\end{align*}
+כאשר
+$X_a \in \mfrak{g}, Y_a \in S$.
+אז
+\begin{align*}
+V\prs{f\prs{X_a + X, Y_a}} = Y_a
+\end{align*}
+לכל
+$X \in \mfrak{g}$.
+כלומר,
+\[\text{.} \prs{\diff V}_a \cdot \prs{\diff f}_{\prs{X_a, Y_a}} \prs{X} = 0\]
+אבל
+\begin{align*}
+\prs{\diff f}_{\prs{X_a, Y_a}}\prs{X} &= \prs{\diff g}_{X_a} \prs{X} \cdot h\prs{Y_a}
+\\\text{.} \hphantom{\prs{\diff f}_{\prs{X_a, Y_a}}\prs{X}}&=
+\prs{\diff g}_{X_a} \cdot X \cdot g\prs{X_a}^{-1} \cdot a  
+\end{align*}
+קיבלנו
+\[\prs{\diff V}_a \cdot \prs{\diff g}_{X_a} \cdot X \cdot g\prs{X_a}^{-1} \cdot a = 0\]
+לכל
+$a$
+בסביבת
+$I$
+ולכל
+$X \in \mfrak{g}$.
+אבל, נרצה
+\[\text{.}\prs{\diff V}_a \cdot X \cdot a = 0\]
+נסמן
+$X' \ceq \prs{\diff g}_{X_a} \cdot X \cdot g\prs{X_a}^{-1}$
+ונשים לב שמתקיים
+$X' = \gamma'\prs{0}$.
+אז
+\[\gamma\prs{t} = g\prs{X_a - tX} \cdot g\prs{X_a}^{-1} \in G\]
+וגם
+$\gamma\prs{0} = I$.
+לכן מהגדרת
+$\mfrak{g}$
+נקבל
+$X'$.
+לכן ההעתקה
+$X \mapsto X'$
+היא העתקה לינארית
+$\mfrak{g} \to \mfrak{g}$.
+אם
+$a = I$
+ו־%
+$f\prs{0,0} = I$
+נקבל
+\[\prs{\diff g}_0 = \id, \quad X_a = 0\]
+ואז
+\[A_I = \id\]
+אופרטור הפיך.
+לכן אם נרחיק את
+$a$
+ממטריצת היחידה קצת, עדיין
+$A_a$
+הפיך, ולכן על.
+\end{proof}
+
+%TODO fill in if anything's left
+
+\chapter{חבורות מטריצות}
+
+\subsection{חבורות מטריצות כחבורות לי}
+
+\section{טופולוגיה על חבורות מטריצות}
+
+\begin{definition}
+ראינו שלכל חבורה
+$G \leq \mrm{GL}_n\prs{k}$
+אפשר לדבר על
+$\exp\prs{X} \in G$
+לכל
+$X \in \mrm{Lie}\prs{G}$.
+
+לכל
+$G \leq \mrm{GL}_n\prs{k}$
+נגדיר טופולוגיה חדשה באופן הבא.
+
+נאמר שקבוצה
+$U \subseteq G$
+פתוחה אם לכל
+$g \in U$
+קיים
+$\eps > 0$
+כך שמתקיים
+$g \cdot \exp\prs{X} \in U$
+לכל
+$X \in \mrm{Lie}\prs{G}$
+המקיים
+$\norm{X} < \eps$.
+
+פורמלית, הקבוצות
+\[B_{g,\eps} = \set{g \cdot \exp\prs{X}}{\substack{X \in \mrm{Lie}\prs{G} \\ \norm{X} < \eps}}\]
+נותנות בסיס לטופולוגיה.
+\end{definition}
+
+\begin{exercise}
+באופן דומה אפשר לקחת בסיס אחר
+$\set{\exp\prs{X} \cdot g}$
+אבל הוא נותן את אותה הטופולוגיה.
+\end{exercise}
+
+\begin{exercise}
+ההעתקות
+\begin{align*}
+\exp \colon \mrm{Lie}\prs{G} &\to G \\
+\cdot \colon G \times G &\to G \\
+\prs{}^{-1} \colon G &\to G
+\end{align*}
+רציפות בטופולוגיה הנ"ל.
+\end{exercise}
+
+\begin{observation}
+קיבלנו שלכל
+$g \in G$
+אם נבחר
+$\eps > 0$
+מספיק קטן יש סביבה
+$B_{g,\eps}$
+של
+$g$
+שהומיאומורפית לקבוצה פתוחה במרחב אוקלידי.
+לכן
+$G$
+יריעה טופולוגית.
+ההעתקות המעבר (בין הקבוצות במרחבים האוקלידיים) יוצאות חלקות ולכן
+$G$
+\emph{יריעה חלקה}.
+
+אכן, אם
+\[h = g_1 \exp\prs{X_1} = g_2 \cdot \exp\prs{X_2}\]
+נקודה בחיתוך של שתי קבוצות פתוחות, ניתן לכתוב
+\[X_1 = \log\prs{g_1^{-1} g_2 \exp\prs{X_2}} \coloneqq \psi\prs{X_2}\]
+ולכן
+$X_1$
+כפונקציה של
+$X_2$
+היא פונקציה חלקה
+$\mbb{R}^n \to \mbb{R}^n$.
+ההופכית שלה חלקה באותו אופן, ולכן זה דיפאומורפיזם.
+\end{observation}
+
+\begin{remark}
+במבנה של
+$G$
+כיריעה חלקה, ההעתקות
+\begin{align*}
+\exp \colon \mrm{Lie}\prs{G} &\to G \\
+\cdot \colon G \times G &\to G \\
+\prs{}^{-1} \colon G &\to G
+\end{align*}
+חלקות.
+\end{remark}
+
+\begin{remark}
+לפעמים הטופולוגיה שהגדרנו מתלכדת עם הטופולוגיה על
+$G$
+כתת־קבוצה של
+$M_n$,
+אבל זה לא נכון תמיד.
+\end{remark}
+
+\begin{example}
+תהי
+$G \ceq \mrm{GL}_n\prs{\mbb{Q}}$.
+כל מסילה חלקה
+$\gamma \colon \prs{-\eps, \eps} \to G$
+קבועה.
+לכן
+$\gamma'\prs{0} = 0$
+ולכן
+$\mrm{Lie}\prs{G} = \set{0}$.
+
+אז
+$B_{g,\eps} = \set{g}$
+ונקבל את הטופולוגיה הדיסקרטית על
+$G$.
+זאת אינה הטופולוגיה היחסית.
+\end{example}
+
+\begin{example}[ישרים על הטורוס]
+תהי
+\[\mbb{T}^2 \ceq \set{\pmat{a & 0 \\ 0 & b}}{\abs{a} = \abs{b} = 1} \leq \mrm{GL}_2\prs{\mbb{C}}\]
+מתקיים
+$\mbb{T}^2 \cong S^1 \times S^1$
+וגם
+\begin{align*}
+\text{.} \mrm{Lie}\prs{\mbb{T}^2} = \set{\pmat{2 \pi i \theta_1 & 0 \\ 0 & 2 \pi i \theta_2}}{\theta_1, \theta_2 \in \mbb{R}}
+\end{align*}
+ניתן לבדוק שהטופולוגיה שעל
+$\mbb{T}^2$
+שהגדרנו בבניית המבנה של היריעה החלקה מתלכדת עם הטופולוגיה המושרית ועם הטופולוגיה על
+$S^1 \times S^1$.
+
+לכל
+$X,Y \in \mfrak{g} \ceq \mrm{Lie}\prs{\mbb{T}^2}$
+מתקיים
+$\brs{X,Y} = 0$.
+לכן כל תת־מרחב של
+$\mfrak{g}$
+הוא אלגברת לי.
+כאן
+\[\exp \colon \prs{\mfrak{g},+} \to \mbb{T}^2\]
+הוא הומומורפיזם של חבורות על ידי
+\[\mbb{R}^2 \to \quot{\mbb{R}^2}{2 \pi \mbb{Z}^2} \cong \mbb{T}^2\]
+כשההעתקה הראשונה היא העתקת המנה.
+
+עבור כל
+$\alpha \in \mbb{R}$
+ניקח תת־אלגברה
+\[\text{.} \mfrak{g}_\alpha = \set{\mrm{diag}\prs{2 \pi i \alpha \theta, 2 \pi i \theta}}{\theta \in \mbb{R}}\]
+אז
+\[\mfrak{g}_\alpha = \mrm{Lie}\prs{G_\alpha}\]
+כאשר
+\[\text{.} G_\alpha \ceq \set{\mrm{diag}\prs{e^{2 \pi i \alpha \theta}, e^{2 \pi i \theta}}}{\theta \in \mbb{R}}\]
+נגדיר
+\[\gamma_\alpha\prs{\theta} = \mrm{diag}\prs{e^{2 \pi i \alpha \theta}, e^{2 \pi i \theta}}\]
+ואם
+$\alpha = \frac{m}{n} \in \mbb{Q}$
+מתקיים
+$\gamma_\alpha\prs{n} = 1$.
+במקרה זה
+$G_\alpha$
+לולאה סגורה הומיאומורפית ל־%
+$S^1$.
+אם
+$\alpha \notin \mbb{Q}$
+נקבל כי
+$G_\alpha$
+לולאה פתוחה (וצפופה) שהומיאומורפית ל־%
+$\mbb{R}$.
+אפשר להשתכנע שהטופולוגיה שהגדרנו על
+$G_\alpha$
+אכן מתאימה לזאת של
+$\mbb{R}$,
+ובמקרה זה הטופולוגיה המושרית על
+$G_\alpha$
+בתוך
+$\mbb{T}^2$
+היא אחרת.
+
+נוכיח שלכל
+$\eps > 0$
+יש
+$\theta$
+גדולה כרצוננו כך שמתקיים
+$\abs{\gamma\prs{\alpha}\prs{\theta} - I} < \eps$.
+נביט בחבורה
+\[S^1 = \set{\mrm{diag}\prs{z,1}}{\abs{z} = 1}\]
+ובחבורה
+\[\text{.} H \ceq G_\alpha \cap S^1 \leq S^1\]
+אם
+$H$
+סופית, קיים
+$d \in \mbb{N}$
+עבורו
+\[\gamma_\alpha\prs{d} = \gamma_\alpha\prs{1}^d = 1\]
+שזאת סטירה לאי־רציונליות של
+$\alpha$.
+לכן
+$H$
+אינסופית.
+מקומפקטיות של
+$S^1$
+נקבל
+$k_1, k_2 \in \mbb{Z}$
+עבורם
+\[\text{.} \abs{\gamma_\alpha\prs{k_1 - k_2} - I} = \abs{\gamma_\alpha\prs{k_1} - \gamma_\alpha\prs{k_2}} < \eps\]
+\end{example}
+
+עבור כל חבורת מטריצות
+$G$
+החבורה
+$G^\circ = \Gamma\prs{\mrm{Lie}\prs{G}}$
+היא תת־החבורה של
+$G$
+הנוצרת על ידי איברים מהצורה
+$\exp\prs{X}$.
+
+\begin{proposition}
+\begin{enumerate}
+\item $G^\circ$
+תת־חבורה נורמלית וקשירה ב־%
+$G$.
+\item אם
+$G$
+קשירה מתקיים
+$G = G^\circ$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item עבור
+\[a = \exp\prs{X_1} \cdot \ldots \cdot \exp\prs{X_k}\]
+המסילה
+\[\gamma\prs{t} = \exp\prs{t X_1} \cdot \ldots \cdot \exp\prs{t X_k}\]
+מסילה רציפה שמקשרת בין
+$a,I$.
+מתקיים גם
+\[\forall g \in G \colon \mrm{Ad}\prs{g}\prs{a} = \exp\prs{\mrm{Ad}\prs{a}\prs{X_1}} \cdot \ldots \cdot \exp\prs{\mrm{Ad}\prs{a} \prs{X_k}} \in \mrm{Lie}\prs{G}\]
+לכן
+$G^\circ$
+נורמלית.
+\item
+$G^\circ$
+מכילה סביבה פתוחה
+$U$
+של
+$I$,
+למשל
+$U = B_{I,\eps}$.
+מתקיים
+\[G^\circ = \bigcup_{g \in G^\circ} g \cdot U\]
+וזה איחוד של קבוצות פתוחות. לכן
+$G^\circ$
+פתוחה.
+תת־חבורה פתוחה של חבורה טופולוגית היא גם סגורה, כי הקוסטים שלה ב־%
+$G$
+פתוחים.
+לכן
+$G$
+פתוחה וסגורה, ולכן קשירה. לכן
+$G = G^\circ$.
+באופן דומה, איברי
+$G/G^\circ$
+פתוחים וסגורים ולכן הינם רכיבי הקשירות של
+$G$.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}
+$G^\circ$
+רכיב הקשירות של
+$I \in G$.
+\end{corollary}
+
+\begin{corollary}
+$G \leq \mrm{GL}_n$
+קשירה בטופולוגיה שהגדרנו אם ורק אם
+$\Gamma\prs{\mrm{Lie}\prs{G}} = G$.
+\end{corollary}
+
+\begin{remark}
+בעתיד נוכיח שאם
+$G \leq \mrm{GL}_n$
+היא סגורה בטופולוגיה המושרית, הטופולוגיה שהגדרנו מתלכדת עם הטופולוגיה היחסית.
+\end{remark}
+
+\begin{example}
+לכל
+$X \in M_n\prs{\mbb{R}}$
+מתקיים
+\[\text{.} \det\prs{\exp\prs{X}} = e^{\tr\prs{X}} > 0\]
+אז
+\[\text{.}\mrm{GL}_n\prs{\mbb{R}}^\circ \subseteq \mrm{GL}_n\prs{\mbb{R}}^+ \ceq \set{A \in \mrm{GL}_n\prs{\mbb{R}}}{\det\prs{A} > 0}\]
+למעשה, ראינו בתרגיל ש־%
+$\mrm{GL}_n\prs{\mbb{R}}^+$
+קשירה.
+לכן יש שוויון
+\[\text{.} \mrm{GL}_n\prs{\mbb{R}}^\circ = \mrm{GL}_n\prs{\mbb{R}}^+\]
+\end{example}
+
+\begin{example}
+ראינו שקיימת
+$g \in \mcal{O}\prs{n}$
+עבורה
+\[\text{.} \mcal{O}\prs{n} = \mrm{SO}\prs{n} \cup g \cdot \mrm{SO}\prs{n}\]
+ראינו גם שמתקיים
+\[\mfrak{so}_3 = \mrm{Lie}\prs{\mrm{SO}\prs{3}}\]
+ושמתקיים
+\[\Gamma\prs{\mfrak{so}_3} = \mrm{SO}\prs{3}\]
+לכן
+\[\text{.} \mrm{SO}\prs{3} = \mrm{SO}\prs{3}^\circ = \mcal{O}\prs{3}^\circ\]
+\end{example}
+
+\begin{example}
+תהי
+\[\text{.} \mrm{O}\prs{1,1} \ceq \set{A \in \mrm{GL}_n\prs{\mbb{R}}}{A \pmat{1 & 0 \\ 0 & - 1} A^t = \pmat{1 & 0 \\ 0 & - 1}}\]
+עבור
+$A \in \mrm{O}\prs{1,1}$
+מתקיים
+\[\det\prs{A} \cdot \det \pmat{1 & \\ & -1} \cdot \det\prs{A^t} = \det\pmat{1 & \\ & -1}\]
+לכן
+$\det\prs{A}^2 = 1$
+לכן
+$\det\prs{A} = \pm 1$.
+מתקיים
+$\pmat{1 & 0 \\ 0 & - 1} \in \mrm{O}\prs{1,1}$
+וגם
+\[\mrm{O}\prs{1,1} = \mrm{SO}\prs{1,1} \cup \pmat{1 & 0 \\ 0 & - 1} \mrm{SO}\prs{1,1}\]
+עבור
+\[\text{.} \mrm{SO}\prs{1,1} \ceq \mrm{O}\prs{1,1} \cap \mrm{SL}_n\prs{\mbb{R}}\]
+
+החבורה
+$\mrm{SO}\prs{1,1}$
+אינה קשירה.
+מתקיים
+\[\mfrak{g} = \mrm{Lie}\prs{\mrm{O}\prs{1,1}}\]
+ואם נגזור את
+$\gamma \colon \prs{-\eps, \eps} \to \mrm{O}\prs{1,1}$
+עם
+$\gamma\prs{0} = I$
+נקבל
+\[\text{.}\gamma'\prs{0} \pmat{1 & 0 \\ 0 & - 1} + \pmat{1 & 0 \\ 0 & - 1} \gamma'\prs{0}^t = 0\]
+אז
+\begin{align*}
+\text{.} \mfrak{g} = \set{X \in M_2\prs{\mbb{R}}}{A \pmat{1 & 0 \\ 0 & - 1} + \pmat{1 & 0 \\ 0 & - 1} A^t = 0} = \set{\pmat{0 & a \\ a & 0}}{a \in \mbb{R}}
+\end{align*}
+זאת חבורה חד־מימדית.
+נקבל
+\[\mrm{O}\prs{1,1}^\circ = \mrm{SO}\prs{1,1}^\circ = \set{\exp\pmat{0 & a \\ a & 0}}{a \in \mbb{R}}\]
+והאיברים בחבורה זאת נקראים סיבובים היפרבוליים.
+
+נסמן
+\[\text{.} C \ceq \frac{1}{2} \pmat{1 & - 1 \\ 1 & 1} \in \mrm{SO}\prs{2}\]
+אז
+\begin{otherlanguage}{english}
+\begin{align*}
+\exp\pmat{0 & a \\ a & 0} &=
+\exp\prs{C \pmat{2a & \\ & -2a} C^{-1}}
+\\&=
+C \pmat{e^{2 a} & \\ & e^{-2a}} C^{-1}
+\\ \text{.} \hphantom{\exp\pmat{0 & a \\ a & 0}} &=
+\pmat{\cosh\prs{2a} & \sinh\prs{2a} \\ \sinh\prs{2a} & \cosh\prs{2a}}
+\end{align*}
+\end{otherlanguage}
+
+בבסיס המלכסן אלו העתקות מהצורה
+$\pmat{t & 0 \\ 0 & t^{-1}}$
+עבור
+$t > 0$.
+העתקות אלה מקיימות
+\[xy = \prs{tx}\prs{t^{-1}y}\]
+ולכן משמרות את ההיפרבולה.
+
+מתקיים למשל
+\begin{align*}
+-I \in \mrm{SO}\prs{1,1} \setminus \mrm{SO}\prs{1,1}^\circ
+\end{align*}
+ולמעשה
+\begin{align*}
+\brs{\mrm{SO}\prs{1,1} : \mrm{SO}\prs{1,1}^\circ} &= 2 \\
+\text{.}\brs{\mrm{O}\prs{1,1} : \mrm{O}\prs{1,1}^\circ} &= 4
+\end{align*}
+בדקו זאת וחשבו בנוסף מהי החבורה הסופית
+$\quot{\mrm{O}\prs{1,1}}{\mrm{O}\prs{1,1}^\circ}$.
+\end{example}
+
+\begin{definition}
+לכל
+$G$,
+החבורה
+$\quot{G}{G^\circ}$
+נקראת ה־%
+\textenglish{component group}
+של
+$G$.
+\end{definition}
+
+\begin{example}
+עבור
+$G \ceq \mrm{GL}_n\prs{\mbb{Q}}$
+מתקיים
+$\quot{G}{G^\circ} \cong G$.
+\end{example}
+
+\subsection{חבורות לי אבליות}
+
+\begin{proposition}
+תהי
+$G \leq \mrm{GL}_n\prs{k}$
+קשירה.
+$G$
+אבלית אם ורק אם
+$\mrm{Lie}\prs{G}$
+אבלית (כלומר
+$\brs{X,Y} = 0$
+לכל
+$X,Y \in \mrm{Lie}\prs{G}$).
+\end{proposition}
+
+\begin{proof}
+נניח כי
+$G$
+אבלית ותהיינה
+$X,Y \in \mrm{Lie}\prs{G}$.
+מתקיים
+\begin{align*}
+\text{.} \gamma\prs{s,t} \ceq \Ad\prs{\exp\prs{tX}} \prs{\exp\prs{sY}} = \exp\prs{sY}
+\end{align*}
+נגזור ב-%
+$0$
+לפי
+$s$
+ונקבל
+\begin{align*}
+\text{.} \exp\prs{tX} \cdot Y \cdot \exp\prs{-tX} = \Ad\prs{\exp\prs{tX}}\prs{Y} = Y
+\end{align*}
+נגזור ב־%
+$t = 0$
+ונקבל
+$XY - YX = 0$.
+
+בכיוון השני, נניח כי
+$\mrm{Lie}\prs{G}$
+אבלית וכי
+$G$.
+אז
+\[\forall X,Y \in \mrm{Lie}\prs{G} \colon \exp\prs{X} \exp\prs{Y} = \exp\prs{Y}\exp\prs{X}\]
+אז
+$\Gamma^\circ =\Gamma\prs{\mrm{Lie}}\prs{G}$
+אבלית, ומתקיים
+$G^\circ = G$
+כי
+$G$
+קשירה.
+\end{proof}
+
+\begin{remark}
+נניח כי
+$G$
+קשירה ואבלית. אז
+$\exp \colon \mfrak{g} \to G$
+הומומורפיזם מ־%
+$\prs{\mfrak{g}, +}$
+ל־%
+$\prs{G, \cdot}$.
+אז אפשר לכתוב
+\[G = \quot{\prs{\mfrak{g}, +}}{L}\]
+כאשר
+\[\text{.} L \ceq \ker \exp = \set{x \in \mfrak{g}}{\exp\prs{X} = 1}\]
+
+לפעמים
+$G$
+כזאת נקראת טורוס (מוכלל).
+\end{remark}
 
 \end{document}

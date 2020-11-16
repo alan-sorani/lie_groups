@@ -21,3 +21,9 @@
 \contentsline {section}{\numberline {2.2}דוגמאות במימדים נמוכים}{19}{section.2.2}%
 \babel@toc {english}{}
 \babel@toc {hebrew}{}
+\contentsline {chapter}{\numberline {3}חבורות מטריצות}{25}{chapter.3}%
+\contentsline {subsection}{\numberline {3.0.1}חבורות מטריצות כחבורות לי}{25}{subsection.3.0.1}%
+\contentsline {section}{\numberline {3.1}טופולוגיה על חבורות מטריצות}{25}{section.3.1}%
+\babel@toc {english}{}
+\babel@toc {hebrew}{}
+\contentsline {subsection}{\numberline {3.1.1}חבורות לי אבליות}{28}{subsection.3.1.1}%
