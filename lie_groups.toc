@@ -27,3 +27,8 @@
 \babel@toc {english}{}
 \babel@toc {hebrew}{}
 \contentsline {subsection}{\numberline {3.1.1}חבורות לי אבליות}{28}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}חזרה להתאמת לי}{30}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}הומומורפיזמים}{32}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}הגדרה}{32}{subsection.3.2.1}%
+\babel@toc {english}{}
+\babel@toc {hebrew}{}

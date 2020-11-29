@@ -1,6 +1,7 @@
 \documentclass[10pt, twoside]{book}
 
 \usepackage{hyperref}
+\usepackage{stmaryrd}
 
 %%%%%%%%%%%%
 % Geometry %
@@ -10,7 +11,7 @@
 \geometry{
 	 a4paper,
 	 inner=10mm,
-	 outer=30mm,
+	 outer=10mm,
 	 marginparwidth = 20mm,
 	 top = 20mm,
 	 bottom = 20mm
@@ -40,6 +41,8 @@
 \usepackage{math-graphics}
 \usepackage{math-symbols}
 \usepackage{math-theorems-heb}
+
+\newcommand{\Lie}{\mrm{Lie}}
 
 %%%%%%%%%
 % Title %
@@ -1888,8 +1891,6 @@ $A_a$
 הפיך, ולכן על.
 \end{proof}
 
-%TODO fill in if anything's left
-
 \chapter{חבורות מטריצות}
 
 \subsection{חבורות מטריצות כחבורות לי}
@@ -2366,6 +2367,657 @@ $\prs{G, \cdot}$.
 לפעמים
 $G$
 כזאת נקראת טורוס (מוכלל).
+\end{remark}
+
+%19.11.2020
+
+\begin{remark}
+כל חבורה סופית
+$G$
+אפשר לשכן בתוך
+$S_n$.
+יש גם שיכון
+\[i \colon S_n \to \mrm{GL}_n\prs{\mbb{R}}\]
+על ידי מטריצות פרמוטציה על הבסיס הסטנדרטי.
+
+באופן זה אפשר לחשוב על כל חבורה סופית כחבורת מטריצות. ל־%
+$G$
+סופית נקבל
+$\mrm{Lie}\prs{G} = \set{0}$.
+לכן הטופולוגיה של
+$G$
+כחבורת לי היא דיסקרטית.
+
+נשים לב ש־%
+$\mrm{Lie}\prs{G}$
+אבלית, בעוד
+$G$
+לאו דווקא אבלית. זה מתאפשר כי
+$G^\circ = \set{\id} \subsetneq G$.
+על כל חבורה סופית אפשר לחשוב כחבורת לי לא־קשירה עם
+$G^\circ$
+טריוויאלי.
+\end{remark}
+
+\begin{definition}[טורוס
+$n$%
+־מימדי]
+נגדיר
+\[\text{.} \mbb{T}^n \ceq \set{\mrm{diag}\prs{e^{i \theta_1}, \ldots, e^{i \theta_n}}}{\prs{\theta_i}_{i \in [n]} \subseteq \mbb{R}} \leq \mrm{GL}_n\prs{\mbb{C}}\]
+\end{definition}
+
+\begin{remark}
+$\prs{S^1}^n \cong \mbb{T}^n$
+כחבורות לי, וההעתקה
+\begin{align*}
+\exp \colon \mbb{R}^n \cong \mrm{Lie}\prs{\mbb{T}^n} &\to \mbb{T}^n \\
+\end{align*}
+היא הומומורפיזם על.
+אז
+\[\text{.}\mbb{T}^n \cong \quot{\mbb{R}^n}{\ker\prs{\exp}} = \quot{\mbb{R}^n}{\mbb{Z}^n}\]
+\end{remark}
+
+\begin{example}
+$\prs{\mbb{R}^n, +}$
+זאת חבורת מטריצות אבלית קשירה על ידי שיכון כמטריצות
+$\pmat{& & & * \\ & I_n & & \vdots \\ & & & * \\ & 0 & & 1}$.
+לחילופין, מתקיים
+\begin{align*}
+\prs{\prs{\mbb{R}^\times}^n}^\circ &\cong \set{\mrm{diag}\prs{e^{\theta_1}, \ldots, e^{\theta_n}}}{\prs{\theta_i}_{i \in [n]} \subseteq \mbb{R}} \\
+\text{.} \prs{\mbb{R}^\times}^n &\cong \set{\mrm{diag}\prs{x_1, \ldots, x_n}}{\forall i \in [n] \colon x_i \neq 0}
+\end{align*}
+אז
+\begin{align*}
+\mbb{R} &\cong \prs{\mbb{R}^\times}^\circ \\
+x &\mapsto e^x \\
+\log\prs{y} &\mapsfrom y
+\end{align*}
+איזומורפיזם.
+נקבל כי
+$\exp \colon \mbb{R}^n \to \prs{\prs{\mbb{R}^\times}^n}^\circ$
+איזומורפיזם.
+\end{example}
+
+\begin{proposition}
+תהי
+$G$
+חבורה קשירה אבלית. אז
+\[\exp \colon \mrm{Lie}\prs{G} \to G\]
+הוא הומומורפיזם על ומתקיים
+\[G \cong \quot{\mrm{Lie}\prs{G}}{\ker\prs{\exp}}\]
+כאשר
+$\ker\prs{\exp}$
+תת־חבורה דיסקרטית בתוך
+$\prs{\mrm{Lie}\prs{G}, +}$.
+\end{proposition}
+
+\begin{theorem}\label{theorem:quotient_by_discrete}
+עבור
+$V$
+מרחב וקטורי ממשי ו־%
+$L \leq V$
+תת־חבורה דיסקרטית יש
+$k,n$
+עבורם
+\[\text{.} \quot{V}{L} \cong \mbb{T}^k \times \mbb{R}^n\]
+\end{theorem}
+
+\begin{corollary}
+כל חבורת מטריצות אבלית קשירה היא מהצורה
+$\mbb{T}^k \times \mbb{R}^n$.
+\end{corollary}
+
+\begin{lemma}\label{lemma:groups_are_lattices}
+תהי
+$L \leq V$
+תת־חבורה דיסקרטית של מרחב וקטורי ממשי. אז קיימים וקטורים בלתי־תלויים לינארית
+$\prs{u_i}_{i \in \brs{n}}$
+עבורם
+\[\text{.} L = \spn_{\mbb{Z}}\prs{u_i}_{i \in \brs{n}}\]
+\end{lemma}
+
+\begin{proof}
+נבנה באינדוקציה וקטורים
+$\prs{u_i}_{i \in \brs{r}}$
+בלתי־תלויים לינארית ב־%
+$V$
+עבורם
+\[\text{.} L \cap \spn_{\mbb{R}}\prs{u_1, \ldots, u_r} = \spn_{\mbb{Z}} \prs{u_1, \ldots, u_r}\]
+אם
+$L \subseteq \spn_{\mbb{R}} \prs{u_1, \ldots, u_r}$
+סיימנו.
+אחרת קיים
+$u \in \mbb{L}$
+בלתי־תלוי לינארית ב־%
+$\prs{u_1, \ldots, u_r}$.
+תהי
+\[P = \set{\sum_{i \in \brs{r}} \alpha_i u_i + \beta u}{\substack{\prs{\alpha_i}_{i \in [r]} \subseteq \brs{0,1} \\ \beta \in \brs{0,1}}} \subseteq V\]
+שהינה קומפקטית.
+אז
+\[u \in P \cap L \cong \set{0}\]
+וזאת קבוצה סופית כחיתוך של קומפקטית ודיסקרטית.
+תהי
+$v \in P \cap L$
+עם
+$\beta \neq 0$
+מינימלי.
+אז לכל
+$x \in L \cap \spn_{\mbb{R}}\prs{u_1, \ldots, u_r, u}$
+קיים
+$n \in \mbb{Z}$
+עבורו
+\[\text{.} x - nv \in L \cap \spn_{\mbb{R}}\prs{u_1, \ldots, u_R} = \spn_{\mbb{Z}}\prs{u_1, \ldots, u_r}\]
+(אחרת היינו מוצאים
+$n \in \mbb{Z}$
+שיתן סתירה למינימליות של
+$\beta$).
+\end{proof}
+
+\begin{proof}[\ref{theorem:quotient_by_discrete}]
+מ־%
+\ref{lemma:groups_are_lattices}
+יש ל־%
+$L$
+בסיס
+$\prs{u_i}_{i \in \brs{m}}$.
+נשלים אותו לבסיס
+$\prs{u_i}_{i \in \brs{k}}$
+של
+$V$
+ואז
+$V \cong \mbb{R}^k$
+לפי הבסיס. נקבל
+\[L \cong \mbb{Z}^m \times \set{0} \leq \mbb{R}^m \times \mbb{R}^{k-m}\]
+ואז
+\[\text{.} \quot{V}{L} \cong \quot{\mbb{R}^m}{\mbb{Z}^m} \times \mbb{R}^{k-m}\]
+\end{proof}
+
+\begin{remark}
+לפעמים, בהקשר של חבורות אלגבריות, חבורות אלגבריות קשירות נקראות טורוסים.
+\end{remark}
+
+\subsection{חזרה להתאמת לי}
+
+נרצה שלכל אלגברת לי נתונה
+$\mfrak{g} \leq M_n$
+יתקיים
+\[\text{.} \mfrak{g} = \mrm{Lie}\prs{\Gamma}\prs{\mfrak{g}}\]
+לכל
+$X \in \mfrak{g}$
+אנו יודעים
+$\exp\prs{tX} \in \Gamma\prs{\mfrak{g}}$.
+לכן לפי ההגדרה נקבל
+\[X \in \mrm{Lie}\prs{\Gamma\prs{\mfrak{g}}}\]
+ולכן
+\[\text{.} \mfrak{g} \subseteq \mrm{Lie}\prs{\Gamma\prs{\mfrak{g}}}\]
+נרצה לתאר את
+$\Gamma\prs{\mfrak{g}}$
+באופן יותר קונקרטי ונרצה להראות במובן מסוים שהיא לא גדולה מדי.
+
+מכך ש־%
+$\exp\prs{X} = \exp\prs{\frac{1}{k} X}^k$
+נובע שלכל סביבה
+$U \in \mfrak{g}$
+של
+$0$
+מתקיים
+\[\text{.} \Gamma\prs{\mfrak{g}} = \bigcup_{k \in \mbb{N}_+} \exp\prs{U}^k = \bigcup_{k \in \mbb{N}_+} \exp\prs{\bar{U}}^k\]
+נרצה להיפטר מהחזקות ולשם כך נוכל לכתוב
+\[\text{.} \Gamma\prs{\mfrak{g}} = \bigcup_{g \in \Gamma\prs{\mfrak{g}}} g \cdot \exp\prs{\bar{U}}\]
+
+נרצה להיות מסוגלים לכתוב את
+$\Gamma\prs{\mfrak{g}}$
+כאיחוד בן מניה באופן דומה.
+זה מתאפשר, וינבע מהמהות של נוסחת
+\textenglish{Baker-Cambell-Hausdorff},
+מזה שקיימת העתקה
+\[C \colon \mfrak{g} \times \mfrak{g} \to \mfrak{g}\]
+מוגדרת בסביבת אפס.
+
+%LECTURE 10 
+
+ראינו כי עבור
+$G$
+חבורת מטריצות קשירה מתקיים
+\[\text{.} G = \Gamma\prs{\mrm{Lie}\prs{G}}\]
+נרצה בעצם תיאור כלשהו של כל
+$G$
+על ידי
+$\exp$.
+ראינו שמתקיים
+\[\text{.} \Gamma\prs{\mfrak{g}} = \bigcup_{k \in \mbb{N}_+} \exp\prs{U}^k\]
+עבור
+$U \subseteq \mfrak{g}$
+סביבה פתוחה של
+$0$.
+
+ניזכר שעבור
+$X,Y \in \mfrak{g}$
+מתקיים
+\[C\prs{X,Y} = \log\prs{\exp\prs{X} \exp\prs{Y}} \in \mfrak{g}\]
+כאשר זה מוגדר.
+נגדיר
+\[I_X\prs{Y} \ceq C\prs{X,Y}\]
+ואז
+$I_0\prs{Y} = Y$.
+לכן מתקיים
+\begin{align*}
+\text{.} \prs{\diff\prs{I_0}}_0 = \id
+\end{align*}
+מרציפות נקבל כי
+$\prs{\diff I_X}_0$
+הפיכה עבור
+$X$
+מספיק קטן.
+ממשפט הפונקציה ההפוכה קיימת סביבה
+$U \subseteq \mfrak{g}$
+של
+$0$
+כך שעבור
+$X$
+מספיק קטן הקבוצה
+\[I_X\prs{U} = C\prs{X,U}\]
+פתוחה (בדקו למה
+$U$
+אחידה לכל
+$X$
+מספיק קטן).
+
+תהי
+\[V \ceq C\prs{U,U}\]
+ותהי
+\[\text{.} V' = C\prs{\bar{U}, \bar{U}}\]
+אז
+$V'$
+קומפקטית כתמונה רציפה של קבוצה קומפקטית
+$\bar{U} \times \bar{U}$.
+מתקיים
+\[V' \subseteq \bigcup_{X \in V'} C\prs{X,U}\]
+אם בוחרים
+$V'$
+מספיק קטנה, וזה איחוד של קבוצות פתוחות ולכן פתוח.
+מקומפקטיות, קיימת קבוצה סופית
+$\set{X_i}{i \in [n]} \subseteq V'$
+כך שמתקיים
+\[\text{.} V' \subseteq \bigcup_{i \in [n]} C\prs{X_i, U}\]
+לכל
+$i \in [n]$
+נסמן
+$a_i = \exp\prs{X_i}$.
+על ידי לקיחת אקספוננט נקבל
+\[\text{.} \exp\prs{\bar{U}} \exp\prs{\bar{U}} \subseteq \bigcup_{i \in [n]} a_i \cdot \exp\prs{\bar{U}}\]
+
+אם נמשיך באינדוקציה נקבל
+\[\bigcup_{k=1}^{\infty} \exp\prs{\bar{U}}^k \subseteq \bigcup_b b \cdot \exp\prs{\bar{U}}\]
+כאשר
+$b$
+רץ על מילים באותיות
+$\set{a_i}{i \in [n]}$.
+
+\begin{theorem}
+לכל אלגברת לי
+$\mfrak{g}$
+של מטריצות מתקיים
+$\mfrak{g} = \mrm{Lie}\prs{\Gamma\prs{\mfrak{g}}}$.
+\end{theorem}
+
+\begin{proof}
+עבור
+$X \in \mfrak{g}$
+יש מסילה
+\[\gamma\prs{t} = \exp\prs{tx} \in \Gamma\prs{\mfrak{g}}\]
+עם
+\[\text{.} X = \gamma'\prs{0} \in \mrm{Lie}\prs{\Gamma\prs{\mfrak{g}}}\]
+לכן
+$\mfrak{g} \subseteq \mrm{Lie}\prs{\Gamma\prs{\mfrak{g}}}$.
+
+להכלה ההפוכה, נראה שקיימת סביבה פתוחה
+$U \subseteq \mfrak{g}$
+של
+$0$
+וקיים
+$c \in \Gamma\prs{\mfrak{g}}$
+כך שהקבוצה
+$c \exp\prs{U}$
+פתוחה בטופולוגיה של
+$\Gamma\prs{\mfrak{g}}$.
+אכן,
+$\Gamma\prs{\mfrak{g}}$
+מרחב טופולוגי קומפקטי מקומית והאוסדורף שהוא איחוד בן מנייה של קבוצות סגורות מהצורה
+$c \cdot \exp\prs{\bar{U}}$.
+לפי משפט הקטגוריה של בייר, אחת הקבוצות
+$c \cdot \exp\prs{\bar{U}}$
+פתוחה.
+אפשר להניח (בדקו!) ש־%
+$c \cdot \exp\prs{U}$
+צפופה ופתוחה בתוך
+$c \cdot \exp\prs{\bar{U}}$
+ומכאן
+$c \cdot \exp\prs{U}$
+פתוחה בעצמה ב־%
+$\Gamma\prs{\mfrak{g}}$.
+
+אפשר להניח ש־%
+$c \cdot \exp\prs{U} \subseteq B\prs{c, \eps}$
+עבור
+$c,\eps$.
+אז
+$U \subseteq \mrm{Lie}\prs{\Gamma\prs{\mfrak{g}}}$
+פתוחה כי
+$\exp$
+הומיאומורפיזם, אבל אם
+$\mfrak{g}$
+תת־מרחב ממימד קטן יותר זה לא יכול לקרות (כי תת־מרחב לא יכול להכיל קבוצה פתוחה).
+\end{proof}
+
+\begin{theorem}
+בהינתן חבורת מטריצות
+$G$
+קיימת התאמה חד־חד ערכית בין אוסף כל התת־חבורות הקשירות
+$H \leq G$
+לבין אוסף כל התת־אלגבראות לי
+$\mfrak{h} \leq \mrm{Lie}\prs{G}$.
+\end{theorem}
+
+\begin{proof}
+זה נובע מכך שההתאמה שהראנו בין אלגבראות לי לחבורות שומרת על סדר הכלה.
+\end{proof}
+
+\begin{proposition}
+תהי
+$G \leq \mrm{GL}_n\prs{k}$
+ונניח שמתקיים
+$G = G^\circ$.
+יש התאמ בין תת־אלגבראות לי
+$\mfrak{h} \leq \mrm{Lie}\prs{G}$
+שמקיימות
+\[\brs{\mrm{Lie}\prs{G}, \mfrak{h}} \subseteq \mfrak{h}\]
+(ונקראות אידאלים), לבין תת-חבורות נורמליות קשירות
+$H \ideal G$.
+\end{proposition}
+
+\begin{proof}
+נניח כי
+$H$
+ו־%
+$\mfrak{h}$
+קשורות בהתאמת לי.
+
+נניח כי
+$H$
+ת"ח נורמלית. אז
+\begin{align*}
+\forall X \in \mrm{Lie}\prs{G} \forall Y \in \mfrak{h} \colon \brs{X,Y} &= \frac{\diff}{\diff t} \rest{\prs{\Ad \prs{\exp\prs{tx}}\prs{Y}}}{t=0}
+\end{align*}
+כי
+\begin{align*}
+\frac{\diff}{\diff t} \prs{\exp\prs{tx} Y \exp\prs{-tX}} = X \exp\prs{tX} Y \exp\prs{-tX} + \exp\prs{tX} Y \exp\prs{-tX} \prs{-X}
+\end{align*}
+וב־%
+$t = 0$
+מקבלים
+$XY - YX$.
+מתקיים
+\[\Ad\prs{\exp\prs{tX}} \colon H \to H\]
+וגם
+\[\Ad\prs{\exp\prs{tX}}\prs{\mfrak{h}} \subseteq \mfrak{h}\]
+לכן מהנ"ל
+$\brs{X,Y} \in \mfrak{h}$.
+
+בכיוון השני, אם
+$\mfrak{h}$
+אידאל, מספיק לבדוק שמתקיים
+\[\text{.}\forall X \in \mrm{Lie}\prs{G} \forall Y \in \mfrak{h} \colon \Ad\prs{\exp\prs{X}} \prs{\exp\prs{Y}} \in H\]
+מתקיים
+$G = G^\circ, H = H^\circ$
+ולכן
+$G,H$
+נוצרות על ידי
+$\exp$.
+לכן
+\begin{align*}
+\Ad\prs{\exp\prs{X}} \prs{\exp\prs{Y}} &=
+\exp\prs{\Ad\prs{\exp\prs{X}}\prs{Y}} \\&=
+\exp\prs{\exp\prs{\ad\prs{X}}\prs{Y}}
+\end{align*}
+אבל כיוון שמתקיים
+$\ad\prs{X} \prs{Y} \in \mfrak{h}$
+נובע
+$\exp \prs{\ad\prs{X}}\prs{Y} \in \mfrak{h}$,
+ולכן
+\[\text{.} \exp\prs{\exp\prs{\ad\prs{X}}\prs{Y}} \in H\]
+\end{proof}
+
+\section{הומומורפיזמים}
+
+\subsection{הגדרה}
+
+בהינתן הומומורפיזם גזיר
+$\phi \colon G \to H$
+בין חבורות מטריצות, הנגזרת
+\[\prs{\diff \phi}_I\]
+היא העתקה לינארית
+\[\text{.} \mrm{Lie}\prs{G} \to \mrm{Lie}\prs{H}\]
+ביתר פירוט, אם
+\[\gamma \colon \prs{-\eps, \eps} \to G\]
+מקיימת
+\begin{align*}
+\gamma\prs{0} &= I \\
+\gamma'\prs{0} &= X \in \mrm{Lie}\prs{G}
+\end{align*}
+אז
+\[\phi\prs{\gamma\prs{0}} = \phi\prs{I} = I \in H\]
+ומתקיים
+\[\text{.} \prs{\phi \circ \gamma}' \prs{0} = \prs{\diff \phi}_I \prs{\gamma'\prs{0}} = \prs{\diff \phi}_I \prs{X} \in \mrm{Lie}\prs{H} \text{,}\]
+אז
+$\phi$
+מעבירה וקטורים משיקים ב־%
+$G$
+לוקטורים משיקים ב־%
+$H$.
+נסמן העתקה זאת בין המשיקים
+\[ \text{.} \diff \phi \colon \mrm{Lie}\prs{G} \to \mrm{Lie}\prs{H}\]
+
+\begin{proposition}
+$\diff \phi$
+הוא הומומורפיזם של אלגבראות לי. כלומר, מתקיים
+\[\forall X,Y \in \mrm{Lie}\prs{G} \colon \brs{\diff \phi\prs{X}, \diff \phi\prs{Y}} = \diff\phi\prs{\brs{X,Y}}\]
+וגם
+\[\text{.} \forall X \in \mrm{Lie}\prs{G} \colon \phi\prs{\exp\prs{X}} = \exp\prs{\diff \phi\prs{X}}\]
+
+את המשוואה השנייה נציג על ידי הדיאגרמה הקומוטטיבית הבאה.
+
+\begin{otherlanguage}{english}
+\[
+\begin{tikzcd}
+G \arrow[r, "\phi"] & H \\
+\mrm{Lie}\prs{G} \arrow[u, "\exp"] \arrow[r, swap, "\diff \phi"] & \mrm{Lie}\prs{H} \arrow[u, swap, "\exp"]
+\end{tikzcd}
+\]
+\end{otherlanguage}
+
+\end{proposition}
+
+\begin{proof}
+לכל
+$X \in \mrm{Lie}\prs{G}$
+מתקיים
+\begin{align*}
+\frac{\diff}{\diff t} \prs{\phi\prs{\exp\prs{tX}}} &= \frac{\diff}{\diff s}\left.\prs{\phi\prs{\exp\prs{\prs{t+s}X}}}\right._{s=0}
+\\&=
+\frac{\diff}{\diff s} \left.\prs{\phi\prs{\exp\prs{tX}} \phi\prs{\exp\prs{sX}}}\right._{s=0}
+\\&= \phi\prs{\exp\prs{tX}} \cdot \frac{\diff}{\diff s} \left. \prs{\phi\prs{\exp\prs{sX}}} \right._{s=0}
+\\&= \phi\prs{\exp\prs{tX}} \cdot \diff \phi\prs{X}
+\end{align*}
+ולפי טענת המד"ר בתחילת הקורס נובע
+\[\text{.} \phi\prs{\exp\prs{tX}} = \exp\prs{t \cdot \diff \phi\prs{X}}\]
+כאשר
+$t = 1$
+אנו מקבלים את המשוואה.
+
+נראה כעת כי
+$\diff \phi$
+הוא הומומורפיזם.
+לכל
+$X,Y \in \mrm{Lie}\prs{G}$
+מתקיים
+\begin{align*}
+\phi\prs{\Ad\prs{\exp\prs{tX}} \prs{\exp\prs{sY}}}
+&= \Ad\prs{\phi\prs{\exp\prs{tX}}}\prs{\phi\prs{\exp\prs{sY}}}
+\\&= \Ad\prs{\exp\prs{t \diff \phi\prs{X}}} \prs{\exp\prs{s \diff \phi\prs{Y}}}
+\end{align*}
+ולאחר גזירה ב־%
+$s=0$
+נקבל
+\[\text{.} \diff \phi\prs{\Ad\prs{\exp\prs{tX}} \prs{Y}} = \Ad\prs{\exp\prs{t \diff \phi\prs{X}}} \prs{\diff \phi\prs{Y}}\]
+נגזור כעת ב־%
+$t = 0$
+ונקבל שאגף שמאל שווה
+\[\text{.}\diff \phi \prs{\frac{\diff}{\diff t} \prs{\Ad\prs{\exp\prs{tX}}\prs{Y}}_{t=0}} = \diff \phi\prs{\brs{X,Y}}\]
+אגף ימין שווה
+$\brs{\diff \phi\prs{X}, \diff \phi\prs{Y}}$
+באותו טיעון, ולכן נקבל את התוצאה.
+\end{proof}
+
+\begin{remark}
+למעשה, קיבלנו ש־%
+\[\mrm{Lie} \colon \catname{Mat-Grp} \to \catname{Lie-Alg}\]
+הוא פנקטור מהקטגוריה של חבורות לקטגוריה של אלגבראות לי
+כשעל מורפיזמים הוא מוגדר
+$\mrm{Lie}\prs{\phi} = \diff \phi$.
+העובדה
+\[\mrm{Lie}\prs{\phi_1 \circ \phi_2} = \mrm{Lie}\prs{\phi_1} \circ \mrm{Lie}\prs{\phi_2}\]
+היא כלל השרשרת.
+\end{remark}
+
+נרצה לדעת מתי
+\[\diff \colon \hom\prs{G,H} \to \hom\prs{\Lie\prs{G}, \Lie\prs{H}}\]
+הוא חד־חד ערכי, ומתי הוא על. אם הוא חד־חד ערכי ועל, הדבר קרוב להיות שקילות בין קטגוריות.
+
+כדי לבדוק מתי
+$\diff$
+חד־חד ערכי, נבדוק מתי
+$\phi$
+נקבע ביחידות על ידי
+$\diff \phi$.
+מתקיים
+\[\phi\prs{\exp\prs{X}} = \exp\prs{\diff \phi\prs{X}}\]
+ולכן
+$\phi$
+נקבע ביחידות על
+$G^\circ = \Gamma\prs{\Lie\prs{G}}$.
+לכן אם
+$G$
+קשירה נובע ש־%
+$\diff$
+חד־חד ערכי.
+בפרט, אם נביט על תת־קטגוריה של חבורות מטריצות קשירות נקבל שהפנקטור
+$\Lie$
+חד־חד ערכי על מורפיזמים, כלומר
+\emph{נאמן}.
+
+נשאל כעת מתי
+$\diff$
+על. זאת השאלה מתי אפשר להרים הומומורפיזם של אלגבראות לי. אם
+$\psi \colon \Lie\prs{G} \to \Lie\prs{H}$,
+מתי קיים
+$\phi \colon G \to H$
+כך ש־%
+$\diff \phi = \psi$.
+לזה יש תשובה טופולוגית, והתשובה היא כן בפרט כאשר
+$G$
+פשוטת קשר.
+
+\begin{remark}
+תהי
+$G$
+חבורת מטריצות ונסמן
+$\mfrak{g} = \Lie\prs{G}$.
+אם
+$g \in G$
+אפשר לחשוב על
+$\Ad\prs{g} \colon G \to G$
+כאוטומורפיזם של
+$G$.
+נקבל העתקה
+\[ \text{.} \Ad \colon G \to \mrm{Aut}\prs{G}\]
+נוכל להרכיב ולקבל
+\[\text{.} G \xrightarrow[\Ad]{} \aut\prs{G} \xrightarrow[\diff]{} \aut\prs{\mfrak{g}} \leq \mrm{GL}\prs{\mfrak{g}}\]
+נסמן הרכבה זאת (\textenglish{with abuse of notation})
+\[\text{.} \Ad\prs{g} = \prs{\diff \circ \Ad}\prs{g} \in \aut\prs{\mfrak{g}}\]
+אם נסמן זאת
+$\Ad_{\mfrak{g}}$
+נקבל
+\[\text{.} \Ad_{\mfrak{g}} \colon G \to \aut\prs{\mfrak{g}}\]
+נוכל גם לגזור ולקבל
+\[\text{.}\Ad_{\mfrak{g}}\prs{g} = \diff\prs{\Ad_G\prs{g}} \colon \mfrak{g} \to \mfrak{g}\]
+
+כעת,
+$\aut\prs{\mfrak{g}}$
+חבורת מטריצות ומתקיים
+\[\text{.}\diff \prs{\Ad_{\mfrak{g}}} \colon \mfrak{g} \to \Lie\prs{\aut\prs{\mfrak{g}}} \leq \endo\prs{\mfrak{g}}\]
+\emph{%
+העתקה זאת מסומנת
+$\ad$}
+ומתקיים
+\[\Ad_{\mfrak{g}}\prs{\exp\prs{X}} = \exp\prs{\ad\prs{X}}\]
+לכל
+$X \in \mfrak{g}$.
+\end{remark}
+
+קיבלנו חבורת מטריצות חדשה
+\[\text{.} \quot{G}{\ker\prs{\Ad_{\mfrak{g}}}} \cong \Ad_{\mfrak{g}}\prs{G} \leq \mrm{GL}\prs{\mfrak{g}}\]
+את הגרעין הזה אנחנו לא מבינים ישר. מתקיים
+\[\ker\prs{\Ad_G} = Z\prs{G}\]
+וגם
+$\Ad_{\mfrak{g}} = \diff \circ \Ad_G$
+ולכן אנחנו כן יודעים
+$Z\prs{G} \leq \ker\prs{\Ad_{\mfrak{g}}}$.
+על פניו, מלחתכילה לא ידוע לנו ש־%
+$\quot{G}{Z\prs{G}}$
+חבורת מטריצות, אך נראה זאת.
+
+%LECTURE 11 (partly above)
+
+\begin{remark}
+
+דיברנו על גזירות וחלקות של הומומורפיזמים
+$\phi \colon G \to H$
+כאשר
+$G,H$
+חבורות מטריצות, והגדרנו את
+$\diff \phi$
+כנגזרת של
+$\phi$
+ב־%
+$I$.
+הכוונה היא שאם ניקח סביבה
+$B_{I,\eps} \subseteq G$
+של
+$I$
+שמוגדרת על ידי
+\[\text{,}\set{\exp\prs{X}}{\substack{X \in \Lie\prs{G} \\ \norm{X} < \eps}}\]
+וניקח סביבה
+$B_{I,\eps}' \subseteq H$
+של
+$I$,
+נקבל שההעתקת המעבר
+$\rest{\exp}{V}^{-1} \circ \phi \circ \rest{\exp}{U}$
+גזירה/חלקה ו־%
+$\diff \phi$
+הנגזרת של הרכבה זאת.
+בפרט,
+$\diff \phi$
+לא תלויה במימוש של
+$G$
+כחבורת מטריצות.
+למעשה גם הטופולוגיה שהגדרנו על
+$G$,
+והחלקות של
+$\phi$
+אינן תלויות במימוש.
+
+בהמשך נגדיר חבורות לי כלליות שאינן בהכרח חבורות מטריצות, באופן שאינו תלוי במימוש.
 \end{remark}
 
 \end{document}
