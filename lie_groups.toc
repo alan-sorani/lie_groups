@@ -32,3 +32,7 @@
 \contentsline {subsection}{\numberline {3.2.1}הגדרה}{32}{subsection.3.2.1}%
 \babel@toc {english}{}
 \babel@toc {hebrew}{}
+\contentsline {subsection}{\numberline {3.2.2}הצגות של טורוסים}{34}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}טורי פורייה}{35}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}גרעין ותמונה}{35}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}מרחבי כיסוי}{38}{subsection.3.2.5}%

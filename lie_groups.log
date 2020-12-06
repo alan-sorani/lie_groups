@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  29 NOV 2020 18:48
+This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  6 DEC 2020 21:23
  restricted system commands enabled.
 **lie_groups.tex
 (./lie_groups.tex
@@ -1593,7 +1593,7 @@ luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate. [28]
 Missing character: There is no [ (U+005B) in font stmary10!
 Missing character: There is no [ (U+005B) in font stmary10!
  [29] [30]
-Overfull \hbox (7.40166pt too wide) in paragraph at lines 2714--2720
+Overfull \hbox (7.40166pt too wide) in paragraph at lines 2715--2721
 []\TU/OpenSansHebrew(0)/m/it/10 בהינתן חבורת מטריצות $\OML/cm
 m/m/it/10 G$ \TU/OpenSansHebrew(0)/m/it/10 קיימת התאמה חד־חד ע
 רכית בין אוסף כל התת־חבורות הקשירות $\OML/cmm/m/i
@@ -1602,32 +1602,38 @@ t/10 H \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 G$ \TU/OpenSansHebrew(0)/m/it/10 ל
  []
 
 [31] [32]
+Package hyperref Info: bookmark level for unknown question defaults to 0 on inpu
+t line 3030.
+ [33] [34] [35]
+Package hyperref Info: bookmark level for unknown fact defaults to 0 on input li
+ne 3360.
+ [36] [37]
 \tf@thm=\write6
 
 \openout6 = lie_groups.thm
- [33]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3023.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3023.
+ [38]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3612.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3612.
  (./lie_groups.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3023.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3023.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3612.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3612.
 Package rerunfilecheck Info: File `lie_groups.out' has not changed.
-(rerunfilecheck)             Checksum: 4293F8A693CB1E8ED4A492DD2A861C08;4422.
+(rerunfilecheck)             Checksum: 0D0AF536866FB1C06FDFA904E77B03D1;5074.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3023.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3612.
 )
 
 Here is how much of LuaTeX's memory you used:
- 32349 strings out of 481302
+ 32388 strings out of 481302
  100000,1144653 words of node,token memory allocated
- 2672 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 2 sub_mlist, 1 glyph, 795 at
-tribute, 62 glue_spec, 267 attribute_list, 2 write nodes
-   avail lists: 1:1,2:2912,3:265,4:46,5:633,6:47,7:3234,8:103,9:1120,10:5,11:8
- 48159 multiletter control sequences out of 65536+200000
+ 3168 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 2 sub_mlist, 1 glyph, 981 at
+tribute, 62 glue_spec, 329 attribute_list, 2 write nodes
+   avail lists: 1:1,2:2664,3:265,4:54,5:651,6:55,7:3234,8:103,9:1120,10:5,11:8
+ 48166 multiletter control sequences out of 65536+200000
  128 fonts using 9383979 bytes
  68i,24n,88p,935b,1296s stack positions out of 5000i,500n,10000p,200000b,50000s
 <//?/c:/users/eladt/appdata/local/programs/miktex/fonts/opentype/public/lm/lmrom
@@ -1659,9 +1665,9 @@ e1/public/amsfonts/symbols/msam10.pfb><C:/Users/EladT/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/EladT/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/EladT/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on lie_groups.pdf (33 pages, 413023 bytes).
+Output written on lie_groups.pdf (38 pages, 454131 bytes).
 
-PDF statistics: 553 PDF objects out of 1000 (max. 8388607)
- 209 named destinations out of 1000 (max. 131072)
- 200 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 617 PDF objects out of 1000 (max. 8388607)
+ 241 named destinations out of 1000 (max. 131072)
+ 232 words of extra memory for PDF output out of 10000 (max. 100000000)
 

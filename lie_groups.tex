@@ -2541,7 +2541,7 @@ $V \cong \mbb{R}^k$
 נרצה שלכל אלגברת לי נתונה
 $\mfrak{g} \leq M_n$
 יתקיים
-\[\text{.} \mfrak{g} = \mrm{Lie}\prs{\Gamma}\prs{\mfrak{g}}\]
+\[\text{.} \mfrak{g} = \mrm{Lie}\prs{\Gamma\prs{\mfrak{g}}}\]
 לכל
 $X \in \mfrak{g}$
 אנו יודעים
@@ -2687,7 +2687,7 @@ $\Gamma\prs{\mfrak{g}}$
 $c \cdot \exp\prs{\bar{U}}$.
 לפי משפט הקטגוריה של בייר, אחת הקבוצות
 $c \cdot \exp\prs{\bar{U}}$
-פתוחה.
+עם פנים לא ריק.
 אפשר להניח (בדקו!) ש־%
 $c \cdot \exp\prs{U}$
 צפופה ופתוחה בתוך
@@ -2700,7 +2700,8 @@ $\Gamma\prs{\mfrak{g}}$.
 אפשר להניח ש־%
 $c \cdot \exp\prs{U} \subseteq B\prs{c, \eps}$
 עבור
-$c,\eps$.
+$c,\eps$
+כך שמתקיים שהאקספוננט הומאומורפיזם לתמונה.
 אז
 $U \subseteq \mrm{Lie}\prs{\Gamma\prs{\mfrak{g}}}$
 פתוחה כי
@@ -3019,5 +3020,593 @@ $\phi$
 
 בהמשך נגדיר חבורות לי כלליות שאינן בהכרח חבורות מטריצות, באופן שאינו תלוי במימוש.
 \end{remark}
+
+%LECTURE 12
+
+עולות לנו כמה שאלות על ההתאמה
+\[\text{.}\Lie \colon \hom\prs{G,H} \to \hom\prs{\Lie\prs{G}, \Lie\prs{H}}\]
+
+\begin{question}
+מה אומרות התכונות של
+$\diff \phi$
+על אלו של
+$\phi$?
+אם
+$\diff \phi$
+איזומורפיזם, מה זה אומר על
+$\phi$?
+\end{question}
+
+\begin{question}
+בהינתן
+$f \in \hom\prs{\Lie\prs{G}, \Lie\prs{H}}$,
+האם אפשר להרים אותו להומומורפיזם
+$\phi \colon G \to H$
+שמקיים
+$\diff \phi = f$?
+\end{question}
+
+\begin{example}
+נסתכל על
+$G = \prs{\mbb{C}, +}, H = \prs{\mbb{C}^\times, \cdot}$.
+אז
+\begin{align*}
+G &\cong \set{\pmat{1 & a \\ 0 & 1}}{a \in \mbb{C}} \leq \mrm{GL}_2\prs{\mbb{C}}
+\text{.} H &\cong \mrm{GL}_1\prs{\mbb{C}}
+\end{align*}
+נקבל
+\begin{align*}
+\Lie\prs{G} &= \set{\pmat{0 & a \\ 0 & 0}}{a \in \mbb{C}} \\
+\Lie\prs{H} &= \mbb{C}
+\end{align*}
+ואכן מתקיים
+\[\text{.}\exp\pmat{0 & a \\ 0 & 0} = \pmat{1 & 0 \\ 0 & 1} + \pmat{0 & a \\ 0 & 0} + 0 = \pmat{1 & a \\ 0 & 1}\]
+תהי
+\begin{align*}
+f \colon \Lie\prs{G} &\riso \Lie\prs{G_2} \\
+\pmat{0 & a \\ 0 & 0} &\mapsto \prs{a}
+\end{align*}
+ונחפש הרמה
+\[\text{.} \phi \colon G \to H\]
+נדרוש
+\[\text{.} \phi\prs{\exp_{G_1} \pmat{0 & a \\ 0 & 0}} = \exp_{G_2}\prs{f\pmat{0 & a \\ 0 & 0}}\]
+אז
+\[\text{.} \phi\prs{\pmat{1 & a \\ 0 & 1}} = e^a\]
+
+נרצה לדעת האם אפשר להרים את
+$f^{-1}$.
+התשובה היא לא, כי
+$\log$
+לא מוגדר על כל
+$\mbb{C}^\times$.
+עדיין,
+$\log$
+מוגדר מקומית.
+\end{example}
+
+\subsection{הצגות של טורוסים}
+
+נסתכל על טורוס
+$n$%
+־מימדי
+\[\text{.} \mbb{T}^n \ceq \set{\mrm{diag}\prs{z_1, \ldots, z_n}}{\abs{z_i} = 1} \cong \prs{S^1}^n\]
+נניח כי
+\[\text{.} \phi \colon \mbb{T}^n \to \mbb{C}^\times = \mrm{GL}_1\prs{\mbb{C}}\]
+נסמן
+$\mfrak{t}^n \ceq \Lie\prs{\mbb{T}^n}$
+ומתקיים
+\[\text{.} \mfrak{t}^n = \set{\mrm{diag}\prs{2 \pi i \theta_1, \ldots, 2 \pi i \theta_n}}{\theta_i \in \mbb{R}}\]
+מתקיים כי
+$\mfrak{t}^n$
+אלגברה קומוטטיבית ו־%
+$\diff \phi$
+הומומורפיזם כללי.
+נכתוב
+\[\text{.} \forall X \in \mfrak{t}^n \colon \phi\prs{\exp\prs{X}} = e^{\diff \phi\prs{X}}\]
+אם
+$X = \prs{2 \pi i \theta_1, \ldots, 2 \pi i \theta_n}$
+מתקיים
+\[\diff \phi\prs{X} = 2 \pi i \prs{\ell_1 \theta_1 + \ldots + \ell_n \theta_n}\]
+עבור
+$\ell_1,\ldots, \ell_n \in \mbb{C}$.
+ככה נראים פונקציונלית
+$\mbb{R}$%
+־לינאריים
+$\mbb{R}^n \to \mbb{C}$.
+
+אם
+$\theta_1,\ldots, \theta_N \in \mbb{Z}$
+אז
+$\exp\prs{X} = I$.
+לכן במקרה זה
+$e^{\diff \phi\prs{X}} = 1$
+ואז
+$\diff \phi\prs{X} = 2 \pi i k$
+עבור
+$k \in \mbb{Z}$.
+בפרט, אם ניקח
+$X = 2 \pi i e_j$
+נקבל
+\[\diff \phi\prs{X} = 2 \pi i \ell_j \in 2 \pi i \mbb{Z}\]
+ואז
+$\ell_j \in \mbb{Z}$.
+אז
+\[\phi\prs{\mrm{diag}\prs{1, \ldots, 1, e^{2 \pi i \theta}, 1, \ldots, 1}} = e^{2 \pi i \ell_j \theta}\]
+כאשר ה־%
+$e^{2 \pi i \theta}$
+מופיע במקום ה־%
+$j$.
+אז
+\[\text{.} \phi\prs{\mrm{diag}\prs{1, \ldots, z, \ldots, 1}} = z^{\ell_j}\]
+
+נצרף את כל ערכי
+$j$
+ונקבל
+\[\phi\prs{\mrm{diag}\prs{z_1, \ldots, z_n}} = z_1^{\ell_1} \cdot \ldots \cdot z_n^{\ell_n}\]
+עבור
+$\ell_i \in \mbb{Z}$.
+
+אכן, כל בחירה של שלמים
+$\ell_1, \ldots, \ell_n$
+מגדירה הומומורפיזם
+$\mbb{T}^n \to \mbb{C}^\times$
+לפי הנוסחה הזאת.
+
+יתרה מכך, אם
+\[\phi \colon \mbb{T}^n \to \mrm{GL}\prs{V}\]
+הצגה מרוכבת של טורוס (כלומר, הומומורפיזם, כאשר
+$V$
+מ"ו מעל
+$\mbb{C}$%
+)
+אז
+\[\diff \phi \colon \mfrak{t}^n \to \endo\prs{V}\]
+העתקה לינארית. נסמן
+\[E_j = \diff \phi\prs{2 \pi i e_j} \in \endo\prs{V}\]
+ונקבל
+$\exp E_j = I$.
+$E_j$
+כזאת חייבת להיות לכסינה עם ע"ע שהם כפולות שלמות של
+$2 \pi i$.
+בבסיס
+$B$
+ל־%
+$V$
+בו
+$E_j$
+אלסונית מתקיים
+\[\brs{\phi\prs{1, \ldots, z, \ldots, 1}}_B = \exp\brs{E_j}_B = \mrm{diag}\prs{z^{\ell_{j,1}}, \ldots, z^{\ell_{j,n}}}\]
+כאשר
+$n = \dim\prs{V}$
+וכאשר
+\[\text{.} \brs{E_j} = \mrm{diag}\prs{2 \pi i \ell_{j,1}, \ldots, 2 \pi i \ell_{j,n}}\]
+
+מתקיים
+\[\brs{E_{j,1}, E_{j_2}} = \diff \phi\prs{\brs{t_1, t_2}} = \diff \phi\prs{0} = 0\]
+עבור
+$t_j = 2 \pi i e_j$
+וכיוון ש־%
+$\mfrak{t}^n$
+אלגברה קומוטטיבית.
+לכן
+$E_1, \ldots, E_n$
+מטריצות מתחלפות בזוגות. במצב כזה, קיים בסיס
+$B$
+ל־%
+$V$
+שבו כל
+$E_1, \ldots, E_n$
+אלכסוניות.
+כלומר
+\[\brs{\phi\prs{z_1, \ldots, z_n}}_B = \mrm{diag}\prs{z_1^{\ell_{1,1}} \cdot \ldots \cdot z_n^{\ell_{n,1}}, \ldots, z_1^{\ell_{1,m}} \cdot \ldots z_n^{\ell_{n,m}}}\]
+ןאכם כך בלחרה של שלמים
+$\set{\ell_{r,s}}_{\substack{r \in [n] \\ s \in [m]}}$
+תיתן הומומורפיזם כזה.
+
+במילים אחרות, פירקנו את
+$V$
+לסכום ישר
+\[V = \bigoplus_{i \in [m]} V_i\]
+כל שכל
+$V_i$
+הוא מרחב חד־מימדי של וקטורים עצמיים ל־%
+$\phi\prs{\mbb{T}^n}$.
+
+\subsection{טורי פורייה}
+
+פורייה ניסה לפתור מד"ח (משוואת החום) עם תנאי התחלה מחזוריים.
+תנאי ההתחלה הוא פונקציה רציפה
+$f \colon S^1 \to \mbb{C}$.
+הוא שם לב שקל יותר לפתור את הבעיה אם מפרקים את
+$f$
+לטור
+\[\text{.} f = \sum_{n \in \mbb{Z}} a_n z^n\]
+בשפה מודרנית,
+$f$
+היא וקטור בתוך מרחב הפונקציות על
+$\mbb{T} \cong S^1$,
+שהיא חבורה.
+נסמן ב־%
+$\mcal{C}\prs{\mbb{T}}$
+את הפונקציות הרציפות
+$\mbb{T} \to \mbb{C}$.
+יש הומומורפיזם טבעי
+\[\text{.} \phi \colon \mbb{T} \to \mbb{GL}\prs{\mcal{C}\prs{\mbb{T}}}\]
+זאת נקראת ההצגה הרגולרית של
+$\mbb{T}$
+ומוגדרת על ידי
+\[\text{.} \phi\prs{g}\prs{f} = \phi\prs{g}\prs{f}\prs{z} = f\prs{g^{-1} z}\]
+אם
+$\mcal{C}\prs{\mbb{T}}$
+מתפרק (כמו במקרה הסוף מימדי) לסכום ישר של מרחבים עצמיים חד־מימדיים זה בדיוק יתן פירוק לטור פורייה, כי הפונקציות
+$z^n$
+הן בדיוק הוקטורים העצמיים של
+$\phi\prs{\mbb{T}}$.
+
+\subsection{גרעין ותמונה}
+
+\begin{proposition}
+יהי
+$\phi \colon G \to H$
+הומומורפיזם של חבורות מטריצות.
+\begin{enumerate}
+\item $\Lie\prs{\ker\prs{\phi}} = \ker \prs{\diff \phi}$.
+\item $\Lie\prs{\im \phi} = \im\prs{\diff \phi}$
+אם
+$\quot{G}{G^\circ}$
+בת־מניה.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\begin{enumerate}
+\item מתקיים
+$X \in \Lie\prs{\ker \phi}$
+אם ורק אם
+$\exp\prs{tX} \in \ker \phi$
+לכל
+$t$
+מספיק קטן, אם ורק אם
+\[\exp\prs{t \diff \phi\prs{X}} = \phi\prs{\exp\prs{tX}} = I_H\]
+לכל
+$t$
+מספיק קטן, אם ורק אם
+$\diff \phi\prs{X} = 0$
+אם ורק אם
+$X \in \ker \prs{\diff \phi}$.
+\item תהי
+$X \in \Lie\prs{G}$.
+אז
+\[\exp\prs{t \diff \phi\prs{X}} = \phi\prs{\exp \prs{tX}} \in \im \phi\]
+ולכן
+$\diff \phi\prs{X} \in \Lie\prs{\im \phi}$.
+אז
+$\im\prs{\diff \phi} \subseteq \Lie\prs{\im \phi}$.
+
+בכיוון ההפוך, מתקיים
+\[G^\circ = \Gamma\prs{\Lie\prs{G}} = \bigcup_{k \in \mbb{Z}} a_k \cdot \exp\prs{\bar{U}}\]
+עבור ערכים
+$a_k \in G^\circ$.
+תהי
+$U \subseteq \Lie\prs{G}$
+סביבה פתוחה של
+$0$.
+אז
+\[G = \bigcup a_k \exp\prs{\bar{U}}\]
+איחוד בן מניה עבור ערכים
+$a_k \in G$.
+אז
+\[\text{.}\im \phi = \bigcup \phi\prs{a_k} \phi\prs{\exp\prs{[\bar{U}}}\]
+$\bar{U}$
+קומפקטית לכן
+$\phi\prs{\exp\prs{\bar{U}}}$
+קומפקטית ובפרט סגורה.
+כמו בהוכחה מקודם, אם נפעיל את משפט בייר
+\[\phi\prs{a_k} \phi\prs{\exp\prs{\bar{U}}} = \phi\prs{a_k} \exp\prs{\diff \phi\prs{\bar{U}}}\]
+עם פנים פתוח.
+כמו בהוכחה קודמת, נקבל ש־%
+$\diff \phi\prs{\bar{U}}$
+מכילה קבוצה פתוחה ב־%
+$\Lie\prs{\im \phi}$.
+לכן
+\[\text{.} \diff \phi\prs{\Lie\prs{G}} = \Lie\prs{\im \phi}\]
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}
+אם
+$\phi$
+חד־חד ערכית / על,
+$\diff \phi$
+חד־חד ערכית / על, בהתאמה.
+\end{corollary}
+
+תהי
+$G$
+חבורת מטריצות ותהי
+$\mfrak{g} = \Lie\prs{G}$.
+ראינו שמתקיים
+$\diff\prs{\Ad_G\prs{a}} = \Ad_{\mfrak{g}}\prs{a}$
+וגם
+\[\text{.}\ker \Ad_G\prs{a} = Z\prs{a}\]
+כעת נקבל מהטענה שמתקיים
+\[\Lie\prs{Z\prs{a}} = \ker\prs{\diff\prs{\Ad_G\prs{a}}} = \ker\prs{\Ad_{\mfrak{g}}\prs{a}} = \set{X \in \mfrak{g}}{aX = Xa}\]
+ונסמן את הביטוי האחרון
+$\mfrak{z}\prs{a}$.
+אז
+\begin{align*}
+a \in \ker\prs{\Ad_\mfrak{g}} &\iff \mfrak{z}\prs{a} = \mfrak{g}
+\\&\iff \Lie\prs{Z\prs{a}} = \mfrak{g}
+\\&\iff Z\prs{a}^\circ = G^\circ
+\\&\iff G^\circ \leq Z\prs{a}
+\end{align*}
+ואם
+$G$
+קשירה נקבל
+\[\text{.} \ker\prs{\Ad_{\mfrak{g}}} = Z\prs{G}\]
+
+נקבל באופן כללי יותר
+\[\text{.} Z\prs{G} \leq \ker\prs{\Ad_{\mfrak{g}}} = Z_G\prs{G^\circ} = \set{a \in G}{\forall g \in G^\circ \colon ag = ga}\]
+אז
+\[\Lie\prs{\ker \Ad_{\mfrak{g}}} = \ker\prs{\diff\prs{\Ad_{\mfrak{g}}}} = \ker\prs{\ad} = \set{X \in \mfrak{g}}{\forall Y \in \mfrak{g} \colon \brs{X,Y} = 0} = \mfrak{g}\prs{\mfrak{g}}\]
+ואם
+$G$
+קשירה נקבל
+\[\text{.} \mfrak{z}\prs{\mfrak{g}} = \Lie\prs{Z\prs{G}}\]
+במקרה זה נקבל גם
+\[\text{.} \Ad_{\mfrak{g}}\prs{G} \cong \quot{G}{\ker\prs{\Ad_{\mfrak{g}}}} = \quot{G}{Z\prs{G}}\]
+
+\begin{fact}
+אם
+$f \colon \mfrak{g} \to \mfrak{h}$
+הומומורפיזם של אלגבראות לי, אז
+\[\im f \cong \quot{\mfrak{g}}{\ker f}\]
+כאלגבראות לי.
+\end{fact}
+
+לפי העובדה, מתקיים
+\[\Lie\prs{\Ad_{\mfrak{g}}\prs{G}} = \Im \prs{\ad_{\mfrak{g}}} \cong \quot{\mfrak{g}}{\ker \prs{\Ad_{\mfrak{g}}}} = \quot{\mfrak{g}}{\mfrak{z}\prs{\mfrak{g}}}\]
+כאשר
+$G$
+קשירה. במקרה זה גם
+$\Ad_{\mfrak{g}}\prs{G}$
+קשירה ולכן
+\[\text{.} \Ad_{\mfrak{g}}\prs{G} = \Gamma\prs{\quot{\mfrak{g}}{\mfrak{z}\prs{\mfrak{g}}}}\]
+זה לא תלוי ב־%
+$G$
+אל רק ב־%
+$\mfrak{g}$.
+
+\begin{definition}[אלגברת לי]
+\emph{אלגברת לי}
+היא מרחב וקטורי
+$\mfrak{g}$
+מעל שדה
+$\mbb{F}$
+יחד עם פעולה
+$\brs{\cdot,\cdot} \colon \mfrak{g} \times \mfrak{g} \to \mfrak{g}$
+בילינארית, אסוציאטיבית, אנטיאסוציאטיבית (כלומר $\brs{x,y} = -\brs{y,x}$) ושמקיימת את זהו יעקובי:
+\[\text{.} \brs{x, \brs{y,z}} + \brs{z, \brs{x,y}} + \brs{Y,\brs{z,x}}\]
+\end{definition}
+
+עם הגדרה זאת לפעמים יותר קל לעבוד. למשל, אפשר להגדיר כך מנה של אלגברת לי. אם
+$\mfrak{h} \ideal \mfrak{g}$
+אידאל (תת־מרחב שמקיים
+$\brs{\mfrak{h}, \mfrak{g}} \subseteq \mfrak{h}$%
+), נוכל להגדיר
+$\quot{\mfrak{g}}{\mfrak{h}}$
+ביחד עם
+\[\text{.} \brs{X + \mfrak{h}, Y + \mfrak{h}} \ceq \brs{X,Y} + \mfrak{h}\]
+
+בחזרה לדיון הקודם, מתקיים
+\[\ad\prs{\mfrak{g}} \cong \quot{\mfrak{g}}{\ker\prs{\ad}} = \quot{\mfrak{g}}{z\mfrak{z} prs{\mfrak{g}}}\]
+כאשר
+\[\text{.} \mfrak{z}\prs{\mfrak{g}}\prs{X \in \mfrak{g}}{\forall Y \in \mfrak{g} \colon \brs{X,Y} = 0}\]
+זה איזומורפיזם של אלגבראות לי, ומתקיים גם
+\[\text{.} \Lie\prs{\quot{G}{Z\prs{G}}} \quot{\mfrak{g}}{\mfrak{z}\prs{\mfrak{g}}}\]
+
+\begin{remark}
+גם אם
+$\mfrak{g}$
+מראש הייתה נלקחת כאלגברה אבסטרקטית אז עדיין
+$\ad\prs{\mfrak{g}}$
+אלגברה של מטריצות עבור
+\[\text{.} \ad \colon \mfrak{g} \to \endo\prs{\mfrak{g}}\]
+כלומר,
+$\quot{\mfrak{g}}{\mfrak{z}\prs{\mfrak{g}}}$
+אלגברת מטריצות גם עבור
+$\mfrak{g}$
+אבסטרקטית.
+
+ממשפט אדו, למעשה
+$\mfrak{g}$
+עצמה גם בהכרח ניתנת לשיכון כמטריצות.
+
+קיבלנו גם שעבור
+$G$
+חבורת מטריצות קשירה,
+$\quot{G}{Z\prs{G}}$
+גם היא חבורת מטריצות.
+עבור
+$H \ideal G$
+תת־חבורה נורמלית סגורה,
+$\quot{G}{H}$
+לא בהכרח חבורת מטריצות.
+זאת אחת המוטיבציות להגדיר חבורות לי אסטרקטיות.
+\end{remark}
+
+\begin{example}
+מתקיים
+$\mrm{PGL}_n\prs{\mbb{C}} = \Ad_{\mfrak{g}}\prs{\mrm{GL}_n\prs{\mbb{C}}}$.
+ידוע כי
+$\mrm{GL}_n\prs{\mbb{C}}$
+קשירה. אפשר לראות זאת על ידי צורת ז'ורדן.
+הראו כתרגיל שאפשר לחבר כל איבר במסילה רציפה ליחידה.
+
+מתקיים גם
+\begin{align*}
+Z\prs{\mrm{GL}_n\prs{\mbb{C}}} &\cong \mbb{C}^\times \\
+\mrm{PGL}_n\prs{\mbb{C}} &\cong \quot{\mrm{GL}_n\prs{\mbb{C}}}{\mbb{C}^\times} \\
+\text{.} \Lie\prs{\mrm{PGL}_n\prs{\mbb{C}}} &\cong \quot{M_n\prs{\mbb{C}}}{\mbb{C}}
+\end{align*}
+גם
+\begin{align*}
+\phi \colon \mfrak{sl}_n\prs{\mbb{C}} &\to \Lie\prs{\mrm{PGL}_n\prs{\mbb{C}}} \\
+X &\to X
+\end{align*}
+איזומורפיזם.
+
+כל
+$X \in M_n\prs{\mbb{C}}$
+ניתן לכתיבה כ־%
+\[X = X_0 + \alpha I\]
+עבור
+$X_0 \in \mfrak{sl}_n\prs{\mbb{C}}$
+ו־%
+$\alpha = \frac{\tr X}{n}$.
+ב־%
+$\quot{M_n\prs{\mbb{C}}}{\mbb{C}}$
+מתקיים
+$X = X_0$
+ולכן
+$\phi$
+על.
+
+נראה ש־%
+$\phi$
+חד־חד ערכית. יהי
+$X \in \ker \phi$.
+אז
+$X = \alpha I$
+ומתקיים
+$n \alpha = \tr X = 0$
+לכן
+$X = 0$.
+
+מתקיים גם
+\[ \mrm{PSL}_n\prs{\mbb{C}} = \Ad_{\mfrak{g}}\prs{\mrm{SL}_n\prs{\mbb{C}}} = \quot{\mrm{SL}_n\prs{\mbb{C}}}{\mu_n \cdot I}\]
+כאשר
+\[\text{.} \mu_n \ceq \set{z \in \mbb{C}}{z^n = 1}\]
+גם
+$\mrm{SL}_n\prs{\mbb{C}}$
+קשירה מאותן סיבות. מתקיים
+\[\mfrak{z}\prs{\mfrak{sl}_n\prs{\mbb{C}}} = \set{0}\]
+וגם
+\[\text{.} \ad\prs{\mfrak{sl}_n\prs{\mbb{C}}} = \mfrak{sl}_n\prs{\mbb{C}}\]
+אז
+\[\text{.} \mrm{PSL}_n\prs{\mbb{C}} \cong \mrm{PGL}_n\prs{\mbb{C}}\]
+\end{example}
+
+\subsection{מרחבי כיסוי}
+
+\begin{definition}[הומאומורפיזם לוקלי]
+נאמר שהומומורפיזם
+\[\pi \colon \tilde{G} \to G\]
+הוא
+\emph{הומאומורפיזם לוקלי}
+אם לכל
+$x \in \tilde{G}$
+יש סביבה פתוחה
+$U$
+כך ש־%
+$\pi\prs{U}$
+פתוחה וש־%
+$\rest{\pi}{U}$
+הומאומורפיזם לתמונה.
+\end{definition}
+
+\begin{definition}[העתקת כיסוי]
+אם
+$\tilde{G}, G$
+קשירות, נקרא להומאומורפיזם לוקלי
+$\pi \colon \tilde{G} \to G$
+\emph{העתקת כיסוי}.
+\end{definition}
+
+\begin{example}
+נסתכל על
+$\phi \colon \mbb{R} \to \mbb{T}$
+המוגדרת על ידי
+$\theta \mapsto e^{2 \pi i \theta}$.
+אז
+$\ker \phi = \mbb{Z}$.
+נגדיר
+$\phi_n \colon \mbb{T} \to \mbb{T}$
+על ידי
+$z \mapsto z^n$
+ואז
+$\phi_n$
+גם העתקות כיסוי, וגם
+$\phi_n \circ \phi$
+כאלה כהרכבות של כיסויים. מתקיים
+$\ker \prs{\phi_n \circ \phi} = \frac{1}{n} \mbb{Z}$.
+\end{example}
+
+\begin{proposition}
+\begin{enumerate}
+\item תהי
+\[\pi \colon \tilde{G} \to G\]
+העתקת כיסוי. אז
+$\pi$
+על כי יש סביבה פתוחה
+$\pi\prs{U}$
+של
+$I$.
+$G^\circ$
+נוצרת תמיד על ידי סביבה פתוחה של
+$I$ (תרגיל)
+ומתקיים
+\[\text{.} G = G^\circ \subseteq \im \pi\]
+
+\item
+$\ker \pi \leq \tilde{G}$
+חבורה דיסקרטית. אם
+$e \in \ker \pi$
+יש סביבה
+$U$
+של
+$e$
+כך שמתקיים
+\[\text{.} U \cap \ker \pi = \set{e}\]
+
+\item מתקיים
+$\ker \pi \leq Z\prs{\tilde{G}}$.
+יהי
+$e \in \ker \pi$.
+ עבור
+ $a \in \tilde{G}$
+ ניקח מסילה רציפה
+$\tilde{a}\prs{t}$
+עם
+$\tilde{a}\prs{0} = I$
+ועם
+$\tilde{a} \prs{1} = a$.
+תהי
+\[\text{.} \gamma\prs{t} \ceq \tilde{a}\prs{t} \cdot e \cdot \tilde{a}\prs{t}^{-1} \in \ker \pi\]
+אז
+\[\gamma\prs{0} = e, \quad \gamma\prs{1} = aea^{-1}\]
+וזאת מסילה בתוך
+$\ker \pi$
+דיסקרטית.
+אז
+\[\text{.} e = \gamma\prs{0} = \gamma\prs{1} = aea^{-1}\]
+
+\item $G$
+היא מנה של
+$\tilde{G}$
+בחבורה דיסקרטית במרכז.
+\end{enumerate}
+\end{proposition}
+
+\begin{lemma}
+יהי
+$\phi \colon G \to H$
+הומומורפיזם.
+
+$\phi$
+העתקת כיסוי אם ורק אם
+$\diff \phi$
+איזומורפיזם.
+\end{lemma}
 
 \end{document}
