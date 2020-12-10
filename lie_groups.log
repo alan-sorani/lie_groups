@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  6 DEC 2020 23:59
+This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  10 DEC 2020 19:15
  restricted system commands enabled.
 **lie_groups.tex
 (./lie_groups.tex
@@ -1221,6 +1221,25 @@ line 1175.
 \c@endsolutionctr=\count387
 \c@solution=\count388
 )
+(C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty
+Package: caption 2020/05/30 v3.4k Customizing captions (AR)
+
+(C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty
+Package: caption3 2020/07/20 v1.12b caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen305
+\captionmargin@=\dimen306
+\captionwidth=\dimen307
+\caption@tempdima=\dimen308
+\caption@indent=\dimen309
+\caption@parindent=\dimen310
+\caption@hangindent=\dimen311
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count389
+\c@continuedfloat=\count390
+Package caption Info: hyperref package is loaded.
+)
 (./lie_groups.aux
 
 Package babel Info: The following font families will use the default
@@ -1285,34 +1304,34 @@ adhyph-en-gb.tex ASCII Hyphenation patterns for British English
 x/hyph-en-gb.tex)))
 \openout1 = lie_groups.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 55
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 70
 .
 
 (C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
 \AtBeginShipoutBox=\box81
-Package hyperref Info: Link coloring OFF on input line 55.
+Package hyperref Info: Link coloring OFF on input line 70.
 
 (C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1324,11 +1343,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count389
+\c@section@level=\count391
 )
-LaTeX Info: Redefining \ref on input line 55.
-LaTeX Info: Redefining \pageref on input line 55.
-LaTeX Info: Redefining \nameref on input line 55.
+LaTeX Info: Redefining \ref on input line 70.
+LaTeX Info: Redefining \pageref on input line 70.
+LaTeX Info: Redefining \nameref on input line 70.
  (./lie_groups.out) (./lie_groups.out)
 \@outlinefile=\write4
 
@@ -1374,77 +1393,77 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 55.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 55.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 55.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 55.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 55.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 55.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 55.
-LaTeX Font Info:    Redeclaring math accent \check on input line 55.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 55.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 55.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 55.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 55.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 70.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 70.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 70.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 70.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 70.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 70.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 70.
+LaTeX Font Info:    Redeclaring math accent \check on input line 70.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 70.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 70.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 70.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 70.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 55.
+(Font)              `operators' in the math version `normal' on input line 70.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/OpenSansHebrew(0)/m/n on input line 5
-5.
+(Font)                  OT1/cmr/m/n --> TU/OpenSansHebrew(0)/m/n on input line 7
+0.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 55.
+(Font)              `operators' in the math version `bold' on input line 70.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/OpenSansHebrew(0)/m/n on input line 
-55.
+70.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/OpenSansHebrew(0)/m/n --> TU/OpenSansHebrew(0)/m/n on
- input line 55.
+ input line 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/OpenSansHebrew(0)/m/it on input line
- 55.
+ 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/OpenSansHebrew(0)/b/n on input line 
-55.
+70.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 55.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 55.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 70.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/OpenSansHebrew(0)/m/n --> TU/OpenSansHebrew(0)/b/n on
- input line 55.
+ input line 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/OpenSansHebrew(0)/b/it on input lin
-e 55.
+e 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 55.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 55.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 70.
 ABD: EveryShipout initializing macros
 (C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count390
-\scratchdimen=\dimen305
+\scratchcounter=\count392
+\scratchdimen=\dimen312
 \scratchbox=\box82
-\nofMPsegments=\count391
-\nofMParguments=\count392
+\nofMPsegments=\count393
+\nofMParguments=\count394
 \everyMPshowfont=\toks53
-\MPscratchCnt=\count393
-\MPscratchDim=\dimen306
-\MPnumerator=\count394
-\makeMPintoPDFobject=\count395
+\MPscratchCnt=\count395
+\MPscratchDim=\dimen313
+\MPnumerator=\count396
+\makeMPintoPDFobject=\count397
 \everyMPtoPDFconversion=\toks54
 )
 (C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
@@ -1453,7 +1472,9 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 5.
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 58
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 73
 .
 
 (C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/latex/stmaryrd/ustmry.fd)
@@ -1465,17 +1486,17 @@ luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
 luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
 luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
 luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
 
 (C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
 
 (C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 58.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 73.
 
 
 (C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/latex/jknappen/ursfs.fd
@@ -1488,14 +1509,14 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 LaTeX Font Info:    Font shape `TU/OpenSansHebrew(0)/m/sl' in size <10> not avai
 lable
 (Font)              Font shape `TU/OpenSansHebrew(0)/m/it' tried instead on inpu
-t line 58.
+t line 73.
  [2
 
 ]
 LaTeX Font Info:    Font shape `TU/OpenSansHebrew(0)/bx/n' in size <24.88> not a
 vailable
 (Font)              Font shape `TU/OpenSansHebrew(0)/b/n' tried instead on input
- line 58.
+ line 73.
 
 (./lie_groups.toc
 LaTeX Font Info:    Font shape `TU/OpenSansHebrew(0)/bx/n' in size <10> not avai
@@ -1518,18 +1539,18 @@ luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.)
 LaTeX Font Info:    Font shape `TU/OpenSansHebrew(0)/bx/n' in size <20.74> not a
 vailable
 (Font)              Font shape `TU/OpenSansHebrew(0)/b/n' tried instead on input
- line 60.
+ line 75.
 LaTeX Font Info:    Font shape `TU/OpenSansHebrew(0)/bx/n' in size <14.4> not av
 ailable
 (Font)              Font shape `TU/OpenSansHebrew(0)/b/n' tried instead on input
- line 62.
+ line 77.
 LaTeX Font Info:    Font shape `TU/OpenSansHebrew(0)/bx/n' in size <12> not avai
 lable
 (Font)              Font shape `TU/OpenSansHebrew(0)/b/n' tried instead on input
- line 64.
+ line 79.
 Package hyperref Info: bookmark level for unknown examples* defaults to 0 on inp
-ut line 149.
-LaTeX Font Info:    Trying to load font information for U+euf on input line 153.
+ut line 164.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 168.
 
 (C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1538,27 +1559,27 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 LaTeX Font Info:    Font shape `TU/OpenSansHebrew(0)/bx/it' in size <10> not ava
 ilable
 (Font)              Font shape `TU/OpenSansHebrew(0)/b/it' tried instead on inpu
-t line 321.
+t line 336.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on i
-nput line 321.
+nput line 336.
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input l
-ine 339.
+ine 354.
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on in
-put line 391.
+put line 406.
  [7]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on inp
-ut line 416.
+ut line 431.
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inpu
-t line 450.
+t line 465.
  [8]
 Package hyperref Info: bookmark level for unknown example defaults to 0 on input
- line 531.
+ line 544.
 Package hyperref Info: bookmark level for unknown notation defaults to 0 on inpu
-t line 559.
+t line 572.
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input 
-line 582.
+line 595.
  [9] [10] [11]
-Overfull \hbox (5.64311pt too wide) detected at line 848
+Overfull \hbox (5.64311pt too wide) detected at line 861
 []\OML/cmm/m/it/10 C [] \OT1/cmr/m/n/10 = [] [] [] [][[]\OML/cmm/m/it/10 ; []; 
 [] ; []; []\OT1/cmr/m/n/10 ]
  []
@@ -1569,31 +1590,31 @@ Overfull \hbox (5.64311pt too wide) detected at line 848
 \bbl@ensure@hebrew {פרק} 2.
 [15] [16] [17] [18]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input
- line 1343.
+ line 1356.
  [19] [20]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input l
-ine 1451.
+ine 1464.
  [21] [22] [23] [24]
 \bbl@ensure@hebrew {פרק} 3.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1896.
+(hyperref)                than one, level fixed on input line 1909.
 
 Package hyperref Info: bookmark level for unknown observation defaults to 0 on i
-nput line 1947.
+nput line 1960.
 [25
 
 ] [26] [27]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 2404.
+(Font)              using `U/stmry/m/n' instead on input line 2417.
 
 luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
 luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate. [28]
 Missing character: There is no [ (U+005B) in font stmary10!
 Missing character: There is no [ (U+005B) in font stmary10!
  [29] [30]
-Overfull \hbox (7.40166pt too wide) in paragraph at lines 2715--2721
+Overfull \hbox (7.40166pt too wide) in paragraph at lines 2728--2734
 []\TU/OpenSansHebrew(0)/m/it/10 בהינתן חבורת מטריצות $\OML/cm
 m/m/it/10 G$ \TU/OpenSansHebrew(0)/m/it/10 קיימת התאמה חד־חד ע
 רכית בין אוסף כל התת־חבורות הקשירות $\OML/cmm/m/i
@@ -1603,39 +1624,39 @@ t/10 H \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 G$ \TU/OpenSansHebrew(0)/m/it/10 ל
 
 [31] [32]
 Package hyperref Info: bookmark level for unknown question defaults to 0 on inpu
-t line 3030.
+t line 3043.
  [33] [34] [35]
 Package hyperref Info: bookmark level for unknown fact defaults to 0 on input li
-ne 3360.
- [36] [37]
+ne 3373.
+ [36] [37] [38] [39]
 \tf@thm=\write6
 
 \openout6 = lie_groups.thm
- [38]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3612.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3612.
+ [40]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4000.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4000.
  (./lie_groups.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3612.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3612.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4000.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4000.
 Package rerunfilecheck Info: File `lie_groups.out' has not changed.
 (rerunfilecheck)             Checksum: 0D0AF536866FB1C06FDFA904E77B03D1;5074.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3612.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4000.
 )
 
 Here is how much of LuaTeX's memory you used:
- 32388 strings out of 481302
+ 33593 strings out of 481302
  100000,1144653 words of node,token memory allocated
- 3168 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 2 sub_mlist, 1 glyph, 981 at
-tribute, 62 glue_spec, 329 attribute_list, 2 write nodes
-   avail lists: 1:1,2:2664,3:265,4:54,5:651,6:55,7:3234,8:103,9:1120,10:5,11:8
- 48166 multiletter control sequences out of 65536+200000
+ 3355 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 3 sub_mlist, 1 glyph, 1050 a
+ttribute, 62 glue_spec, 352 attribute_list, 2 write nodes
+   avail lists: 1:1,2:2748,3:264,4:54,5:672,6:55,7:3234,8:103,9:1120,10:5,11:8
+ 49334 multiletter control sequences out of 65536+200000
  128 fonts using 9383979 bytes
- 68i,24n,88p,935b,1296s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,24n,88p,935b,1294s stack positions out of 5000i,500n,10000p,200000b,50000s
 <//?/c:/users/eladt/appdata/local/programs/miktex/fonts/opentype/public/lm/lmrom
 an10-bolditalic.otf><//?/c:/users/eladt/appdata/local/programs/miktex/fonts/open
 type/public/lm/lmroman12-bold.otf><C:/Users/EladT/AppData/Local/Microsoft/Window
@@ -1665,9 +1686,9 @@ e1/public/amsfonts/symbols/msam10.pfb><C:/Users/EladT/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/EladT/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/EladT/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on lie_groups.pdf (38 pages, 454139 bytes).
+Output written on lie_groups.pdf (40 pages, 473856 bytes).
 
-PDF statistics: 617 PDF objects out of 1000 (max. 8388607)
- 241 named destinations out of 1000 (max. 131072)
+PDF statistics: 649 PDF objects out of 1000 (max. 8388607)
+ 264 named destinations out of 1000 (max. 131072)
  232 words of extra memory for PDF output out of 10000 (max. 100000000)
 

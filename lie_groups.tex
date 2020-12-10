@@ -44,6 +44,21 @@
 
 \newcommand{\Lie}{\mrm{Lie}}
 
+%%%%%%%%%%%
+% Colours %
+%%%%%%%%%%%
+
+\RequirePackage{xcolor}
+\RequirePackage{caption}
+
+\definecolor{stytextcolor}{named}{black}
+\definecolor{stysepcolor}{RGB}{255, 207, 49}
+\definecolor{styurlcolor}{RGB}{108, 168, 204}
+\definecolor{stylinkcolor}{RGB}{39, 116, 162}
+\definecolor{stysepaltcolor}{RGB}{6, 73, 113}
+\definecolor{stystresscolor}{named}{stysepaltcolor}
+\definecolor{stycitecolor}{RGB}{229, 177, 6}
+
 %%%%%%%%%
 % Title %
 %%%%%%%%%
@@ -522,8 +537,6 @@ $1$
 $a = a_X$.
 \end{enumerate}
 \end{proof}
-
-%TODO fill in last part of 2nd lecture
 
 %29.10.2020
 
@@ -3608,5 +3621,380 @@ $\phi$
 $\diff \phi$
 איזומורפיזם.
 \end{lemma}
+
+\begin{remark}
+ההגדרה שלנו להעתקת כיסוי שקולה למושג הכללי יותר של העתקת כיסוי מטופולוגיה.
+עבור כל
+$g \in G$
+ונקודה
+$g' \in \pi^{-1}\prs{g}$
+עם סביבה פתוחה
+$U$
+מספיק קטנה
+כך שמתקיים
+$V = \pi\prs{U}$,
+נקבל
+\[\text{.} \pi^{-1}\prs{V} = U \cdot \ker \pi = \bigcup_{e \in \ker \pi} U e = \bigsqcup_{e \in \ker \pi} U e\]
+אפשר לקחת
+$U$
+מספייק קטנה כך שהאיחוד זר, כי
+$\ker \pi$
+חבורה דיסקרטית.
+\end{remark}
+
+\begin{example}
+תהי
+\[\pi \colon \prs{0,3} \to \mbb{T} \leq \mbb{C}^\times\]
+המוגדרת על ידי
+\[\text{.}\pi\prs{a} = e^{i \pi a}\]
+זאת העתקת כיסוי במובן הטופולוגי כי זה הומיאומורפיזם מקומי.
+אבל, למשל אם
+$-1 \in U \subseteq \mbb{T}$
+עבור
+$U$
+מספיק קטנה אז
+$\pi^{-1}\prs{U} = \prs{1-\eps, 1 + \eps} \cup \prs{3-\eps, 3}$.
+\end{example}
+
+\begin{lemma}
+יהי
+$\phi \colon G \to H$
+הומומורפיזם בין חבורות מטריצות.
+אז
+$\phi$
+העתקת כיסוי אם ורק אם
+$\diff \phi$
+איזומורפיזם.
+\end{lemma}
+
+\begin{proof}
+נניח כי
+$\phi$
+העתקת כיסוי.
+אנו יודעים
+\[\ker \diff \phi = \Lie\prs{\ker \phi} = \set{0}\]
+כאשר השוויון השני נכון כי
+$\ker \phi$
+דיסקרטית.
+אז
+\[\im \diff \phi = \Lie\prs{\phi\prs{G}} = \Lie\prs{H}\]
+לכן
+$\diff \phi$
+איזומורפיזם.
+
+בכיוון השני, נניח כי
+$\diff \phi$
+איזומורפיזם.
+ממשפט הפונקציה ההפוכה
+$\phi$
+איזומורפיזם מקומי ב־%
+$I$.
+לכן קיימת
+$U \subseteq G$
+סביבה פתוחה של
+$I$
+עבורה
+$\phi \colon U \to \phi\prs{U}$
+הומיאומורפיזם ו־%
+$\phi\prs{U}$
+פתוחה.
+אז
+$\phi\prs{U} \subseteq H$
+סביבה פתוחה של
+$I$.
+$H$
+קשירה ולכן נוצרת על ידי
+$\phi\prs{U}$,
+ואז
+$\im \phi = H$.
+לכל
+$g \in G$
+ניקח את הסביבה
+$gU$
+של
+$g$
+ואז
+\[\phi\prs{gU} = \phi\prs{g} \cdot \phi\prs{U}\]
+ונקבל כי
+$\rest{\phi}{gU}$
+הומיאומורפיזם.
+\end{proof}
+
+\begin{example}
+ראינו כי יש
+\[\phi \colon \mrm{U}\prs{2} \to \mrm{SO}\prs{3}\]
+כך ש־%
+$\diff \phi$
+איזומורפיזם. לכן הומומורפיזם זה הוא העתקת כיסוי.
+\end{example}
+
+\begin{exercise}
+הומומורפיזם כיסוי הוא תמיד על.
+\end{exercise}
+
+\begin{example}
+ראינו כי עבור
+\[\exp \colon \prs{\mbb{C}, +} \to \mrm{GL}_1\prs{\mbb{C}}\]
+שראינו, ההעתקה
+$d\prs{\exp}$
+היא איזומורפיזם.
+למעשה זאת דוגמא דומה לכיסוי
+$\mbb{R} \to \mbb{T}$.
+
+מתקיים
+\[\text{.} \mbb{C}^\times \cong \mrm{GL}_1\prs{\mbb{C}} \times \mbb{T} \times \mbb{R}_{>0} \times \mbb{T} \times \mbb{R}\]
+\end{example}
+
+%lecture Thursday 10.12.2020
+
+\begin{theorem}[משפט ההרמה]
+נניח כי
+$\mfrak{g} = \Lie\prs{G}, \mfrak{h} = \Lie\prs{H}$
+ותהי
+$f \colon \mfrak{g} \to \mfrak{h}$.
+אם
+$G$
+קשירה, קיימת העתקת כיסוי
+\[\pi \colon \tilde{G} \to G\]
+וקיים הומומורפיזם
+\[\phi \colon \tilde{G} \to H\]
+כך שמתקיים
+\[\text{.} \diff \phi = f \circ \diff \pi\]
+\end{theorem}
+
+\begin{proof}
+נביט ב־%
+$G \times H$
+כחבורת מטריצות המשוכנת ב־%
+$\mrm{GL}_n\prs{\mbb{R}} \times \mrm{GL}_k\prs{\mbb{R}} \leq \mrm{GL}_{n+k}\prs{\mbb{R}}$
+כשהשיכון הוא כבלוקים.
+מתקיים
+\[\Lie\prs{G \times H} \cong \mfrak{g} \oplus \mfrak{h}\]
+כאשר
+$\mfrak{g} = \Lie\prs{G}$
+ו־%
+$\mfrak{h} = \Lie\prs{\mbb{H}}$.
+תהי
+\[\tilde{\mfrak{g}} \ceq \set{\prs{X,Y} \in \mfrak{g} \oplus \mfrak{h}}{f\prs{X} = Y} \leq g \oplus \mfrak{h}\]
+כאשר זאת אלגברת לי. מתקיים
+\[\brs{\prs{X_1, Y_1}, \prs{X_2, Y_2}} = \prs{\brs{X_1, X_2}, \brs{Y_1, Y_2}} \in \tilde{g}\]
+כיוון ש־%
+\[\text{.} f\prs{\brs{X_1, X_2}} = \brs{f\prs{X_1}, f\prs{X_2}} = \brs{Y_1, Y_2}\]
+ניקח את ההטלות
+\begin{align*}
+p_1 \colon \tilde{\mfrak{g}} &\riso \mfrak{g}
+p_2 \colon \tilde{\mfrak{g}} &\to h
+\end{align*}
+כשמתקיים
+$p_2 = f \circ p_1$.
+ניקח
+$\tilde{G} \ceq \Gamma\prs{\tilde{\mfrak{g}}} \leq G \times H$
+ביחד עם ההטלות
+\begin{align*}
+p \colon \tilde{G} &\to G \\
+\text{.} \phi \colon \tilde{G} &\to H
+\end{align*}
+הנגזרת של הטלה היא הטלה ואז
+$\diff p = p_1, \diff \phi = p_2$.
+בפרט
+$\diff p$
+איזומורפיזם לכן
+$p$
+כיסוי, ומתקיים
+$\diff \phi = f \circ \diff p$.
+\end{proof}
+
+\begin{example}
+תהיינה
+$G=H=\mbb{T}$
+ואז
+$\mfrak{g} = \mfrak{h} = \mbb{R}$.
+יהי
+\begin{align*}
+L_\alpha \colon \mbb{R} &\to \mbb{R} \\
+x &\mapsto \alpha x
+\end{align*}
+הומומורפיזם ויהי
+\begin{align*}
+\exp \colon \mbb{R} &\to \mbb{T} \\
+\text{.} x &\mapsto e^{ix}
+\end{align*}
+היינו רוצים להרים את
+$L_\alpha$
+להומומורפיזם
+\begin{align*}
+\phi \colon \mbb{T} &\to \mbb{T} \\
+\text{.} e^{ix} &\mapsto e^{i\alpha x}
+\end{align*}
+
+באופן כללי, נוכל להביט בכיסוי
+$\mbb{R}$
+של
+$\mbb{T}$
+על ידי
+$\pi \colon a \mapsto e^{ia}$.
+אז
+$\diff \phi \circ \prs{\diff \pi}^{-1} = L_\alpha$.
+
+מהוכחת המשפט, אפשר למצוא את הכיסוי
+$\mbb{R}$
+בתוך
+$\mbb{T} \times \mbb{T}$,
+
+אם
+$\alpha$
+אי־רציונלי
+מתקיים
+\[\mbb{R} \cong \set{\prs{e^{ia}, e^{i \alpha a}}}{a \in \mbb{R}}\]
+והכרנו שיכון זה של
+$\mbb{R}$.
+
+אם
+$\alpha$
+שלם, ראינו שהחבורה הזאת איזומורפית ל־%
+$\mbb{T}$
+ואז קיים הומומורפיזם
+\begin{align*}
+\phi_n \colon \mbb{T} &\to \mbb{T} \\
+z &\mapsto z^n
+\end{align*}
+עבורו
+$\diff \prs{\phi_n} = L_\alpha$.
+בדקו איך עובדת ההוכחה ומהם
+$\phi, \pi$
+עבור
+$\alpha$
+רציונלי כללי.
+\end{example}
+
+\begin{remark}
+אם
+$G_1, G_2$
+חבורות מטריצות קשירות עבורן
+$\Lie\prs{G_1} \riso \Lie\prs{G_2}$,
+המשפט נותן בפרט כיסוי משותף
+\[
+\begin{tikzcd}
+& \tilde{G} \arrow[dl, "\pi"] \arrow[dr, "\phi"] & \\
+G_1 & & G_2
+\end{tikzcd}
+\]
+כאשר
+$\diff \phi$
+איזומורפיזם.
+\end{remark}
+
+עדיין נותרנו עם השאלה מתי ל־%
+$f \in \hom\prs{\Lie\prs{G}, \Lie\prs{H}}$
+נתון קיים
+$\phi \in \hom\prs{G,H}$
+עבורו
+$\diff \phi = f$.
+
+התשובה לא פשוטה, אבל אם
+$G$
+\href{https://en.wikipedia.org/wiki/Simply_connected_space}{פשוטת קשר}%
+, קיים
+$\phi$
+כזה לכל
+$f$
+כי אז
+$G$
+היא הכיסוי האוניברסלי של עצמה, ואין לה כיסויים שאינם הומאומורפיזם.
+
+\begin{example}
+מרחבים פשוטים קשר הם למשל קבוצות קמורות ב־%
+$\mbb{R}^n$,
+הספירות
+$S^n$
+עבור
+$n \geq 2$.
+\end{example}
+
+\begin{example}
+על ידי גרם-שמידט, כל איבר
+$g \in \mrm{SL}_2\prs{\mbb{C}}$
+ניתן לכתיבה כ־%
+$g = k \cdot \pmat{\alpha & \beta \\ 0 & \alpha^{-1}}$
+עבור
+$k \in \mrm{SU}\prs{2}$
+וכאשר
+$\alpha \in \mbb{R}_{>0}, \beta \in \mbb{C}$
+ביחידות.
+כמרחב טופולוגי מתקיים
+\[\mrm{SL}_2\prs{\mbb{C}} \cong \mrm{SU}\prs{2} \times \mbb{R}_{>0} \times \mbb{C} \cong S^3 \times \mbb{R}^3\]
+ואז זה מרחב פשוט־קשר כמכפלה של כאלה.
+\end{example}
+
+\begin{example}
+$S^1$
+לא פשוטת קשר כי יש כיסוי
+$R \to S^1$.
+\end{example}
+
+\begin{example}
+יש כיסוי
+$\mrm{SU}\prs{2} \to \mrm{SO}\prs{3}$
+לכן
+$\mrm{SO}\prs{3}$
+אינה פשוטת קשר.
+\end{example}
+
+\begin{example}
+באופן דומה ל־%
+$\mrm{SL}_2\prs{\mbb{C}}$
+מתקיים
+\[\mrm{SL}_2\prs{\mbb{R}} \cong \mrm{SO}\prs{2} \times \set{\pmat{\alpha & \beta \\ 0 & \alpha^{-1}}}{\substack{\alpha \in \mbb{R}_{>0} \\ \beta \in \mbb{R}}}\]
+כאשר כמרחבים טופולוגיים המכפלה האחרונה הומאומורפית ל־%
+$S^1 \times \mbb{R}^2$
+וזה אינו מרחב פשוט קשר.
+לכן
+$\mrm{SL}_2\prs{\mbb{R}}$
+אינה פשוטת קשר.
+\end{example}
+
+\begin{corollary}
+אם
+$G$
+חבורה פשוטת קשר אז
+\[\text{.} \hom\prs{G,H} \cong \hom\prs{\Lie\prs{G}, \Lie\prs{H}}\]
+\end{corollary}
+
+\begin{proof}
+ראינו שכל הומומורפיזם ניתן להרמה לכיסוי
+$\phi \colon \tilde{G} \to H$
+כאשר
+$\pi \colon \tilde{G} \to G$
+הומיאומורפיזם כי
+$G$
+פשוטת קשר.
+אז
+$\phi \circ \pi^{-1}$
+ההרמה.
+\end{proof}
+
+\begin{remark}
+למעשה, לכל חבורה קשירה
+$G$
+קיים כיסוי
+$\pi \colon \tilde{G} \to G$
+פשוט־קשר שנקרא
+\emph{הכיסוי האוניברסלי של
+$G$}.
+$\tilde{G}$
+לא בהכרח חבורת מטריצות. נגדיר בהמשך חבורות לי כלליות ואז זה יהיה ברור.
+הכיסוי האוניברסלי יחיד עד כדי איזומורפיזם (יחיד) של חבורות לי.
+\end{remark}
+
+\begin{remark}[פנקטורים צמודים]
+הפנקטור
+\[\mfrak{g} \mapsto \widetilde{\Gamma\prs{\gamma}}\]
+צמוד שמאלי לפנקטור
+$\Lie$.
+\end{remark}
+
+\begin{remark}[שקילות קטגורית]
+הקטגוריה של חבורות פשוטות־קשר שקולה לקטגוריה של אלגבראות לי.
+\end{remark}
 
 \end{document}
