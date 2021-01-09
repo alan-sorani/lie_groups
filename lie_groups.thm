@@ -132,5 +132,99 @@
 \contentsline {corollary}{{מסקנה}{3.2.{32}}{}}{40}{theorem.3.2.32}%
 \contentsline {proof}{{הוכחה}{24}{}}{40}{proof.24}%
 \contentsline {remark}{{הערה}{3.2.{33}}{}}{40}{theorem.3.2.33}%
-\contentsline {remark}{{הערה}{3.2.{34}}{פנקטורים צמודים}}{40}{theorem.3.2.34}%
-\contentsline {remark}{{הערה}{3.2.{35}}{שקילות קטגורית}}{40}{theorem.3.2.35}%
+\contentsline {remark}{{הערה}{3.2.{34}}{כיסוי אוניברסלי}}{40}{theorem.3.2.34}%
+\contentsline {example}{{דוגמה}{3.2.{35}}{}}{40}{theorem.3.2.35}%
+\contentsline {remark}{{הערה}{3.2.{36}}{}}{40}{theorem.3.2.36}%
+\contentsline {remark}{{הערה}{3.2.{37}}{פנקטורים צמודים}}{40}{theorem.3.2.37}%
+\contentsline {remark}{{הערה}{3.2.{38}}{שקילות קטגורית}}{41}{theorem.3.2.38}%
+\contentsline {example}{{דוגמה}{3.2.{39}}{}}{41}{theorem.3.2.39}%
+\contentsline {proposition}{{טענה}{3.2.{40}}{}}{41}{theorem.3.2.40}%
+\contentsline {proof}{{הוכחה}{25}{}}{41}{proof.25}%
+\contentsline {remark}{{הערה}{3.2.{41}}{}}{41}{theorem.3.2.41}%
+\contentsline {fact}{{עובדה}{3.2.{42}}{}}{41}{theorem.3.2.42}%
+\contentsline {definition}{{הגדרה}{3.3.{1}}{קטגוריה}}{42}{theorem.3.3.1}%
+\contentsline {example}{{דוגמה}{3.3.{2}}{}}{42}{theorem.3.3.2}%
+\contentsline {example}{{דוגמה}{3.3.{3}}{}}{42}{theorem.3.3.3}%
+\contentsline {example}{{דוגמה}{3.3.{4}}{}}{42}{theorem.3.3.4}%
+\contentsline {example}{{דוגמה}{3.3.{5}}{}}{42}{theorem.3.3.5}%
+\contentsline {example}{{דוגמה}{3.3.{6}}{}}{42}{theorem.3.3.6}%
+\contentsline {example}{{דוגמה}{3.3.{7}}{}}{42}{theorem.3.3.7}%
+\contentsline {definition}{{הגדרה}{3.3.{8}}{פנקטור}}{42}{theorem.3.3.8}%
+\contentsline {example}{{דוגמה}{3.3.{9}}{}}{42}{theorem.3.3.9}%
+\contentsline {definition}{{הגדרה}{3.3.{10}}{קטגוריה דואלית}}{42}{theorem.3.3.10}%
+\contentsline {example}{{דוגמה}{3.3.{11}}{מרחב דואלי}}{42}{theorem.3.3.11}%
+\contentsline {example}{{דוגמה}{3.3.{12}}{}}{43}{theorem.3.3.12}%
+\contentsline {example}{{דוגמה}{3.3.{13}}{}}{43}{theorem.3.3.13}%
+\contentsline {definition}{{הגדרה}{3.3.{14}}{מורפיזם הופכי}}{43}{theorem.3.3.14}%
+\contentsline {definition}{{הגדרה}{3.3.{15}}{איזומורפיזם}}{43}{theorem.3.3.15}%
+\contentsline {remark}{{הערה}{3.3.{16}}{}}{43}{theorem.3.3.16}%
+\contentsline {definition}{{הגדרה}{3.3.{17}}{שקילות קטגורית}}{43}{theorem.3.3.17}%
+\contentsline {exercise}{{תרגיל}{9}{}}{43}{exercise.9}%
+\contentsline {exercise}{{תרגיל}{10}{}}{43}{exercise.10}%
+\contentsline {remark}{{הערה}{3.3.{18}}{}}{43}{theorem.3.3.18}%
+\contentsline {remark}{{הערה}{3.3.{19}}{}}{43}{theorem.3.3.19}%
+\contentsline {example}{{דוגמה}{3.3.{20}}{}}{43}{theorem.3.3.20}%
+\contentsline {example}{{דוגמה}{3.3.{21}}{}}{43}{theorem.3.3.21}%
+\contentsline {example}{{דוגמה}{3.3.{22}}{}}{43}{theorem.3.3.22}%
+\contentsline {example}{{דוגמה}{3.3.{23}}{}}{43}{theorem.3.3.23}%
+\contentsline {example}{{דוגמה}{3.3.{24}}{}}{43}{theorem.3.3.24}%
+\contentsline {proposition}{{טענה}{3.3.{25}}{}}{43}{theorem.3.3.25}%
+\contentsline {definition}{{הגדרה}{4.1.{1}}{חבורת לי}}{45}{theorem.4.1.1}%
+\contentsline {remark}{{הערה}{4.1.{2}}{לאנשי תורת־הקטגוריות}}{45}{theorem.4.1.2}%
+\contentsline {definition}{{הגדרה}{4.1.{3}}{יריעה חלקה}}{45}{theorem.4.1.3}%
+\contentsline {remark}{{הערה}{4.1.{4}}{}}{45}{theorem.4.1.4}%
+\contentsline {definition}{{הגדרה}{4.1.{5}}{העתקה חלקה}}{45}{theorem.4.1.5}%
+\contentsline {example}{{דוגמה}{4.1.{6}}{}}{45}{theorem.4.1.6}%
+\contentsline {remark}{{הערה}{4.1.{7}}{}}{45}{theorem.4.1.7}%
+\contentsline {example}{{דוגמה}{4.1.{8}}{}}{45}{theorem.4.1.8}%
+\contentsline {remark}{{הערה}{4.1.{9}}{}}{45}{theorem.4.1.9}%
+\contentsline {fact}{{עובדה}{4.1.{10}}{}}{45}{theorem.4.1.10}%
+\contentsline {fact}{{עובדה}{4.1.{11}}{}}{45}{theorem.4.1.11}%
+\contentsline {remark}{{הערה}{4.1.{12}}{}}{45}{theorem.4.1.12}%
+\contentsline {remark}{{הערה}{4.1.{13}}{}}{45}{theorem.4.1.13}%
+\contentsline {definition}{{הגדרה}{4.1.{14}}{}}{45}{theorem.4.1.14}%
+\contentsline {definition}{{הגדרה}{4.1.{15}}{}}{46}{theorem.4.1.15}%
+\contentsline {remark}{{הערה}{4.1.{16}}{}}{46}{theorem.4.1.16}%
+\contentsline {remark}{{הערה}{4.1.{17}}{}}{46}{theorem.4.1.17}%
+\contentsline {definition}{{הגדרה}{4.1.{18}}{שדה וקטורי}}{47}{theorem.4.1.18}%
+\contentsline {remark}{{הערה}{4.1.{19}}{}}{47}{theorem.4.1.19}%
+\contentsline {definition}{{הגדרה}{4.1.{20}}{מרחב משיק}}{47}{theorem.4.1.20}%
+\contentsline {remark}{{הערה}{4.1.{21}}{}}{47}{theorem.4.1.21}%
+\contentsline {remark}{{הערה}{4.1.{22}}{}}{47}{theorem.4.1.22}%
+\contentsline {example}{{דוגמה}{4.1.{23}}{}}{47}{theorem.4.1.23}%
+\contentsline {example}{{דוגמה}{4.1.{24}}{}}{47}{theorem.4.1.24}%
+\contentsline {example}{{דוגמה}{4.1.{25}}{}}{47}{theorem.4.1.25}%
+\contentsline {definition}{{הגדרה}{4.1.{26}}{זרימה על יריעה}}{48}{theorem.4.1.26}%
+\contentsline {theorem}{{משפט}{4.1.{27}}{קיום ויחידות}}{48}{theorem.4.1.27}%
+\contentsline {definition}{{הגדרה}{4.1.{28}}{אקספוננט}}{48}{theorem.4.1.28}%
+\contentsline {remark}{{הערה}{4.1.{29}}{}}{48}{theorem.4.1.29}%
+\contentsline {remark}{{הערה}{4.1.{30}}{}}{48}{theorem.4.1.30}%
+\contentsline {definition}{{הגדרה}{4.1.{31}}{}}{48}{theorem.4.1.31}%
+\contentsline {theorem}{{משפט}{4.1.{32}}{}}{48}{theorem.4.1.32}%
+\contentsline {proof}{{הוכחה}{26}{}}{48}{proof.26}%
+\contentsline {remark}{{הערה}{4.1.{33}}{}}{49}{theorem.4.1.33}%
+\contentsline {remark}{{הערה}{4.1.{34}}{}}{49}{theorem.4.1.34}%
+\contentsline {definition}{{הגדרה}{4.2.{1}}{תת־חבורת לי}}{49}{theorem.4.2.1}%
+\contentsline {remark}{{הערה}{4.2.{2}}{}}{49}{theorem.4.2.2}%
+\contentsline {remark}{{הערה}{4.2.{3}}{}}{49}{theorem.4.2.3}%
+\contentsline {definition}{{הגדרה}{4.2.{4}}{אלגברת לי של תת־חבורה}}{49}{theorem.4.2.4}%
+\contentsline {exercise}{{תרגיל}{11}{}}{49}{exercise.11}%
+\contentsline {corollary}{{מסקנה}{4.2.{5}}{}}{49}{theorem.4.2.5}%
+\contentsline {remark}{{הערה}{4.2.{6}}{}}{49}{theorem.4.2.6}%
+\contentsline {definition}{{הגדרה}{4.2.{7}}{אקספוננטים של תת־אלגברה}}{49}{theorem.4.2.7}%
+\contentsline {exercise}{{תרגיל}{12}{}}{49}{exercise.12}%
+\contentsline {theorem}{{משפט}{4.2.{8}}{\textenglish {Chevalley}}}{49}{theorem.4.2.8}%
+\contentsline {definition}{{הגדרה}{4.2.{9}}{תת־יריעה}}{49}{theorem.4.2.9}%
+\contentsline {remark}{{הערה}{4.2.{10}}{}}{49}{theorem.4.2.10}%
+\contentsline {theorem}{{משפט}{4.2.{11}}{משפט התת־חבורה הסגורה}}{49}{theorem.4.2.11}%
+\contentsline {remark}{{הערה}{4.2.{12}}{}}{49}{theorem.4.2.12}%
+\contentsline {example}{{דוגמה}{4.2.{13}}{}}{50}{theorem.4.2.13}%
+\contentsline {proof}{{הוכחה}{27}{}}{50}{proof.27}%
+\contentsline {corollary}{{מסקנה}{4.2.{14}}{}}{50}{theorem.4.2.14}%
+\contentsline {proof}{{הוכחה}{28}{}}{50}{proof.28}%
+\contentsline {corollary}{{מסקנה}{4.2.{15}}{}}{51}{theorem.4.2.15}%
+\contentsline {corollary}{{מסקנה}{4.2.{16}}{}}{51}{theorem.4.2.16}%
+\contentsline {proof}{{הוכחה}{29}{}}{51}{proof.29}%
+\contentsline {example}{{דוגמה}{4.3.{1}}{}}{51}{theorem.4.3.1}%
+\contentsline {theorem}{{משפט}{4.3.{2}}{\textenglish {Peter-Weyl}}}{51}{theorem.4.3.2}%
+\contentsline {remark}{{הערה}{4.3.{3}}{}}{51}{theorem.4.3.3}%

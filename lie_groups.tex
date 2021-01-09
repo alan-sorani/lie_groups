@@ -3986,6 +3986,72 @@ $\tilde{G}$
 הכיסוי האוניברסלי יחיד עד כדי איזומורפיזם (יחיד) של חבורות לי.
 \end{remark}
 
+\begin{remark}[כיסוי אוניברסלי]
+עבור מרחב טופולוגי
+$X$
+מספיק נחמד אפשר לבנות כיסוי אוניברסלי
+$\tilde{X} \to X$,
+כלומר כיסוי כאשר
+$\tilde{X}$
+פשוט־קשר.
+ניתן להגדיר זאת על ידי
+\[\tilde{X} \ceq \set{\gamma \colon \brs{0,1} \to X}{\gamma\prs{0} = x_0} / \sim\]
+עבור
+$x_0 \in X$
+וכאשר השקילות היא שקילות של הומוטופיה שמשאירה את הקצוות קבועים.
+\end{remark}
+
+\begin{example}
+נסתכל על
+$X = \mbb{C}^\times$
+כאשר כמרחב טופולוגי מתקיים
+$X \cong \mbb{R} \times S^1$.
+נקודות ב־%
+$\widetilde{\mbb{C}^\times}$
+הן מסילות ב־%
+$\mbb{C}^\times$
+שמתחילות ב־%
+$1$
+עד כדי הומוטופיה.
+אפשר לקחת מסילות שונות לא הומוטופיות למשל מ־%
+$1$
+ל־%
+$i$,
+לפי מספר הסיבובים סביב
+$0$.
+אבל, ההטלה של כולם תהיה
+$i$.
+\end{example}
+
+\begin{remark}
+אם
+$G$
+חבורה, קל לראות מבנה של חבורה על
+$\tilde{G}$.
+אם
+$\gamma_1, \gamma_2 \in \tilde{G}$
+נקבל כי אם
+$\gamma_1$
+מסילה מ־%
+$1$
+ל־%
+$h$
+ו־%
+$\gamma_2$
+ל־%
+$g$
+אז
+$\gamma_2 \cdot \gamma_1 = g \gamma_1 \circ \gamma_2$
+מגדיר כפל בחבורה.
+אם
+$G$
+חבורת מטריצות, אין שום סיבה ש־%
+$\tilde{G}$
+תהיה כזאת. מאידך, לא קשה לראות שזו חבורת לי.
+\end{remark}
+
+
+
 \begin{remark}[פנקטורים צמודים]
 הפנקטור
 \[\mfrak{g} \mapsto \widetilde{\Gamma\prs{\gamma}}\]
@@ -3996,5 +4062,1520 @@ $\Lie$.
 \begin{remark}[שקילות קטגורית]
 הקטגוריה של חבורות פשוטות־קשר שקולה לקטגוריה של אלגבראות לי.
 \end{remark}
+
+%LECTURE 21.12.2020
+
+\begin{example}
+בדוגמאות עד כה ראינו כי
+\begin{align*}
+\widetilde{S^1} &= \mbb{R} \\
+\widetilde{\mrm{SO}\prs{3}} = \mrm{SU}\prs{2} \cong S^3
+\end{align*}
+חבורות מטריצות. ראינו גם
+$\mrm{SL}_2\prs{\mbb{R}} \cong S^1 \times \mbb{R}^2$
+כמרחבים טופולוגיים, וניתן לראות כי
+$\mrm{SL}_2\prs{\mbb{R}}$
+אינה פשוטת־קשר.
+\end{example}
+
+\begin{proposition}
+$\widetilde{\mrm{SL}_2\prs{\mbb{R}}}$
+אינה חבורת מטריצות.
+\end{proposition}
+
+\begin{proof}
+נניח בשלילה שיש שיכון
+\[i \colon \widetilde{\mrm{SL}_2\prs{\mbb{R}}} \to \mrm{GL}_n\prs{\mbb{R}}\]
+ותהי
+\[p \colon \widetilde{\mrm{SL}_2\prs{\mbb{R}}} \to \mrm{SL}_2\prs{\mbb{R}}\]
+העתקת הכיסוי.
+נסמן
+$\mfrak{g} = \Lie\prs{\widetilde{\mrm{SL}_2\prs{\mbb{R}}}}$.
+אז
+\[\diff p \colon \Lie\prs{\widetilde{\mrm{SL}_2\prs{\mbb{R}}}} \to \mfrak{sl}_2\prs{\mbb{R}}\]
+איזומורפיזם. מתקיים
+\[\diff i \colon \mfrak{g} \to M_n\prs{\mbb{R}}\]
+ונסמן
+\[\text{.} j = \diff i \circ \prs{\diff p}^{-1} \colon \mfrak{sl}_2\prs{\mbb{R}} \to M_n\prs{\mbb{R}}\]
+נגדיר
+\begin{align*}
+f \colon \mfrak{sl}_2\prs{\mbb{C}} &\to M_n \\
+A + iB &\mapsto j\prs{A} + i j\prs{B}
+\end{align*}
+כאשר
+$A,B \in \mfrak{sl}_2\prs{\mbb{R}}$.
+ראינו כי
+$\mrm{SL}_2\prs{\mbb{C}}$
+פשוטת־קשר.
+אז קיים
+\[\phi \colon \mrm{SL}_2\prs{\mbb{C}} \to \mrm{GL}_n\prs{\mbb{C}}\]
+כך שמתקיים
+\begin{align*}
+\text{.}\diff \phi = f, \quad \rest{\diff \phi}{\mrm{SL}_2\prs{\mbb{R}}} = j
+\end{align*}
+אז
+\[\text{.}\diff i = j \circ \diff p = \diff \phi \circ \diff p = \diff \prs{\phi \circ p}\]
+$\widetilde{\mrm{SL}_2\prs{\mbb{R}}}$
+קשירה, לכן נובע
+$i = \phi \circ p$.
+$i$
+חד־חד ערכי, אבל
+$p$
+כיסוי לא טריוויאלי, לכן יש סתירה.
+\end{proof}
+
+\begin{remark}
+אם
+$G$
+חבורת מטריצות קשירה ו־%
+$\tilde{G}$
+הכיסוי האוניברסלי שלה, אז
+\[G \cong \quot{\tilde{G}}{Z}\]
+כאשר
+$Z = \ker p \cong \pi_1\prs{G}$
+זאת חבורה דיסקרטית בתוך
+$Z\prs{\tilde{G}}$.
+\end{remark}
+
+\begin{fact}
+תהי
+$G$
+חבורת מטריצות קשירה ויהי
+$f \in \hom\prs{\Lie\prs{G}, \Lie\prs{H}}$.
+%TODO fill in
+\\
+... אשלים כשתעלה ההקלטה.
+\end{fact}
+
+עבור אלגברת לי
+$\mfrak{g}$
+של מטריצות ראינו ש־%
+$\Gamma\prs{\mfrak{g}}$
+תלוי בשיכון של
+$\mfrak{g}$
+כאלגברת מטריצות. אבל, הכיסוי האוניברסלי של החבורה מוגדר היטב עד כדי איזומורפיזם. זאת אולי לא חבורת מטריצות.
+
+\section{חבורות לי כלליות}
+
+\subsection{חבורות לי כלליות}
+
+נרצה להגדיר חבורות לי ואלגבראות לי כלליות, ולהגדיר התאמת לי כללית.
+
+\subsection{קטגוריות}
+ראינו כי יש התאמה חד־חד ערכית ועל בין חבורות לי קשירות פשוטות קשר עד כדי איזומורפיזם לבין אלגבראות לי עד כדי איזומורפיזם.
+\begin{align*}
+G &\mapsto \Lie\prs{G} \\
+\widetilde{\Gamma\prs{\mfrak{g}}} &\mapsfrom \mfrak{g}
+\end{align*}
+ראינו גם שעבור
+$G,H$
+חבורות לי פשוטות קשר יש התאמה
+\[\text{.} \hom\prs{G,H} \leftrightarrow \hom\prs{\Lie\prs{G}, \Lie\prs{H}}\]
+זאת בעצם שקילות שנקראת
+\emph{שקילות קטגורית}
+שנתאר בהמשך.
+
+\begin{definition}[קטגוריה]
+\emph{קטגוריה}
+(קטנה)
+$\mcal{C}$
+היא אוסף אוביקטים
+$\mrm{ob}\prs{\mcal{C}}$
+כך שלכל
+$X,Y \in \mrm{ob}\prs{\mcal{C}}$
+יש קבוצה
+$\hom_{\mcal{C}}\prs{X,Y}$,
+ביחד עם העתקות
+\emph{הרכבה}
+\[\circ \colon \hom\prs{Y,Z} \times \hom\prs{X,Y} \to \hom\prs{X,Z}\]
+אסוציאטיביות ולכל אוביקט
+$X$
+מורפיזם
+$\id_X \in \hom\prs{X,X}$
+אדיש להרכבה משני הכיוונים.
+\end{definition}
+
+\begin{example}
+בקטגוריה
+$\catname{Set}$
+של קבוצות, האובייקטים הם קבוצות והמורפיזמים הם העתקות בין קבוצות.
+\end{example}
+
+\begin{example}
+יהי
+$k$
+שדה.
+אז
+$\catname{Vec}_k$
+היא הקטגוריה בה אובייקטים הם מרחבים וקטוריים מעל
+$k$
+והמורפיזמים הם העתקות לינאריות.
+\end{example}
+
+\begin{example}
+בקטגוריה
+$\catname{Grps}$
+האובייקטים הם חבורות והמורפיזמים הם הומומורפיזמים.
+\end{example}
+
+\begin{example}
+בקטגוריה
+$\catname{Top}$
+האובייקטים הם מרחבים טופולוגיים והמורפיזמים הם העתקות רציפות.
+\end{example}
+
+\begin{example}
+נוכל להגדיר קטגוריה
+$\mcal{C}$
+עם אובייקטים
+$\set{1,2}$,
+מורפיזמים
+$\hom\prs{1,2} = \set{\alpha}, \hom\prs{2,1} = \beta, \hom\prs{1,1} = \set{\id_1}, \hom\prs{2,2} = \set{\id_2}$,
+ואז מתקיים
+$\alpha \circ \beta = \id_1, \beta \circ \alpha = \id_2$.
+\end{example}
+
+\begin{example}
+נוכל להסתכל על הקטגוריה של חבורות מטריצות עם מורפיזמים שהם העתקות חלקות.
+
+נוכל להסתכל על אלגבראות לי עם הומומורפיזמים ש אלגבראות לי.
+\end{example}
+
+%LECTURE 17 - 24.12
+
+\begin{definition}[פנקטור]
+תהיינה
+$\mcal{C}, \mcal{D}$
+שתי קטגוריות.
+פנקטור
+\[F \colon \mcal{C} \to \mcal{D}\]
+הוא העתקה
+\[F \colon \ob\prs{\mcal{C}} \to \ob\prs{\mcal{D}}\]
+ולכל
+$X,Y \in \ob\prs{\mcal{C}}$
+העתקה
+\[F = F_{X,Y} \colon \hom_{\mcal{C}}\prs{X,Y} \to \hom_{\mcal{D}}\prs{F\prs{X}, F\prs{Y}}\]
+שמקיימת
+\[F \prs{f \circ g} = F\prs{f} \circ F\prs{g}\]
+וגם
+\[\text{.} F\prs{\id_X} = \id_{F\prs{X}}\]
+\end{definition}
+
+\begin{example}
+אם יש לנו קטגוריה של אוביקטים שהם גם קבוצות ושההעתקות בינם הן פונקציות עם אולי תנאי נוסף, יש פנקטור
+\emph{שוכח}
+לקבוצות, שמסתכל על הכל כקבוצות. למשל
+\[\text{.} F \colon \catname{Top} \to \catname{Set}\]
+\end{example}
+
+\begin{definition}[קטגוריה דואלית]
+עבור קטגוריה
+$\mcal{C}$
+נגדיר קטגוריה
+$\mcal{C}^\op$
+עם אותם אובייקטים ועם חצים הפוכים:
+\[\hom_{\mcal{C}^\op}\prs{X,Y} = \hom_{\mcal{C}}\prs{Y,X}\]
+\end{definition}
+
+\begin{example}[מרחב דואלי]
+נגדיר
+\[F \colon \catname{Vec}_k \to \catname{Vec}_k^\op\]
+על ידי
+\[\text{.} F\prs{V} = V^*\]
+אם
+$T \in \hom_{\catname{Vec}_k}\prs{X,Y}$
+אז
+\[F\prs{T^*} = T^* \in \hom_{\catname{Vec}_k} \prs{Y^*, X^*} = \hom_{\catname{Vec}^\op} \prs{F\prs{X}, F\prs{Y}}\]
+ומתקיים
+\[\text{.} \prs{T \circ S}^* = S^* \circ T^*\]
+\end{example}
+
+\begin{example}
+ניתן להגדיר
+\[F = \hom_{\catname{Top}}\prs{-, \mbb{R}} \colon \catname{Top}^\op \to \catname{Vec}_{\mbb{R}}\]
+ששולח מרחב טופולוגי למרחב הפונקציות הרציפות ממנו ל־%
+$\mbb{R}$
+והעתקה
+$f \colon X \to Y$
+להעתקה
+$\phi \mapsto f \circ \phi$
+ב־%
+$\hom_{\catname{Vec}_{\mbb{R}}}\prs{F\prs{Y}, F\prs{X}}$.
+\end{example}
+
+\begin{example}
+אצלנו
+$\Lie$
+הוא פנקטור מחבורות מטריצות לאלגבראות לי.
+\end{example}
+
+\begin{definition}[מורפיזם הופכי]
+יהי
+$f \colon X \to Y$
+מורפיזם בקטגוריה ויהיו
+$g,h \colon X \to Y$
+שני מורפיזמים.
+אם
+$g \circ f = \id_X$
+נקרא ל־%
+$g$
+\emph{הופכי משמאל ל־%
+$f$}
+ואם
+$f \circ h = \id_Y$
+נקרא ל־%
+$h$
+\emph{הופכי מימין ל־%
+$f$}.
+
+אם
+$g$
+הופכי משמאל ומימין ל־%
+$f$
+נקרא ל־%
+$g$
+\emph{הופכי ל־%
+$f$}.
+\end{definition}
+
+\begin{definition}[איזומורפיזם]
+מורפיזם
+$f \colon X \to Y$
+בקטגוריה נקרא
+\emph{איזומורפיזם}
+אם יש לו הופכי
+$g \colon Y \to X$.
+במקרה זה נסמן
+$g = f^{-1}$.
+\end{definition}
+
+\begin{remark}
+אם נסתכל על ההגדרה של איזומורפיזם נקבל הגדרה של איזומורפיזם בין קטגוריות כפנקטור
+$F \colon \mcal{C} \to \mcal{D}$
+כך שיש פנקטור
+$G \colon \mcal{D} \to \mcal{C}$
+כך שההרכבות
+$F \circ G, G \circ F$
+נותנות את הזהות על
+$\mcal{D}, \mcal{C}$.
+
+הגדרה זאת לא "טובה". היינו רוצים להשוות לא את האובייקטים
+$\ob\prs{\mcal{C}}$
+אלא את האובייקטים עד כדי יחס שקילות של איזומורפיזם.
+\end{remark}
+
+\begin{definition}[שקילות קטגורית]
+נאמר שפנקטור
+$F \colon \mcal{C} \to \mcal{D}$
+הוא
+\emph{שקילות קטגורית}
+אם
+\begin{description}
+\item[$F$ נאמן ומלא:]
+ לכל
+$X,Y \in \ob\prs{\mcal{C}}$
+ההעתקה
+\[F_{X,Y} \colon \hom\prs{X,Y} \to \hom\prs{F\prs{X}, F\prs{Y}}\]
+היא חח"ע ועל.
+\item[$F$ מהותית על] 
+כל
+$Z \in \ob\prs{\mcal{D}}$
+איזומורפי ל־%
+$F\prs{X}$
+עבור
+$X \in \ob\prs{\mcal{C}}$
+כלשהו.
+\end{description}
+\end{definition}
+
+\begin{exercise}
+אם יש שקילות
+\[F \colon \mcal{D} \to \mcal{C}\]
+יש גם שקילות
+\[\text{.} G \colon \mcal{C} \to \mcal{D}\]
+\end{exercise}
+
+\begin{exercise}
+שקילות קטגורית היא יחס שקילות על קטגוריות.
+\end{exercise}
+
+\begin{remark}
+אפשר להסתכל על פנקטורים כמורפיזמים בקטגוריה של קטגוריות (קטנות, צריכים דרישה תורת־קבוצתית כדי לדבר על הקטגוריה של הקטגוריות).
+
+פנקטור
+$F \colon \mcal{C} \to \mcal{D}$
+מעביר אוביקטים לאוביקטים ומורפזמים ב־%
+$\mcal{C}$
+למורפמיזמים ב־%
+$\mcal{D}$.
+\end{remark}
+
+\begin{remark}
+הרבה קטגוריות
+$\mcal{C}$
+באות עם פנקטור קנוני
+$F \colon \mcal{C} \to \catname{Set}$.
+\end{remark}
+
+\begin{example}
+בחשבון דיפרנציאלי, רוצים להגיד שנגזרת מתנהגת כמו פנקטור, בגלל כלל השרשרת
+\[\text{.}\diff \prs{f \circ g}_x = \diff \prs{f}_{f\prs{x}} \circ \diff\prs{g}_x\]
+\end{example}
+
+\begin{example}
+תהי
+$\mcal{C}$
+הקטגוריה עם
+$\ob\prs{\mcal{C}} = \set{\mbb{R}^n}{n \in \mbb{N}_+}$
+ועם מורפיזמים שהם פונקציות גזירות המקיימות
+$f\prs{0} = 0$.
+
+נגזרת ב־%
+$0$
+היא פנקטור
+\[F \colon C \to \catname{Vec}_{\mbb{R}}\]
+עם
+\begin{align*}
+F\prs{\mbb{R}^n} &= \mbb{R}^n \\
+\text{.} F\prs{f} &= \prs{\diff f}_0
+\end{align*}
+\end{example}
+
+\begin{example}
+כל הומומורפיזם בין חבורות מטריצות
+$f \colon G \to H$
+מקיים
+$f\prs{I} = I$,
+לכן גזירה ב־%
+$I$
+נותנת פנקטור לתוך מרחבים וקטוריים.
+
+במצב הכללי, אנחנו מגדירים את
+$\Lie$
+ואם
+$\phi \colon \hom\prs{G,H}$
+הגדרנו את
+$\diff \phi$
+להיות הנגזרת שלו ב־5
+$I$,
+ומתקיים
+\[\text{.} \diff \phi \in \hom\prs{\Lie\prs{G}, \Lie\prs{H}}\]
+\end{example}
+
+\begin{example}
+תהי
+$\mcal{C}$
+הקטגוריה שהאובייקטים בה הם
+$\mbb{N}$
+והמורפיזמים
+$\hom\prs{k,\ell}$
+הם מורפיזמים
+$\brs{k} \to \brs{\ell}$.
+
+$\mcal{C}$
+שקולה לקטגוריה
+$\catname{Set}^\fin$
+של קבוצות סופיות, ויש שיכון
+\[F\prs{k} = \set{1, \ldots, k}\]
+מ־%
+$C$
+ל־%
+$\catname{Set}^\fin$
+כאשר כאן ההעתקה על מורפיזמים ברורה (בדקו שאתם יודעים מה היא).
+\end{example}
+
+\begin{example}
+יהי
+$k$
+שדה ותהי
+$\mcal{C}_k$
+הקטגוריה שהאוביקטים בה הם
+$\mbb{N}$
+והמורפיזמים הם
+$\hom\prs{m,n} = M_{m,n}\prs{k}$
+כך שהרכבת מורפיזמים היא כפל מטריצות.
+
+המשפט הבסיסי באלגברה לינארית אומר ש־%
+$\mcal{C}_k$
+ו־%
+$\catname{Vec}_k^\fin$
+(הקטגוריה של מרחבים וקטוריים סוף־מימדיים מעל
+$k$)
+שקולות. שקילות היא
+\begin{align*}
+F \colon \mcal{C}_k &\to \catname{Vec}_k^\fin \\
+\text{.} F\prs{n} &= k^n
+\end{align*}
+\end{example}
+
+\begin{proposition}
+תהי
+$\mcal{C}$
+הקטגוריה של חבורות לי פשוטות־קשר ותהי
+$\catname{algLie}$
+הקטגוריה של אלגבראות לי. אז
+$\Lie \colon \mcal{C} \to \catname{algLie}$
+היא שקילות קטגורית.
+השקילות בכיוון ההפוך לוקחת אלגברת לי
+$\mfrak{g}$
+ל־%
+$\widetilde{\Gamma\prs{\mfrak{g}}}$.
+\end{proposition}
+
+\chapter{חבורות לי כלליות}
+
+\section{יריעות חלקות}
+
+\subsection{הגדרות}
+
+\begin{definition}[חבורת לי]
+חבורת לי היא חבורה
+$G$
+שיש לה מבנה של יריעה חלקה וכך שהעתקות הכפל וההופכי חלקות.
+\end{definition}
+
+\begin{remark}[לאנשי תורת־הקטגוריות]
+בשפה קטגורית, חבורת לי היא אוביקט חבורה בקטגוריה של חבורות חלקות.
+\end{remark}
+
+\begin{definition}[יריעה חלקה]
+יריעה חלקה
+$M$
+ממימד
+$n$
+היא מרחב טופולוגי האוסדורף עם בסיס בן־מנייה עם אטלס חלק:
+
+כיסוי
+$\mcal{A}$
+של
+$M$
+ולכל
+$U \in \mcal{A}$
+הומיאומורפיזם
+$\phi_{U} \colon U \to \hat{U} \subseteq \mbb{R}^n$
+מ־%
+$U$
+לקבוצה פתוחה
+$\hat{U} \subseteq \mbb{R}^n$
+וכך שההרכבות
+$\phi_U \circ \phi_V^{-1} \colon \phi_V \prs{U \cap V} \riso \phi_U \prs{U \cap V}$
+חלקות לכל
+$U,V$
+(נובע מכך שגם ההופכיות חלקות, ולכן ההעתקות הן דיפאומורפיזמים).
+\end{definition}
+
+%LECTURE 18 - 28.12
+
+\begin{remark}
+אפשר לדבר על יריעה אנליטית, עם העתקות מעבר אנליטיות (שניתנות לפיתוח לטור חזקות) ושאינן רק אנליטיות. במקרה של חבורות לי שני הדברים שקולים.
+\end{remark}
+
+\begin{definition}[העתקה חלקה]
+העתקה
+$f \colon M \to N$
+בין יריעות חלקות תיקרא
+\emph{חלקה}
+אם לכל בחירת מפות
+$\prs{U,\phi}$
+של
+$M$
+ו־%
+$\prs{V,\psi}$
+של
+$N$,
+ההרכבה
+$\psi \circ f \circ \phi^{-1}$
+חלקה על תחום ההגדרה שלה.
+\end{definition}
+
+\begin{example}
+$\mbb{R}^n$
+יריעה חלקה. כל הומאומורפיזם חלק
+$\phi \colon U \to V$
+נותן מפה.
+\end{example}
+
+\begin{remark}
+באופן כללי, לרוב מניחים שהאטלס הוא מקסימלי (כל אטלס מוכל באטלס מקסימלי כפי שניתן להוכיח בעזרת הלמה של צורן). כלומר, כל הומיאומורפיזם
+$\phi \colon U \to \tilde{U}$
+שהוא חלק הוא מפה בעצמו באטלס.
+\end{remark}
+
+\begin{example}
+תהי
+$G \leq \mrm{GL}_n\prs{\mbb{R}}$.
+ראינו שיש סביבות פתוחות
+$U \subseteq \Lie\prs{G} \cong \mbb{R}^n$
+של
+$0$
+כל שההעתקות
+$u \mapsto g \cdot \exp\prs{u}$
+לתוך
+$g \cdot U$
+הן הומיאומורפיזמים לכל
+$g \in G$,
+ביחס לטופולוגיה שהגדרנו על
+$G$.
+כלומר,
+$g \cdot U = U_g \xrightarrow{\phi_g} U'$
+היא מפה.
+
+העתקות המעבר נתונות על ידי
+\[\text{.} u \mapsto \log\prs{g_2^{-1} g_1 \exp\prs{u}}\]
+נובע כי
+$\log,\exp$
+אנליטיות בתחום הגדרתן, וכך גם ההעתקה
+$x \mapsto gx$.
+נעזרנו בכך ש־%
+$G$
+חיה בתוך מרחב לינארי.
+
+כלומר, לרוב חבורות מטריצות הן חבורות לי עם המבנה שיצרנו. ההנחה של בסיס בן־מנייה לא תמיד תהיה נכונה וכדי שיהיה בסיס כזה
+$\quot{G}{G^\circ}$
+צריכה להיות בת־מנייה.
+\end{example}
+
+\begin{remark}
+לפעמים לא דורשים בסיס בן־מנייה עבור ההגדרה של יריעה חלקה ואז כל חבורת מטריצות היא חבורת לי.
+\end{remark}
+
+\begin{fact}
+קבוצה פתוחה בתוך יריעה היא יריעה חלקה מאותו המימד.
+\end{fact}
+
+\begin{fact}
+אם
+$M,N$
+יריעות חלקות, גם
+$M \times N$
+עם טופולוגיית המכפלה היא יריעה חלקה והמימד שלה הוא
+$\dim M + \dim N$.
+\end{fact}
+
+\begin{remark}
+העובדה הנ"ל נותנת משמעות לדרישה בחבורות לי שהכפל
+$G \times G \to G$
+חלק.
+\end{remark}
+
+\begin{remark}
+חבורות לי הן יריעות הומוגניות. כלומר, לכל
+$g_1,g_2 \in G$
+קיים דיפאומורפיזם
+$\phi \colon G \to G$
+עבורו
+$\phi\prs{g_1} = g_1$.
+\end{remark}
+
+\begin{definition}
+עבור
+$g \in G$
+יש העתקה
+$\ell_g \colon G \to G$
+המוגדרת על ידי
+$\ell_g\prs{h}$.
+\end{definition}
+
+\subsection{מרחבים משיקים}
+
+עבור נקודה
+$p \in M$
+נרצה להגדיר מרחב משיק של
+$M$
+בנקודה
+$p$,
+ולהיות מסוגלים לגזור פונקציות לפי כל כיוון.
+
+ב־%
+$\mbb{R}^n$
+יכולנו לקחת מסילה
+$\gamma \colon \prs{-\eps,\eps} \to \mbb{R}^n$
+עם
+$\gamma\prs{0} = p, \gamma'\prs{0} \in \mbb{R}^n$
+כאשר הנגזרת היא הכיוון של המסילה.
+
+ביריעה כללית, נוכל לקחת מפה
+$\phi \colon U \to \tilde{U} \subseteq \mbb{R}^n$
+ואז לקחת מסילה
+$\gamma \colon \prs{-\eps,\eps} \to M$
+עם
+$\gamma\prs{0} = p$.
+אז הכיוון של
+$\gamma$
+יהיה
+$\prs{\phi \circ \gamma}'\prs{0} \in \mbb{R}^n$.
+לכל נקודה
+$p \in M$
+מגדירים מרחב וקטורי
+$\dim\prs{M}$%
+־מימדי
+$T_p M$
+שאיבריו הם מסילות חלקות דרך
+$0$
+תחת השקילות
+$\gamma \sim \rho \iff \gamma'\prs{0} = \rho'\prs{0}$.
+
+כל מפה
+$\phi \colon U \to \tilde{U}$
+כך ש־%
+$p \in U$
+מגדירה בסיס סדור
+\[\text{.} B = \prs{\frac{\del}{\del x_i}}_{i \in [n]} \in T_p M\]
+בבסיס הזה
+\[\text{.}\brs{\gamma'\prs{0}}_{B} = \prs{\phi \circ \gamma}'\prs{0}\]
+מקבלים שמתקיים
+\begin{align*}
+\brs{\gamma'\prs{0}}_B &= \prs{\phi \circ \gamma}' \prs{0}
+\\&= \diff_{\phi\prs{p}}\prs{\phi} \circ \prs{\phi \circ \gamma}'\prs{0}
+\\\text{.} \hphantom{\brs{\gamma'\prs{0}}_B} &= \diff_{\phi\prs{p}} \prs{\phi} \cdot \brs{\gamma'\prs{0}}_B
+\end{align*}
+
+לכל העתקה חלקה
+$f \colon M \to N$
+ונקודה
+$p \in M$
+מתקבלת העתקה לינארית
+\[\text{.}\diff_p f \colon T_p M \to T_{f\prs{p}} N\]
+עבור מסילה
+$\gamma \colon \prs{-\eps,\eps} \to M$
+כך ש־%
+$\gamma\prs{0} = p, \gamma'\prs{0} = x \in T_p M$
+נגדיר
+\[\text{.} \diff_p f \prs{x} = \prs{f \circ \gamma}'\prs{0} \in T_{f\prs{p}} N\]
+בקואורדינטות
+\[\text{.} \brs{\diff_p f}_{B\prs{p}}^{B\prs{f\prs{p}}} = \diff_{\phi\prs{p}} \prs{\psi \circ f \circ \phi^{-1}}\]
+
+\begin{definition}
+עבור חבורת לי
+$G$
+נגדיר
+$\Lie\prs{G} = T_e G$.
+\end{definition}
+
+כיוון ש־%
+$G$
+הומוגנית, יש איזומורפיזם קנוני
+$\ell_g \colon G \to G$
+עם
+$\diff_e \prs{\ell_g} \colon T_e G \to T_g G$
+איזומורפיזם מ־%
+$\Lie\prs{G}$
+ל־%
+$T_g G$.
+כל הומומורפיזם
+$\phi \colon G \to H$
+חלק נותן
+$\diff \phi = \diff_e \phi \colon T_e G \to T_e H$
+כאשר
+$\phi\prs{e} = e$.
+
+\begin{remark}
+אם
+$f \colon M \to \mbb{R}$
+חלקה ו־%
+$p \in M$,
+אפשר לכתוב
+\[\text{.}\diff_p f \colon T_p M \to T_{f\prs{p}} \mbb{R} \cong \mbb{R}\]
+לרוב נחשוב על
+$\diff_p f$
+כעל העתקה לתוך
+$\mbb{R}$
+כאשר זאת הנגזרת של
+$f \circ \gamma$
+כאשר
+$\gamma \colon \prs{-\eps,\eps} \to M$
+מסילה עם
+$\gamma'\prs{0} = v$.
+\end{remark}
+
+נשאל למה
+$\Lie\prs{G}$
+זאת אלגברת לי.
+
+כל
+$g \in G$
+מגדיר
+\begin{align*}
+\Ad\prs{g} \colon G &\to G \\
+h &\mapsto g h g^{-1}
+\end{align*}
+חלקה עם
+$\Ad\prs{g} \prs{e} = e$.
+מתקיים
+\[\Ad_{\mfrak{g}} \prs{g} = \diff_e\prs{\Ad\prs{g}} \colon \Lie\prs{G} \to \Lie\prs{G}\]
+עבור
+$\mfrak{g} = \Lie\prs{G}$.
+כאן
+$\Ad_\mfrak{g} \colon G \to \mrm{GL}\prs{\Lie\prs{G}}$
+הומומורפיזם חלק.
+נקבל העתקה
+\[\text{.} \ad \colon \diff \prs{\Ad_{\mfrak{g}}} \colon \Lie\prs{G} \to \Lie\prs{\mrm{GL}\prs{\Lie\prs{G}}} \cong \endo\prs{\Lie\prs{G}}\]
+עבור
+$X,Y \in \Lie\prs{G}$
+נגדיר
+$\brs{X,Y} \ceq \ad\prs{X}\prs{Y} \in \Lie\prs{G}$.
+
+\begin{remark}
+לחבורות מטריצות ראינו שהבנייה הנ"ל מתלכדת עם ההגדה של
+$\brs{X,Y}$
+כקומוטטור.
+\end{remark}
+
+יש גם הגדרה יותר קונקרטית עבור
+$\brs{X,Y}$.
+לשם כך נצטרך לדון בשדות וקטוריים.
+
+\subsection{שדות וקטוריים}
+
+\begin{definition}[שדה וקטורי]
+ראינו שלכל
+$p \in M$
+יש מרחב משיק
+$T_p M$.
+שדה וקטורי
+$\rho$
+הוא בחירה של כיוון
+$\rho_p \in T_p M$
+לכל
+$p \in M$,
+שמשתנה באופן חלק ב־%
+$p$.
+כלומר, לכל מפה
+$\prs{U, \phi}$
+ההעתקה
+$\rho^\phi \colon \tilde{U} \to \mbb{R}^n$
+עם
+\[\rho^\phi\prs{u} = \brs{\rho_{\phi^{-1}\prs{u}}}_{B\prs{\phi^{-1}\prs{u}}}\]
+היא פונקציה חלקה.
+\end{definition}
+
+\begin{remark}
+מתקיים
+\[\text{.} \rho^\phi\prs{u} = \brs{\rho\prs{\phi^{-1}\prs{u}}}_{B^U}\prs{\phi^{-1}\prs{u}}\]
+
+אפשר גם לכתוב
+\[\rho^\phi\prs{p} = \sum_{i \in [n]} a_i^U\prs{p} \cdot \frac{\del}{\del x_i^U}\]
+וחלקות שקולה לכך שכל ה־%
+$a_i^U$
+פונקציות חלקות.
+\end{remark}
+
+שדות וקטוריים משמשים לגזירת פונקציות חלקות
+$f \colon M \to \mbb{R}$.
+אם
+$X$
+שדה וקטורי נגדיר
+$X\prs{f} \colon M \to \mbb{R}$
+על ידי
+\[X\prs{f}\prs{p} = \diff_p f \prs{X\prs{p}}\]
+ואז
+\[\text{.} X\prs{f} \prs{p} = \sum_{i \in [n]} a_i\prs{p} \frac{\del f}{\del x_i}\prs{p}\]
+
+%TODO fill in? (28.12)
+
+%LECTURE 31.12.2020
+
+\begin{definition}[מרחב משיק]
+עבור יריעה
+$M$
+ונקודה
+$p \in M$
+נגדיר את
+$T_p M$
+כמרחב הפונקציונלים הלינאריים
+\[X \colon \mcal{C}^\infty \to \mbb{R}\]
+שמקיימים את כלל לייבניץ:
+\[X\prs{f \cdot g} = X\prs{f} \cdot g\prs{p} + f\prs{p} \cdot X\prs{g}\]
+פונקציונלים כאלה נקראים דריבציות \textenglish{(derivations)}.
+\end{definition}
+
+\begin{remark}
+ראינו שפונקציונל לינארי
+$X$
+כנ"ל, המקיים את כלל לייבניץ, הוא גזירה של
+$f$
+בכיוון נתון.
+\end{remark}
+
+\begin{remark}
+שדה וקטורי
+$X$
+מגדיר העתקה
+\[X \colon \mcal{C}^\infty \prs{M} \to \mcal{C}^\infty \prs{M}\]
+עם
+$X\prs{f} \in \mcal{C}^\infty\prs{M}$
+וכך שמתקיים
+$X\prs{f}\prs{p} = X\prs{p}\prs{f}$
+כש־%
+$X\prs{p} \in T_p M$.
+
+אפשר לחשוב על שדות וקטוריים כאופרטורים דיפרנציאליים.
+בפרט עבור 2 שדות וקטוריים
+$X,Y$
+מוגדר אופרטור
+$X \circ Y$.
+מסתבר שהאופרטור־%
+$X \circ Y - Y \circ X$
+נתון על ידי שדה וקטורי שנסמנו
+$\brs{X,Y} \ceq X \circ Y - Y \circ X$.
+\end{remark}
+
+\begin{example}
+תהי
+$M = \mbb{R}^2$.
+כאן
+\[\text{.}\brs{\frac{\del}{\del x}, \frac{\del}{\del y}} = 0\]
+מתקיים גם
+\[\text{.}\brs{\frac{\del}{\del x} + y \frac{\del}{\del y}, \frac{\del}{\del y}} = - \frac{\del}{\del y}\]
+\end{example}
+
+\begin{example}
+תהי
+$G$
+חבורת לי.
+כל
+$g \in G$
+מגדיר העתקה
+$\ell_g \colon G \to G$
+על ידי
+$\ell_g\prs{h} = gh$.
+זה נגדיר איזומורפיזם קנוני
+\[\text{.} d_e\prs{\ell_g} \colon \Lie\prs{G} \riso T_g G\]
+
+מכאן, כל
+$X \in \Lie\prs{G}$
+מגדיר שדה וקטורי
+$L_X$
+על ידי
+$g \cdot X \ceq L_X\prs{g} = d_e\prs{\ell_g}\prs{X} \in T_g G$.
+ההעתקה
+$X \mapsto L_X$
+לינארית.
+מקבלים
+\[L_{\brs{X,Y}} = \brs{L_X, L_Y}\]
+לכל
+$X,Y \in \Lie\prs{G}$
+ויכולנו להגדיר
+\[\text{.} \brs{X,Y} = \brs{L_X, L_Y} \prs{e}\]
+
+כרגע לא הסברנו למה ההגדרות מתלכדות.
+\end{example}
+
+\begin{example}
+אם
+$G = \mrm{GL}_n\prs{\mbb{R}}$,
+זאת קבוצה פתוחה ב־%
+$M_n\prs{\mbb{R}}$
+כלומר
+$G$
+באה עם מפה אחת שמכסה את כל החבורה.
+יש זיהוי טבעי
+$T_g G \cong M_n\prs{\mbb{R}}$
+ואז אם
+$X \in \Lie\prs{G}$
+אז
+$g \cdot X \in T_g G$
+נתון פשוט על ידי מכפלת המטריצות
+$g,X$
+כשמזהים את
+$T_g G$
+עם מטריצות.
+\end{example}
+
+\begin{definition}[זרימה על יריעה]
+שדה וקטורי
+$X$
+על יריעה
+$M$
+מגדיר
+\emph{זרימה על
+$M$}
+שמסומנת
+$\Phi_X$.
+
+קיימת קבוצה פתוחה
+$A \subseteq \mbb{R} \subseteq M$
+כך ש־%
+$A \cap R \times \set{p} = \prs{a_p, b_p} \times \set{p}$
+ופונקציה חלקה
+$\Phi_X \colon A \to M$
+כך ש־%
+\begin{align*}
+\Phi_X\prs{0,p} &= p \\
+\text{.} \frac{\diff}{\diff t} \prs{\Phi_X\prs{t,p}} &= X\prs{\Phi_X\prs{t,p}}
+\end{align*}
+
+במילים, המסילה
+$t \mapsto \Phi_X\prs{t,p}$
+יוצאת בזמן
+$t=0$
+מ־%
+$p$
+והולכת לפי הכיוונים שנתונים על ידי
+$X$.
+\end{definition}
+
+\begin{theorem}[קיום ויחידות]
+יהי
+$X$
+שדה וקטורי על יריעה
+$M$
+ותהי
+$p \in M$.
+נחפש מסילה
+$\gamma \colon \prs{-\eps, \eps} \to M$
+שתקיים
+\begin{align*}
+\gamma\prs{0} &= p \\
+\text{.} \forall t \in \prs{-\eps, \eps} \colon \gamma'\prs{t} &= X\prs{\gamma\prs{t}} \in T_{\gamma\prs{t}} M
+\end{align*}
+יש
+$\gamma$
+יחידה כזאת ויש
+$\eps$
+מקסימלי עליה היא מוגדרת.
+\end{theorem}
+
+\begin{definition}[אקספוננט]
+נסמן
+\[\text{.} \exp\prs{tX} p \ceq \Phi_X\prs{t,p}\]
+כאן
+$\exp\prs{tX} \colon M \to M$
+בהנחה שזה מוגדר עבור
+$t$
+נתון.
+\end{definition}
+
+\begin{remark}
+מתקיים
+$\exp\prs{0 \cdot X} = \id$
+ובנקודות שבהן המשוואה מוגדרת מתקיים
+\[\exp\prs{\prs{t+s} X} = \exp\prs{tX} \circ \exp\prs{sX}\]
+מיחידות הפתרון.
+\end{remark}
+
+\begin{remark}
+הסימון
+$tX$
+מוצדק כי
+\[\text{.} \exp\prs{t \cdot \prs{\alpha X}} = \exp\prs{\prs{t \cdot \alpha} X}\]
+בדקו זאת.
+\end{remark}
+
+\begin{definition}
+בחבורת לי
+$G$
+עבור כל
+$X \in \Lie\prs{G}$
+נגדיר
+\[\text{.} \exp\prs{tX} \ceq \exp\prs{t L_X}\prs{e} \in G\]
+\end{definition}
+
+%LECTURE 20 - 4.1
+
+\begin{theorem}
+תהי
+$G$
+חבורת לי.
+לכל
+$X \in \Lie\prs{G}$,
+$\exp\prs{t L_X}$
+מוגדר לכל
+$t \in \mbb{R}$.
+
+זאת ההעתקה האנליטית יחידה
+$\exp \colon \Lie\prs{G} \to G$
+כך שמתקיים
+\[\text{.} \frac{\diff}{\diff t} \prs{\exp \prs{tX}} = \exp\prs{tX} \cdot \prs{X} = \prs{X} \cdot \exp\prs{tX} \in T_{\exp\prs{tX}} G\]
+\end{theorem}
+
+\begin{proof}
+נניח תחילה כי
+\[\exp\prs{tX} \ceq \exp\prs{t L_X}\prs{e} \in G\]
+מוגדר לכל
+$t \in \mbb{R}$.
+כשנציב
+$t = 1$
+נקבל את
+$\exp\prs{X}$.
+מתקיים לפי המד"ר
+\[\text{.} \frac{\diff}{\diff t} \prs{\exp\prs{tX}} = L_X\prs{\exp\prs{t L_X}} = \exp\prs{t L_X} \cdot \prs{X} = \exp\prs{tX} \prs{X}\]
+השוויון האחרון נשאר כתרגיל, יחידות נובעת מהיחידות במשפט הקיום והיחידות, ואנליטיות נשארת כתרגיל.
+
+נוכיח עכשיו כי
+$\exp\prs{tX}$
+מוגדר לכל
+$t \in \mbb{R}$.
+נביט במסילה
+$\gamma_X\prs{T}$
+ונרצה להראות שהיא מוגדרת לכל
+$t \in \mbb{R}$.
+נניח כי היא מוגדרת עבור
+$t \in \prs{-\eps, \eps}$
+וכי
+$\gamma_X\prs{t_0}$
+מוגדר.
+תהי
+$g \ceq \gamma_X\prs{t_0}$
+ונגדיר
+\[\text{.}\gamma_g\prs{t} = g \cdot \gamma\prs{t}\]
+זאת מסילה
+$\gamma_g\prs{-\eps,\eps} \to G$.
+מתקיים
+$\gamma_g\prs{0} = g$
+וגם
+\[\text{.} \gamma_g'\prs{t} = \prs{d_E \ell_g} \prs{\gamma'_X\prs{t}} = g \cdot \gamma'_X\prs{t} = g \cdot \prs{L_X\prs{\gamma_X\prs{t}}} = g \cdot \prs{\gamma_X\prs{t} \cdot \prs{X}} = \gamma_g\prs{t} \prs{X} = L_X\prs{\gamma_g\prs{t}}\]
+כלומר,
+\[\gamma_g\prs{t} = \exp\prs{t L_X}\prs{g} = \exp\prs{t L_X} \cdot \exp\prs{t_0 L_X}\prs{e}\]
+ומיחידות נקבל
+\[\text{.} \gamma_g\prs{t} = \exp\prs{\prs{t_0 + t} L_X} \prs{e} = \gamma_X\prs{t_0 + t}\]
+כלומר, לכל
+$t_0$
+שבה
+$\gamma_X$
+מוגדרת, היא מוגדרת בקטע
+$\prs{t_0 - \eps, t_0 + \eps}$
+ולכן היא מוגדרת לכל
+$t \in \mbb{R}$.
+\end{proof}
+
+\begin{remark}
+לכל
+$X \in \Lie\prs{G}$
+קיבלנו הומומורפיזם של חבורות
+\begin{align*}
+\mbb{R} &\to G \\
+\text{.} t &\mapsto \exp\prs{tX}
+\end{align*}
+הומומורפיזם זה נקרא
+\emph{חבורה חד־פרמטרית}.
+\end{remark}
+
+\begin{remark}
+קל לחשב את
+\[\text{.} d_0\prs{\exp} \colon \Lie\prs{G} \to \Lie\prs{G}\]
+עבור
+$tX \in \Lie\prs{G}$
+מתקיים
+\[\frac{\diff}{\diff t} \exp\prs{tX} \prs{e} = X\]
+ואז
+\[\text{.} d_0 \prs{\exp}\prs{X} = X\]
+
+ממשפט הפונקציה ההפוכה, יש סביבה פתוחה
+$U \subseteq \Lie\prs{G}$
+סביב
+$0$
+כך ש־%
+$U \cong \exp\prs{U} \subseteq G$
+הומיאומורפיזם של קבוצות פתוחות.
+כלומר, קיבלנו מפה (\textenglish{chart}) אקספוננציאלית סביב
+$e \in G$.
+לכל
+$g \in G$
+יש גם מפה
+$g \cdot \exp\prs{U} \cong U$.
+
+קיבלנו אטלס מיוחד על כל חבורת לי לחבורת מטריצות בעצם הגדרנו באמצעותו את המבנה החלק.
+\end{remark}
+
+\section{התאמת לי כללית}
+
+\begin{definition}[תת־חבורת לי]
+תהי
+$G$
+חבורת לי.
+$H \leq G$
+תיקרא תת־חבורת לי אם יש על
+$H$
+כקבוצה מבנה של חבורת לי, וההכלה
+$i \colon H \to G$
+היא הומומורפיזם חלק ביחס לאותו מבנה.
+\end{definition}
+
+\begin{remark}
+תת־חבורת לי
+$H$
+קשירה נקראת לפעמים תת־חבורה
+\emph{אנליטית}.
+\end{remark}
+
+\begin{remark}
+באופן כללי,
+$i \colon H \to G$
+חח"ע, לכן נקבל העתקה לינארית חח"ע
+$\diff i \colon \Lie\prs{H} \rmono \Lie\prs{G}$.
+כלומר, כל ת"ח לי נותנת תת־אלגברת לי.
+\end{remark}
+
+\begin{definition}[אלגברת לי של תת־חבורה]
+אם
+$G$
+חבורת לי ו־%
+$H \leq G$
+היא ת"ח אבסטרקטית, כמו במקרה של מטריצות נוכל להגדיר
+\[\text{.} \Lie\prs{H} \ceq \set{\gamma'\prs{0} \in \Lie\prs{G}}{\gamma \colon \prs{-\eps,\eps} \to H \text{ smooth as a path in $G$}}\]
+וזאת תת־אלגברת לי של
+$\Lie\prs{G}$.
+\end{definition}
+
+\begin{exercise}
+הוכיחו כי עבור
+$X \in \Lie\prs{H}$
+מתקיים
+$\exp\prs{X} \in H$,
+כמו במקרה של חבורות מטריצות.
+\end{exercise}
+
+\begin{corollary}
+תת־חבורה
+$H \leq G$
+מקבלת אטלס אקספוננציאלי וכמעט מבנה של חבורת לי. אולי
+$\quot{H}{H^\circ}$
+לא בן־מנייה. אם דרישה זאת כן מתקיימת,
+$H$
+היא חבורת לי.
+\end{corollary}
+
+\begin{remark}
+נקבל שיש לחבורה
+$G$
+"הרבה תת־חבורות לי" ו"מעט תת־חבורות אנליטיות".
+\end{remark}
+
+\begin{definition}[אקספוננטים של תת־אלגברה]
+תהי
+$G$
+חבורת לי ותהי
+$\mfrak{h} \leq \Lie\prs{G}$
+תת־אלגברת לי.
+נגדיר את
+$\Gamma\prs{h}$
+להיות תת־החבורה של
+$G$
+שנוצרת על ידי
+$\exp\prs{X}$
+עבור
+$X \in \mfrak{h}$.
+\end{definition}
+
+\begin{exercise}
+$\Gamma\prs{\Lie\prs{H}} \leq H$
+ומתקיים
+$\Lie\prs{\Gamma\prs{\mfrak{h}}} = \mfrak{h}$
+כמו במקרה של חבורות מטריצות.
+\end{exercise}
+
+\begin{theorem}[\textenglish{Chevalley}]
+תהי
+$G$
+חבורת לי.
+קיימת התאמה חח"ע בין תת־חבורות אנליטיות של
+$G$
+ותת־אלגבראות לי של
+$\Lie\prs{G}$.
+ההתאמה נתונה על ידי
+$\Gamma, \Lie$.
+\end{theorem}
+
+נרצה להבין תת־חבורות אנליטיות.
+
+\begin{definition}[תת־יריעה]
+עבור יריעה חלקה
+$M$,
+תת־קבוצה
+$N \leq M$
+נקראת תת־יריעה (משוכנת, \textenglish{embedded}) ממימד
+$n$
+אם לכל
+$p \in N$
+קיימת מפה
+$\phi_U$
+של
+$M$
+כך ש־%
+$p \in U$
+ושמתקיים
+\[\text{.} \phi_U\prs{U \cap N} = U \cap \prs{\mbb{R}^n \oplus \set{0}}\]
+\end{definition}
+
+\begin{remark}
+תת־יריעה
+$N \leq M$
+היא יריעה עם הצמצום של המפות מ־%
+$M$
+ל־%
+$N$.
+\end{remark}
+
+\begin{theorem}[משפט התת־חבורה הסגורה]
+תהי
+$G$
+חבורת לי ותהי
+$H \leq G$
+תת־חבורה אבסטרקטית.
+$H$
+היא תת־יריעה אם ורק אם
+$H$
+סגורה.
+\end{theorem}
+
+\begin{remark}
+תת־חבורה שהיא תת־יריעה היא תת־חבורת לי עם המבנה החלק כתת־יריעה.
+כלומר, תת־חבורה שהיא סגורה וקשירה בטופולוגיה של
+$G$
+היא אנליטית.
+\end{remark}
+
+\begin{example}
+תהי
+\[\text{.} H_a \ceq \set{\pmat{e^{it} & \\ & e^{iat}}}{t \in \mbb{R}}\]
+עבור
+$a \in \mbb{Q}$
+זאת תת־חבורה סגורה וקשירה, ולכן אנליטית. עבור
+$a \in \mbb{R} \setminus \mbb{Q}$
+היא אינה סגורה, אך עדיין אנליטית.
+\end{example}
+
+\begin{proof}
+נניח כי
+$H \leq G$
+תת־יריעה.
+קיימת סביבה פתוחה
+$U \subset G$
+של
+$e$
+כך ש־%
+$U \cap H$
+סגורה ב־%
+$U$.
+
+$\bar{H}$
+גם תת־חבורה אבסטרקטית (כי הכפל רציף). תהי
+$y \in \bar{H}$
+ואז
+$yU$
+פתוחה. מתקיים
+\[x \in yU \cap H, \quad \ns \neq yU \cap H\]
+ולכן
+\[y^{-1} x \in U \cap y^{-1} \bar{H} = U \cap \bar{H} = U \cap H \subseteq H\]
+ומכיוון ש־%
+$x \in H$
+נקבל
+$y \in H$.
+
+בכיוון ההפוך, נניח כי
+$H$
+תת־חבורה סגורה ונכתוב
+$\mfrak{h} \ceq \Lie\prs{H} \leq \Lie\prs{G}$.
+נבחר תת־מרחב משלים
+\[\Lie\prs{G} = \mfrak{h} \oplus \mfrak{s}\]
+ונביט בהעתקה
+\begin{align*}
+\psi \colon \Lie\prs{G} &\to G \\
+\prs{X,Y} &\mapsto \exp\prs{X} \exp\prs{Y}
+\end{align*}
+כאשר
+$X \in \mfrak{h}, \, Y \in \mfrak{s}$.
+אפשר לבדוק שעדיין
+$d_0 \psi = \id$.
+ממשפט הפונקציה ההפוכה יש סביבה
+$U' \subseteq \Lie\prs{G}$
+של
+$0$
+שבה
+$\psi \colon U' \riso U \subseteq G$
+הומיאומורפיזם לקבוצה פתוחה, ומתקיים
+$\psi\prs{U' \cap \mfrak{h}} \subseteq H$.
+
+נראה להראות שמתקיים
+\[\text{.} \psi\prs{U' \cap \mfrak{h}} = U \cap H\]
+במילים אחרות, אנו רוצים להראות שלא קיים
+\[\prs{X, Z_1} \in \prs{\mfrak{h} \oplus \mfrak{s}} \cap U\]
+כך ש־%
+$Z_1 \neq 0$
+וגם
+\[\exp\prs{X} \exp\prs{Z_1} \in H \text{,}\]
+או באופן שקול
+$\exp\prs{Z_1} \in H$.
+
+%LECTURE 21 - 7.1.2021
+
+נניח בשלילה שקיים
+$Z_1 \in \mfrak{s}$
+כזה שונה מאפס ושקיים
+$Z$
+כזה בכל סביבה קטנה ב־%
+$\mfrak{s}$
+סביב
+$0$.
+כלומר, קיימים
+$Z_k \in \mfrak{s} \setminus \set{0}$
+כך ש־%
+$\exp\prs{Z_k} \in H$
+ושמתקיים
+$\lim_{k\to\infty} Z_k = 0$.
+הסדרה
+$\prs{\frac{Z_k}{\norm{Z_k}}} \subseteq S^1$
+מוכלת בקבוצה קומפקטית ולכן נוכל להניח שהיא מתכנסת ל־%
+$Y \in S^1$.
+נקבע
+$t \in \mbb{R}$
+ונבחר שלמים
+$n_k$
+כך שמתקיים
+\[\lim_{k\to\infty} n_k \norm{Z_k} = t\]
+ואז
+\[\exp\prs{Z_k}^{n_k} = \exp\prs{n_k \norm{Z_k} \cdot \frac{Z_k}{\norm{Z_k}}} \xrightarrow{k\to\infty} \exp\prs{t \cdot Y}\]
+כאשר זהו גבול של איברים ב־%
+$H$
+ולכן ב־%
+$H$
+כי
+$H$
+סגורה.
+לכן
+$\exp\prs{tY} \in H$
+לכל
+$t \in \mbb{R}$
+ולכן
+$Y \in \Lie\prs{H}$.
+זאת סתירה כי
+$\mfrak{s}$
+נבחר כמשלים של
+$\mfrak{h}$.
+\end{proof}
+
+\begin{corollary}
+תהי
+$G$
+חבורת לי ותהי
+$H \leq G$
+תת־חבורה סגורה. אוסף הקוסטים
+$\quot{G}{H}$
+עם טופולוגיית המנה מ־
+\begin{align*}
+\pi \colon G &\to \quot{G}{H} \\
+g &\mapsto gH
+\end{align*}
+הוא יריעה חלקה ממימד
+$\dim G - \dim H$.
+\end{corollary}
+
+\begin{proof}
+$H$
+סגורה לכן
+$\quot{G}{H}$
+האוסדורף.
+מההוכחה הקודמת נראה שאם ניקח פירוק
+$\Lie\prs{G} = \Lie\prs{H} \oplus \mfrak{s}$
+קיימת סביבה
+$U \subseteq \mfrak{s}$
+של אפס כך שההעתקה
+\begin{align*}
+\phi \colon U \times H &\rmono G \\
+\prs{u,h} &\mapsto \exp\prs{u} \cdot h
+\end{align*}
+היא הומיאומורפיזם חלק לתמונה.
+תהי
+\begin{align*}
+\bar{\phi} \colon U &\to \quot{G}{H} \\
+u &\mapsto \pi\prs{\phi\prs{u,e}}
+\end{align*}
+שנותנת מפה ב־%
+$\quot{G}{H}$
+סביב
+$eH$.
+לכל
+$a_0 H \in \quot{G}{H}$
+הקבוצה
+$a_0 \exp\prs{U} \cdot H$
+הומיאומורפית ל־%
+$U$
+והיא מפה באטלס על
+$\quot{G}{H}$.
+\end{proof}
+
+\begin{corollary}
+אם
+$N \ideal G$
+תת־חבורה נורמלית סגורה בחבורת לי
+$G$,
+המנה
+$\quot{G}{N}$
+היא חבורת לי.
+\end{corollary}
+
+\begin{corollary}
+תהי
+$\mfrak{g}$
+אלגברת לי.
+$G = \widetilde{\Gamma\prs{\mfrak{g}}}$
+היא חבורה פשוטת־קשר וקשירה.
+
+אוסף החבורות לי שאלגברת לי שלהן היא
+$\mfrak{g}$
+נתון על ידי
+$\quot{G}{\Lambda}$
+כאשר
+$\Lambda \leq Z\prs{G}$
+תת־חבורות דיסקטריות.
+\end{corollary}
+
+\begin{proof}
+ראינו בדיון על כיסויים שכל חבורות לי הנ"ל הן מהצורה
+$\quot{G}{\Lambda}$.
+עכשיו רואים שבכיוון ההפוך
+$\Lambda$
+כזו מגדירה חבורת לי: כיוון ש־%
+$\Lambda$
+דיסקרטית במרכז היא נורמלית,
+ועבור
+$\pi \colon G \to \quot{G}{\Lambda}$
+הדיפרנציאל
+$\diff \pi$
+הוא איזומורפיזם.
+\end{proof}
+
+\section{חבורות לי קומפקטיות}
+
+\subsection{דוגמאות}
+
+נרצה לחקור חבורות לי שכמרחב טופולוגי הן קומפקטיות.
+
+\begin{example}
+\begin{itemize}
+\item טורוסים,
+$\prs{S^1}^n$.
+\item $O\prs{n} = \set{A \in \mrm{GL}_n\prs{\mbb{R}}}{A A^t = I}$.
+\item $U\prs{n} = \set{A \in \mrm{GL}_n\prs{\mbb{C}}}{A \bar{A}^t = I}$.
+\item תת־חבורות סגורות שהאיברים שלהן חסומים בנורמה על
+$\mbb{R}^{n^2}$.
+\item 
+\end{itemize}
+\end{example}
+
+\subsection{מוטיבציה}
+
+קומפקטיות זאת הנחה חזקה מספיק בשביל להבין הרבה מהמבנה של חבורות לי. בפרט, אפשר להתקרב להבנה של מהן כל החבורות ממחלקה זאת על ידי סיווגן.
+
+חבורה סופית, למשל, היא חבורת לי קומפקטית (כיריעה ממימד 0) ומתקיים בה
+$G^\circ = \set{e}$.
+חבורות קומפקטיות מכלילות הרבה מהתורה של חבורות סופיות.
+
+הנחה מספיקה חלשה בשביל לחשוף חלק גדול מסימטריות בטבע. יותר במדויק, יש קשר הדוק בין חבורות לי קומפקטיות לאלגבראות לי פשוטות־למחצה שידועות כמסווגות הרבה מבנים באלגברה, גיאומטריה, תורת המספרים, פיזיקה וכו'.
+
+\begin{theorem}[\textenglish{Peter-Weyl}]
+כל חבורת לי קומפקטית איזומורפית לחבורת מטריצות.
+\end{theorem}
+
+\begin{remark}
+גרסה חזקה יותר של המשפט נוגעת לכל חבורה טופולוגית קומפקטית.
+
+לא נוכיח את המשפט שהוכחתו מערבת כלים מאנליזה פונקציונלית. מראים תכונות של אופרטורים על מחרב הילברט של הפונקציות על החבורה.
+
+בהמשך נניח את נכונות המשפט בלי הוכחה.
+\end{remark}
+
+
 
 \end{document}

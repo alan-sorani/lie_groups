@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  10 DEC 2020 19:15
+This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  9 JAN 2021 20:54
  restricted system commands enabled.
 **lie_groups.tex
 (./lie_groups.tex
@@ -1629,32 +1629,65 @@ t line 3043.
 Package hyperref Info: bookmark level for unknown fact defaults to 0 on input li
 ne 3373.
  [36] [37] [38] [39]
+Overfull \hbox (3.45953pt too wide) in paragraph at lines 3990--3998
+[]\TU/OpenSansHebrew(0)/m/n/10 עבור מרחב טופולוגי $\OML/cmm/m/i
+t/10 X$ \TU/OpenSansHebrew(0)/m/n/10 מספיק נחמד אפשר לבנות 
+כיסוי אוניברסלי $[] \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 X$\TU/Ope
+nSansHebrew(0)/m/n/10 , כלומר כיסוי כאשר $[]$ פשוט־קשר.
+ []
+
+[40]
+Missing character: There is no [ (U+005B) in font stmary10!
+Missing character: There is no [ (U+005B) in font stmary10!
+ [41]
+Overfull \hbox (28.6385pt too wide) in paragraph at lines 4228--4236
+[]\TU/OpenSansHebrew(0)/m/n/10 נוכל להגדיר קטגוריה $\OMS/cmsy/
+m/n/10 C$ \TU/OpenSansHebrew(0)/m/n/10 עם אובייקטים $[]$, מורפ
+יזמים $[] [] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ; [] [] \OT1/cmr/m/n/10
+ = \OML/cmm/m/it/10 ; [] [] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ; [] [] \OT1
+/cmr/m/n/10 =
+ []
+
+[42] [43] [44
+
+]
+\bbl@ensure@hebrew {פרק} 4.
+[45] [46]
+Overfull \hbox (6.84056pt too wide) in paragraph at lines 4912--4921
+[]\TU/OpenSansHebrew(0)/m/n/10 אפשר לחשוב על שדות וקטורי
+ים כאופרטורים דיפרנציאליים. בפרט עבור 2 שדו
+ת וקטוריים $\OML/cmm/m/it/10 X; Y$ \TU/OpenSansHebrew(0)/m/n/10 מו
+גדר אופרטור $\OML/cmm/m/it/10 X \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 Y$\TU/OpenSansHebrew(0)/m/n/10 . 
+מסתבר שהאופרטור־$\OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 
+ []
+
+[47] [48] [49] [50]
 \tf@thm=\write6
 
 \openout6 = lie_groups.thm
- [40]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4000.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 4000.
+ [51]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5581.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5581.
  (./lie_groups.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4000.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4000.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5581.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5581.
 Package rerunfilecheck Info: File `lie_groups.out' has not changed.
-(rerunfilecheck)             Checksum: 0D0AF536866FB1C06FDFA904E77B03D1;5074.
+(rerunfilecheck)             Checksum: ABB5BD71AB06AE3C48B3B9ABD8A0532A;6968.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4000.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5581.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33593 strings out of 481302
+ 33721 strings out of 481302
  100000,1144653 words of node,token memory allocated
- 3355 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 3 sub_mlist, 1 glyph, 1050 a
-ttribute, 62 glue_spec, 352 attribute_list, 2 write nodes
-   avail lists: 1:1,2:2748,3:264,4:54,5:672,6:55,7:3234,8:103,9:1120,10:5,11:8
- 49334 multiletter control sequences out of 65536+200000
+ 4015 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 7 sub_mlist, 1 glyph, 1293 a
+ttribute, 62 glue_spec, 433 attribute_list, 2 write nodes
+   avail lists: 1:1,2:2556,3:268,4:76,5:768,6:79,7:3648,8:103,9:1120,10:5,11:8
+ 49345 multiletter control sequences out of 65536+200000
  128 fonts using 9383979 bytes
  68i,24n,88p,935b,1294s stack positions out of 5000i,500n,10000p,200000b,50000s
 <//?/c:/users/eladt/appdata/local/programs/miktex/fonts/opentype/public/lm/lmrom
@@ -1684,11 +1717,12 @@ EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb
 onts/latxfont/line10.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/amsfonts/symbols/msam10.pfb><C:/Users/EladT/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/EladT/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/EladT/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on lie_groups.pdf (40 pages, 473856 bytes).
+/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm5.pfb><C:/Users/EladT/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/U
+sers/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb>
+Output written on lie_groups.pdf (51 pages, 573720 bytes).
 
-PDF statistics: 649 PDF objects out of 1000 (max. 8388607)
- 264 named destinations out of 1000 (max. 131072)
- 232 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 856 PDF objects out of 1000 (max. 8388607)
+ 381 named destinations out of 1000 (max. 131072)
+ 328 words of extra memory for PDF output out of 10000 (max. 100000000)
 
