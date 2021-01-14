@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  9 JAN 2021 20:54
+This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  14 JAN 2021 10:43
  restricted system commands enabled.
 **lie_groups.tex
 (./lie_groups.tex
@@ -1661,33 +1661,33 @@ Overfull \hbox (6.84056pt too wide) in paragraph at lines 4912--4921
 מסתבר שהאופרטור־$\OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 
  []
 
-[47] [48] [49] [50]
+[47] [48] [49] [50] [51] [52] [53]
 \tf@thm=\write6
 
 \openout6 = lie_groups.thm
- [51]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5581.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5581.
+ [54]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 6103.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 6103.
  (./lie_groups.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5581.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5581.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 6103.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 6103.
 Package rerunfilecheck Info: File `lie_groups.out' has not changed.
-(rerunfilecheck)             Checksum: ABB5BD71AB06AE3C48B3B9ABD8A0532A;6968.
+(rerunfilecheck)             Checksum: F9339CCA52E93071F6D6E2BE99D5F7DC;7965.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5581.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 6103.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33721 strings out of 481302
+ 33762 strings out of 481302
  100000,1144653 words of node,token memory allocated
- 4015 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 7 sub_mlist, 1 glyph, 1293 a
-ttribute, 62 glue_spec, 433 attribute_list, 2 write nodes
-   avail lists: 1:1,2:2556,3:268,4:76,5:768,6:79,7:3648,8:103,9:1120,10:5,11:8
- 49345 multiletter control sequences out of 65536+200000
+ 4255 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 7 sub_mlist, 1 glyph, 1383 a
+ttribute, 62 glue_spec, 463 attribute_list, 2 write nodes
+   avail lists: 1:1,2:2436,3:268,4:84,5:833,6:87,7:3648,8:103,9:1120,10:5,11:8
+ 49353 multiletter control sequences out of 65536+200000
  128 fonts using 9383979 bytes
  68i,24n,88p,935b,1294s stack positions out of 5000i,500n,10000p,200000b,50000s
 <//?/c:/users/eladt/appdata/local/programs/miktex/fonts/opentype/public/lm/lmrom
@@ -1720,9 +1720,9 @@ TeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/EladT/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm5.pfb><C:/Users/EladT/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/U
 sers/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on lie_groups.pdf (51 pages, 573720 bytes).
+Output written on lie_groups.pdf (54 pages, 607739 bytes).
 
-PDF statistics: 856 PDF objects out of 1000 (max. 8388607)
- 381 named destinations out of 1000 (max. 131072)
- 328 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 915 PDF objects out of 1000 (max. 8388607)
+ 414 named destinations out of 1000 (max. 131072)
+ 360 words of extra memory for PDF output out of 10000 (max. 100000000)
 

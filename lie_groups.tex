@@ -5576,6 +5576,528 @@ $G^\circ = \set{e}$.
 בהמשך נניח את נכונות המשפט בלי הוכחה.
 \end{remark}
 
+%LECTURE 11.01.2021
 
+%TODO fill in
+
+\begin{remark}
+עבור
+$G \leq \mrm{GL}_n\prs{\mbb{C}}$
+אפשר לעשות את אותה הוכחה עם מכפלה פנימית מרוכבת ולקבל
+\[\text{.} \Ad\prs{a}\prs{G} \leq U\prs{n}\]
+
+כאשר מדובר ב־%
+$G$
+קומפקטית כללית את הסכום
+$\sum_{g \in G}$
+מחליף אינטגרל. רוצים פעולה שאם נזיז בה את סדר הסכימה הסכום לא ישתנה.
+זאת נקראת מידה אינווריאנטית.
+\end{remark}
+
+\begin{example}
+ב־%
+$\prs{\mbb{R}^n, +}$
+אינטרגל רימן־לבג מקיים
+\[\text{.}\int_{\mbb{R}^n} f\prs{x} \diff x = \int_{\mbb{R}^n} f \prs{x' + y} \diff x\]
+
+ב־%
+$\prs{\mbb{R}^n, \cdot}$
+אותו אינטגרל לא אינווריאנטי כי מתקיים
+\[\int_0^\infty f\prs{x} \diff x = \frac{1}{a} \int_0^\infty f\prs{a x'} \diff x'\]
+ועבור
+$a \neq 1$
+אין שוויון.
+במקרה זה המידה האינווריאנטית היא
+$\frac{\diff x}{x}$
+ומתקיים
+\[\text{.} \int_0^\infty f\prs{x} \frac{\diff x}{x} = \int_0^\infty f\prs{a x'} \frac{\diff x'}{x'}\]
+\end{example}
+
+\begin{definition}
+עבור מרחב טופולוגי
+$X$
+נגדיר
+\[\text{.}\mcal{C}_c\prs{G} = \set{f \colon G \to \mbb{R}}{f\prs{g} \text{ for all $g$ outside of a compact set}}\]
+\end{definition}
+
+\begin{remark}
+אם
+$G$
+קומפקטית,
+$\mcal{C}_c\prs{G} = \mcal{C}\prs{G}$.
+\end{remark}
+
+\begin{definition}[מידת האר]
+\emph{מידת האר על $G$}
+היא העתקה לינארית
+\[m \colon \mcal{C}_c\prs{G} \to \mbb{R}\]
+שונה מאפס כך ש־%
+$m\prs{f} \geq 0$
+עבור
+$f \geq 0$
+וכך שאם ל־%
+$f \in \mcal{C}_c\prs{G}, g \in G$
+נגדיר
+$fg\prs{x} \ceq f\prs{g^{-1} \cdot x}$
+אז
+\[\text{.} \forall g \in G \colon m\prs{f} = m\prs{fg}\]
+\end{definition}
+
+\begin{theorem}[האר]
+לכל חבורת לי קיימת מידת האר שמאלית והיא יחידה עד כדי סקלר חיובי.
+\end{theorem}
+
+\begin{proof} %TODO previous theorem that I have to fill in
+כמו במקקרה הסופי, ניקח
+\[\text{.} B\prs{v,w} \ceq m\prs{f_{v,w}}\]
+כאשר עבור
+$v,w \in V$
+נגדיר
+$f_{v,w}\prs{g} = \trs{g \cdot v, g \cdot w}$.
+
+מתיים
+$f_{v,w} \in \mcal{C}_c\prs{G}$
+ואז
+\begin{align*}
+B\prs{g\prs{v}, g\prs{w}} &= m\prs{f_{g\prs{v}, g\prs{w}}}
+\\&= m\prs{f^{g^{-1}}_{v,w}}
+\\&= m\prs{f_{v,w}}
+\text{.} \hphantom{B\prs{g\prs{v}, g\prs{w}}} \\&= B\prs{v,w}
+\end{align*}
+\end{proof}
+
+\begin{remark}
+בעצם הוכחנו שכל הומומורפיזם
+$\phi \colon G \to \mrm{GL}\prs{V}$
+מקיים
+$\phi\prs{G} \subseteq O_B\prs{V}$
+כאשר
+$B$
+מכפלה פנימית על
+$V$.
+\end{remark}
+
+נרצה עכשיו לראות שכל חבורה קומפקטית
+$G \leq \mrm{GL}_n\prs{\mbb{R}}$
+היא
+\emph{אלגברית},
+מה שפחות או יותר אומר שהיא מוגדרת על ידי פולינומים.
+זאת עובדה שקשורה להשקפה קטגורית. תהיה קטגוריה של הצגות שהיא דואלית ל־%
+$G$.
+זאת דואליות
+\textenglish{Tannaka-Krein}.
+
+\begin{example}
+מתקיים
+\[\text{.} O\prs{n} = \set{A \in M_n\prs{\mbb{R}}}{A A^t = I}\]
+אם
+$A \in M_n\prs{\mbb{R}} \cong \mbb{R}^{n^2}$
+נוכל לכתוב את הדרישה
+$A \in O\prs{n}$
+בקורדינטות:
+\[\sum_{j \in \brs{n}} a_{i_1,j} a_{i_2,j} = \delta_{i_1, i_2}\]
+אלו הם פולינומים ב־%
+$n^2$
+משתנים וממעלה
+$2$.
+$O(n)$
+היא תת־קבוצה של
+$M_n\prs{\mbb{R}}$
+שהיא קבוצת האפסים של הפולינומים הנתונים.
+\end{example}
+
+\subsection{גיאומטריה אלגברית}
+
+יהי
+$k$
+שדה ונגדיר את
+\[\text{.} A_k^n = k\brs{x_1, \ldots, x_n}\]
+זהו חוג קומוטטיבי.
+
+עבור קבוצה
+$S \subseteq \mbb{A}^n_k$
+נגדיר
+\[\text{.} V\prs{S} \ceq \set{x \in A_k^n}{\forall f \in S \colon f\prs{x} = 0} \subseteq k^n \]
+קבוצות אלו נקראות
+\emph{קבוצות אלגבריות סגורות}
+ולמעשה ניתן להגדיר טופולוגיה אחרת על
+$\mbb{A}_k^n$
+על ידי הכרזה על אלו כקבוצות הסגורות.
+זאת נקראת
+\emph{טופולוגיית זריצקי}
+על
+$k^n$.
+
+\begin{example}
+ב־%
+$\mbb{C}$
+הקבוצות הסגורות זריצקי היחידות הן הקבוצות הסופיות.
+\end{example}
+
+בכיוון השני, עבור
+$Y \subseteq k^n$
+נגדיר
+\[\text{.} I\prs{Y} = \set{p \in {A}_n^k}{\forall y \in Y \colon p\prs{y} = 0} \leq {A}_k^n\]
+
+\begin{example}
+נסתכל על
+$xy \in A_\mbb{R}^2$.
+אז
+$V\prs{xy} \subseteq \mbb{R}^2$
+זה איחוד הצירים.
+\end{example}
+
+נגדיר גם
+\[\text{.}A^{n,n}_k = k\brs{x_{i,j}}_{i,j \in [n]} \cong A^{n^2}_k\]
+עבור
+$Y \subseteq M_n\prs{k}$
+פולינום
+$f \in A^{n,n}_k$
+מגדיר פונקציה
+$\tilde{f} \colon Y \to k$
+על ידי הצבה של
+$y$
+ב־%
+$f$.
+
+אם
+$A = \prs{a_{i,j}}_{i,j \in [n]} \in Y$
+אפשר לכתוב
+$a_{i,j} = r_{i,j}\prs{a}$
+כאשר
+$r_{i,j} \colon Y \to k$
+הצבה בפולינום
+$x_{i,j}$.
+
+ניתן לחשוב על
+$\tilde{f}$
+כפעולה אלגברית על פולינומים בפונקציות
+$r_{i,j}$.
+
+\begin{example}
+אם נכתוב
+\[\text{,}G = \mrm{GL}_2\prs{\mbb{R}}\]
+$a+b$
+זאת פונקציה על
+$G$
+שניתן לחשוב עליה כהצבה של
+$r_{1,1}, r_{1,2}$
+בפולינום
+$x_{1,1} + x_{1,2}$.
+\end{example}
+
+\begin{theorem}
+תהי
+$G \leq \mrm{GL}_n\prs{\mbb{R}}$
+קומפקטית. אז
+$G$
+סגורה זריצקי.
+\end{theorem}
+
+\begin{proof}
+
+\end{proof}
+
+\begin{remark}
+יש חבורות מטריצות שאינן אלגבריות.
+למשל
+\[\set{\pmat{e^{it} & 0 \\ 0 & e^{iat}} \in \mrm{GL}_2\prs{\mbb{C}}}{t \in \mbb{R}}\]
+כאשר
+$a \in \mbb{R} \setminus \mbb{Q}$
+אינה סגורה ולכן אינה אלגברית.
+
+אפשר להסתכל גם על
+\[\set{\pmat{1 & \theta & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & \cos \theta & \sin \theta \\ 0 & 0 & \sin \prs{-\theta} & \cos \theta}}{\theta \in \mbb{R}}\]
+וזאת חבורה סגורה שאינה אלגברית.
+אפשר להסתכל על זאת כעל שיכון של גרף של
+\begin{align*}
+f \colon \mbb{R} &\to \mbb{C} \\
+\theta &\mapsto^{i\theta}
+\end{align*}
+ב־%
+$\mbb{R}^3$.
+\end{remark}
+
+\subsection{עוד על מידות האר}
+
+עבור
+$G$
+קומפקטית והומומורפיזם
+$\pi \colon G \to \mrm{GL}\prs{V}$
+נגדיר לכל
+$v \in V$:
+\begin{align*}
+w &= \int_G \pi\prs{g} \cdot v \diff g \in V \\
+\text{.}A_\pi &= \pi\prs{g} \diff g \in \endo\prs{V}
+\end{align*}
+אז
+$w = A_\pi\prs{v}$.
+
+אפשר לקחת בסיס ל־%
+$V$
+ולחשוב על
+$\pi\prs{g}$
+כמטריצות. אז אפשר להפעיל את אינטגרל האר על כל מקדם של המטריצות בתמונה.
+
+
+אפשר לעשות זאת בדרך אחרת.
+עבור
+$v^* \in V^*$
+%TODO fill in
+נביט בפונקציה
+\[v^* \mapsto m\prs{f_{v,v^*}}\]
+כשמתקיים
+$f_{v,v^*}\prs{g} = v^*\prs{\pi\prs{g} v}$.
+הגדרנו העתקה לינארית
+$w \colon V^* \to \mbb{R}$
+ואז
+$w \in V^{**} \cong V$
+ונוכל לזהות את
+$w$
+עם איבר ב־%
+$V$.
+ולהסתכל על
+$v^*\prs{w} = m\prs{f_{v,v^*}}$.
+זה מגדיר את
+\[\text{.} w = \int_G \pi\prs{g} v \diff g\]
+%TODO
+
+\begin{theorem}[משפט הקירוב של ויירשטראס]
+פונקציה ממשית רציפה
+$f \colon \brs{0,1} \to \mbb{R}$
+ניתנת לקירוב במידה שווה על ידי פולינומים.
+\end{theorem}
+
+\begin{theorem}[סטון-ויירשטראס]
+יהי
+$X$
+מרחב טופולוגי קומפקטי ויהי
+$\mcal{C}\prs{X,\mbb{R}}$
+מרחב הפונקציות הממשיות הרציפות על
+$\mbb{R}$.
+תהי
+$B \leq \mbb{C}\prs{X,\mbb{R}}$
+תת־אלגברה שמכילה את הפונקציות הקבועות ושמפרידה נקודות (לכל $x,y \in X$ שונים קיימת $f \in B$ כך ש־%
+$f\prs{x} \neq f\prs{y}$).
+\end{theorem}
+
+%LECTURE 14.1.2021
+
+\subsection{אלגבריות של חבורות קומפקטיות}
+
+\begin{definition}[חבורה אלגברית ממשית]
+תהי
+$S \subseteq A_{\mbb{R}}^{n, n}$.
+הקבוצות
+$V\prs{S}$
+הן הקבוצות הסגורות בטופולוגיית זריצקי על
+$M_n\prs{\mbb{R}}$.
+אם
+$V\prs{S} = G \leq \mrm{GL}_n\prs{\mbb{R}}$
+היא חבורה, היא תיקרא
+\emph{חבורה אלגברית ממשית}.
+\end{definition}
+
+\begin{theorem}
+תהי
+$G \leq \mrm{GL}_n\prs{\mbb{R}}$
+חבורה קומפקטית. אז
+$G$
+חבורה אלגברית ממשית.
+
+באופן שקול,
+$G$
+סגורה בטופולוגיית זריצקי.
+\end{theorem}
+
+\begin{proof}
+ניקח
+$X \in \mrm{GL}_n\prs{\mbb{R}}$
+כך ש־%
+$X \notin G$
+ונמצא פולינום
+$\tilde{Q} \in A^{n,n}_{\mbb{R}}$
+כך ש־%
+$\rest{\tilde{Q}}{G} = 0$
+אבל
+$\tilde{Q}\prs{X} \neq 0$.
+
+נביט בקבוצה
+$Y \ceq G \sqcup G x \subseteq \mbb{GL}_n\prs{\mbb{R}}$.
+נוכל למצוא פונקציה רציפה
+\[f \colon M_n\prs{\mbb{R}} \to \mbb{R}\]
+כך ש־%
+$f\prs{G} = 0$
+ו־%
+$f\prs{G x} = 1$.
+מסטון-ויירשטראס קיים פולינום
+$P \in A^{n,n}_{\mbb{R}}$
+כך שלכל
+$g \in G$
+מתקיים
+\[\text{.} p\prs{g} \leq \frac{1}{3}, \quad p\prs{gx} \geq \frac{2}{3}\]
+נרצה למצע את
+$P$
+על פני
+$G$.
+נביט ב־%
+$V \leq A^{n,n}_{\mbb{R}}$
+תת־מרחב של פולינומים מדרגה לכל היותר
+$\deg\prs{P}$
+כאשר הדרגה של פולינום היא סכום חזקות המקדמים המקסימלי במונום.
+אז
+$\dim V < \infty$.
+
+עבור
+$p \in A^{n,n}_{\mbb{R}}$
+נגדיר
+$p^g\prs{x} = p\prs{g^{-1} x}$
+ואז
+$p^g \in A^{n,n}_{\mbb{R}}$
+ומתקיים
+$\deg\prs{p^g} \leq \deg\prs{p}$.
+נקבל הומומורפיזם
+\begin{align*}
+\pi \colon G \to \mrm{GL}\prs{V} \\
+\text{.} \pi\prs{g} p &= p^g
+\end{align*}
+
+ניקח
+\[\text{.}Q = \int_G \pi\prs{g} p \diff g \in V\]
+כל
+$A \in M_n\prs{\mbb{R}}$
+נותנת פונקציונל לינארי
+$v_A \in V^*$
+על ידי
+$v_A\prs{p} = p\prs{A}$.
+אז
+\[\text{.} Q\prs{A} = v_A Q = \int v_A\prs{p^g} \diff g = \int_G p\prs{g^{-1} A} \diff g\]
+כיוון ש־%
+$\diff g$
+מידת האר, נקבל שלכל
+$h \in G$
+מתקיים
+\[\text{.} Q\prs{h} = Q\prs{e} = \int_G p\prs{g^{-1}} \diff g\]
+לכן
+$Q$
+קבוע על
+$G$
+עם ערך
+$a \ceq Q\prs{e}$.
+נגדיר
+$\tilde{Q} = Q - a$
+ואז
+$\rest{Q}{G} = 0$.
+מתקיים גם
+\[\tilde{Q}\prs{x} = \int_G p\prs{g^{-1} x}\diff g \geq \frac{2}{3}\]
+לכן
+\begin{otherlanguage}{english}
+\[\text{.} \tilde{Q}\prs{x} \geq \frac{2}{3} - a > 0\]
+\end{otherlanguage}
+
+הסיבה ש־%
+$Q$
+פולינום היא ש־%
+$V$
+סוף־מימדי.
+\end{proof}
+
+המשפט שציינו הוא גירסה כלשהי של דואליות
+\textenglish{Krein-Tannaka}.
+
+\section{קומפלקסיפיקציה של חבורות אלגבריות}
+
+\begin{definition}[סגור זריצקי]
+עבור
+$Y \subseteq \mbb{C}^m$
+אפשר לדבר על
+\emph{סגור זריצקי של
+$Y$}
+שמוגדר להיות
+\[V_{\mbb{C}}\prs{I_{\mbb{C}}\prs{Y}} \subseteq \mbb{C}^m\]
+כאשר
+$I_{\mbb{C}}, V_{\mbb{C}}$
+ההעתקות שלוקחות אידאל פולינומים מתאפסים וקבוצת אפסים, בהתאמה.
+\end{definition}
+
+\begin{remark}
+אם
+$Y \subseteq \mbb{R}^m \subseteq \mbb{C}^m$
+נפריד בין
+$Y \subseteq \bar{Y}^{\mbb{R}} \subseteq \mbb{Y}^{\mbb{C}}$.
+
+נרצה להגיד שהסגור של חבורה
+$G \leq \mrm{GL}_n\prs{\mbb{C}}$
+הוא חבורה. זה לא ממש נכון, למשל כי
+$\overline{\mrm{GL}_n\prs{\mbb{C}}} = M_n\prs{\mbb{C}}$.
+במקום זה נגדיר את ההגדרה הבאה.
+\end{remark}
+
+\begin{definition}[סגור יחסי]
+עבור
+$G \leq \mrm{GL}_n\prs{\mbb{C}}$
+נגדיר את
+\emph{הסגור היחסי של
+$G$}
+להיות
+\[\text{.} G_{\mbb{C}} \ceq \bar{G}^{\mbb{C}} \cap \mrm{GL}_n\prs{\mbb{C}}\]
+\end{definition}
+
+\begin{example}
+בהסתכלות אחרת, נגדיר שיכון
+$\phi \colon \mrm{GL}_n\prs{\mbb{C}} \rmono \mrm{GL}_{n+1}\prs{\mbb{C}}$
+כבלוק
+$n \times n$
+וכאשר
+$\phi\prs{A}_{n+1,n+1} = \frac{1}{\det\prs{A}}$.
+
+ככה
+$\mbb{GL}_n\prs{\mbb{C}}$
+היא קבוצה סגורה־זריצקי ב־%
+$M_{n+1}\prs{\mbb{C}}$.
+בשיכון זה מתקיים
+\[\text{.} G_{\mbb{C}} = \bar{G}^{\mbb{C}} \leq M_{n+1}\prs{\mbb{C}}\]
+\end{example}
+
+\begin{lemma}
+עבור
+$H \leq \mrm{GL}_n\prs{\mbb{C}}$
+חבורה, גם
+$H_{\mbb{C}}$
+חבורה.
+\end{lemma}
+
+\begin{proof}
+יהי
+$x \in H$
+ונכתוב
+$H = xH$.
+יהי
+$P \in I\prs{H}$.
+אז
+$p\prs{xH} = 0$
+ולכן
+$p^{x^{-1}} \in I\prs{H}$.
+לכל
+$y \in H_{\mbb{C}}$
+ולכל
+$p \in I\prs{H}$
+מתקיים
+\[0 = p^{x^{-1}}\prs{y} = p\prs{xy}\]
+לכן
+$xH_{\mbb{C}} \subseteq H_{\mbb{C}}$
+כלומר
+$H \cdot H_{\mbb{C}} \subseteq H_{\mbb{C}}$.
+
+אם
+$y \in H_{\mbb{C}}$,
+$y$
+הפיך.
+אז
+$H_{\mbb{C}} \cdot y^{-1}$
+סגורה זריצקי.
+
+%TODO continue next lecture
+\end{proof}
 
 \end{document}
