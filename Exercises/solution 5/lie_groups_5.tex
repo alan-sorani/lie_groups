@@ -2,6 +2,7 @@
 
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{comment}
 
 %%%%%%%%%
 % Maths %
@@ -154,24 +155,233 @@ so $\Phi$ satisfies the required properties, so $G$ is a left-adjoint to $F$.
 \newcommand{\LieGrp}{\catname{LieGrp}}
 \newcommand{\LieAlg}{\catname{LieAlg}}
 \newcommand{\Lie}{\mrm{Lie}}
-\begin{solution}%3
-Denote $\catname{LieGrp}, \catname{LieAlg}$ the respective categories of Lie groups and algebras, with Lie group homomorphisms and Lie algebra homomorphisms.
 
-We find a natural isomorphism \[\Phi \colon \hom_{\LieGrp}\prs{\tilde{\Gamma}\prs{-}, -} \riso \hom_{\LieAlg}\prs{-, \Lie\prs{-}} \text{.}\]
-I.e. for any $\mfrak{g} \in \LieAlg$ and $H \in \LieGrp$ we construct a bijection
-\begin{align*}
-\Phi_{\mfrak{g},H} \colon \hom_{\LieGrp}\prs{\tilde{\Gamma}\prs{\mfrak{g}}, H} \riso \hom_{\LieAlg}\prs{\mfrak{g}, \Lie\prs{H}}
-\end{align*}
-such that the diagram
+\begin{exercise}
+Show that the pair of functors $\prs{\tilde{\Gamma}, \Lie}$ is an adjoint pair between the categories of Lie groups and of Lie algebras.
+You may assume facts that were proven in the case of matrix groups.
+\end{exercise}
+
+\begin{solution}%3
+
+We use in the proof some tools from category theory which we illustrate below.
+
+\begin{definition}[Natural Transformation]
+Let $F,G \colon \mcal{C} \to \mcal{D}$ be functors. A \emph{natural transformation} $\alpha \colon F \to G$ is the data $\alpha_{X} \colon F\prs{X} \to G\prs{X}$ for all $X \in \ob\prs{\mcal{C}}$ and under the condition that the diagram
 \[
 \begin{tikzcd}
-\hom_{\LieGrp}\prs{\tilde{\Gamma}\prs{\mfrak{g}_2}, G_1} \arrow[r, "\Phi_{\mfrak{g}_2, G_1}"] \arrow[d, swap, "g \circ \prs{-} \circ \tilde{\Gamma}\prs{f}"] & \hom\prs{\mfrak{g}_2, \Lie\prs{G_1}} \arrow[d, "\Lie\prs{g} \circ \prs{-} \circ f"] \\
-\hom_{\LieGrp}\prs{\tilde{\Gamma}\prs{\mfrak{g}_1}, G_2} \arrow[r, "\Phi_{\mfrak{g}_1, G_2}"] & \hom\prs{\mfrak{g}_1, \Lie\prs{G_2}}
+F\prs{X} \arrow[r, "\alpha_X"] \arrow[d, swap, "F\prs{f}"] & G\prs{X} \arrow[d, "G\prs{f}"] \\
+F\prs{Y} \arrow[r, "\alpha_Y"] & G\prs{Y}
 \end{tikzcd}
 \]
-commutes for any $f \colon \mfrak{g}_1 \to \mfrak{g}_2$ in $\LieAlg$ and any $g \colon G_1 \to G_2$ in $\LieGrp$. The latter description matches our definition of an adjunction since one can take $f = \id_{X_2}$ or $g = \id_{Y_1}$ to get the desired equations.
+commutes for all $f \in \hom_{\mcal{C}}\prs{X,Y}$.
+\end{definition}
 
-%TODO continue
+\begin{definition}[Natural Isomorphism]
+A natural transformation $\alpha$ is a \emph{a natural isomorphism} if $\alpha_X$ is a bijection for all $X \in \ob\prs{\mcal{C}}$.
+\end{definition}
+
+\begin{comment}
+
+\begin{definition}[Horizontal Composition of Natural Transformations]
+Let $F,G,H \colon \mcal{C} \to \mcal{H}$ and let $\alpha \colon F \to G$ and $\beta \colon G \to H$ be natural transformations. We define their \emph{(horizontal) composition} $\beta \circ \alpha$ by $\prs{\beta \circ \alpha}_X = \beta_X \circ \alpha_X$.
+\end{definition}
+
+\begin{lemma}\label{lemma:natural_trans_composition}
+Let $F,G,H \colon \mcal{C} \to \mcal{H}$ and let $\alpha \colon F \to G$ and $\beta \colon G \to H$ be natural transformations. Then $\beta \circ \alpha$ is also a natural transformation.
+\end{lemma}
+
+\begin{proof}
+The large small squares in
+\[
+\begin{tikzcd}
+F\prs{X} \arrow[r, "\alpha_X"] \arrow[d, "F\prs{f}"] &
+G\prs{X} \arrow[r, "\beta_X"] \arrow[d, "G\prs{f}"] &
+H\prs{X} \arrow[d, "H\prs{f}"] \\
+F\prs{Y} \arrow[r, "\alpha_Y"] &
+G\prs{Y} \arrow[r, "\beta_Y"] &
+H\prs{Y}
+\end{tikzcd}
+\]
+commute for all $f \in \hom_{\mcal{C}}\prs{X,Y}$ since $\alpha,\beta$ are natural transformations.
+
+This implies in general that the large square (it's a rectangle, but people call those squares) commutes for indeed
+\begin{align*}
+H\prs{f} \circ \beta_X \circ \alpha_X &= \prs{H\prs{f} \circ \beta_X} \circ \alpha
+\\&= \beta_Y \circ G\prs{f} \circ \alpha_X
+\\&= \beta_Y \circ \prs{G\prs{f} \circ \alpha_X}
+\\&= \beta_Y \circ \alpha_Y \circ F\prs{f} \text{.}
+\end{align*} 
+\end{proof}
+
+\begin{lemma}\label{lemma:natural_iso_composition}
+Let $F,G,H \colon \mcal{C} \to \mcal{H}$ and let $\alpha \colon F \to G$ and $\beta \colon G \to H$ be natural isomorphisms. $\beta \circ \alpha$ is also a natural isomorphism.
+\end{lemma}
+
+\end{comment}
+
+\begin{proof}
+$\alpha,\beta$ are natural isomorphisms, so $\alpha_X, \beta_X$ are bijections for all $X \in \ob\prs{\mcal{C}}$, hence so are $\beta_X \circ \alpha_X$.
+$\beta \circ \alpha$ is a natural transformation by \eqref{lemma:natural_trans_composition}, hence this implies $\beta \circ \alpha$ is a natural isomorphism.
+\end{proof}
+
+\begin{definition}[Product Category]
+Let $\mcal{C}, \mcal{D}$ be categories. We define $\mcal{C} \times \mcal{D}$ with $\ob\prs{\mcal{C} \times \mcal{D}} = \ob\prs{\mcal{C}} \times \ob\prs{\mcal{D}}$ and with
+\[\hom_{\mcal{C} \times \mcal{D}}\prs{\prs{X,Y}, \prs{X',Y'}} = \hom_{\mcal{C}}\prs{X, X'} \times \hom_{\mcal{D}}\prs{Y,Y'}\]
+and composition $\prs{f_2, g_2} \circ \prs{f_1, g_1} = \prs{f_2 \circ f_1, g_2 \circ g_1}$.
+\end{definition}
+
+\begin{definition}[Hom-Functor]
+Let $\mcal{C}$ be a category. We define
+\[\hom_{\mcal{C}} \colon \mcal{C}^\op \times \mcal{C} \to \catname{Set}\]
+where $\catname{Set}$ is the category of sets.
+On objects, let $\hom_{\mcal{C}}$ be as defined in class.
+On morphisms, for $f^\op \colon X \to Y$ in $\mcal{C}^\op$ and $g \colon X' \to Y'$ in $\mcal{C}$, define
+\begin{align*}
+\hom_{\mcal{C}}\prs{f^\op,g} \colon \hom\prs{X, X'} &\to \hom\prs{Y,Y'} \\
+h &\mapsto g \circ h \circ f \text{,}
+\end{align*}
+where $f^\op$ is $f$ when viewed as a morphism in the opposite category (so that $f^\op \colon X \to Y$ means $f \colon Y \to X$).
+\end{definition}
+
+\begin{lemma}\label{lemma:hom_functor}
+$\hom_{\mcal{C}}$ is a functor.
+\end{lemma}
+
+\begin{proof}
+Let $\prs{f_1^\op, g_1} \colon \prs{X,X'} \to \prs{Y,Y'}$ and $\prs{f_2^\op, g_2} \colon \prs{Y,Y'} \to \prs{Z,Z'}$ be morphisms in $\mcal{C}^\op \times \mcal{C}$.
+Let $h \in \hom\prs{X,X'}$, we have
+\begin{align*}
+\hom_{\mcal{C}}\prs{\prs{f_2^\op, g_2} \circ \prs{f_1^\op, g_1}}\prs{h}
+&=
+\hom_{\mcal{C}}\prs{f_2^\op \circ f_1^\op, g_2 \circ g_1}\prs{h}
+\\&=
+\hom_{\mcal{C}}\prs{\prs{f_1 \circ f_2}^\op, g_2 \circ g_1}\prs{h}
+\\&= g_2 \circ g_1 \circ h \circ f_1 \circ f_2
+\\&= g_2 \circ \prs{g_1 \circ h \circ f_1} \circ f_2
+\\&= \hom_{\mcal{C}}\prs{f_2^\op, g_2}\prs{g_1 \circ h \circ f_1}
+\\&= \hom_{\mcal{C}}\prs{f_2^\op, g_2}\prs{\hom_{\mcal{C}}\prs{f_1^\op, g_1}\prs{h}}
+\\&= \prs{\hom_{\mcal{C}}\prs{f_2^\op, g_2} \circ \hom_{\mcal{C}}\prs{f_1^\op, g_1}}\prs{h} \text{.}
+\end{align*}
+\end{proof}
+
+\begin{lemma}\label{lemma:hom_functor2}
+Let $F \colon \mcal{C} \to \mcal{D}$ and $G \colon \mcal{D} \to \mcal{C}$ be functors. Then so are $\hom_{\mcal{D}}\prs{F\prs{-}, \prs{-}}$ and $\hom_{\mcal{C}}\prs{-,G\prs{-}}$.
+\end{lemma}
+
+\begin{proof}
+\begin{itemize}
+\item Let $f_1^\op, f_2^\op$ be morphisms in $\mcal{D}$ such that $f_2^\op \circ f_1^\op$ is defined and let $g_1, g_2$ be morphisms in $\mcal{C}$ such that $g_2 \circ g_1$ is defined.
+
+We have
+\begin{align*}
+\hom_{\mcal{D}}\prs{F\prs{f_1^\op \circ f_2^\op}, g_2 \circ g_1}
+&=
+\hom_{\mcal{D}}\prs{F\prs{f_2 \circ f_1}^\op, g_2 \circ g_1}
+\\&=
+\hom_{\mcal{D}}\prs{F\prs{f_2 \circ f_1}^\op, g_2 \circ g_1}
+\\&=
+\hom_{\mcal{D}}\prs{\prs{F\prs{f_2} \circ F\prs{f_1}}^\op, g_2 \circ g_1}\prs{h}
+\\&=
+\hom_{\mcal{D}}\prs{F\prs{f_2}^\op, g_2} \circ \hom_{\mcal{D}}\prs{F\prs{f_1}^\op, g_2}
+\\&=
+\hom_{\mcal{D}}\prs{F\prs{f_2^\op}, g_2} \circ \hom_{\mcal{D}}\prs{F\prs{f_1^\op}, g_2}
+\end{align*}
+where we write $F$ also for the induced map $\mcal{C}^\op \to \mcal{D}^\op$, and where the second-to-last equality is due to \eqref{lemma:hom_functor}.
+
+\item Let $f_1^\op, f_2^\op$ be morphisms in $\mcal{C}$ such that $f_2^\op \circ f_1^\op$ is defined and let $g_1, g_2$ be morphisms in $\mcal{D}$ such that $g_2 \circ g_1$ is defined.
+
+We have
+\begin{align*}
+\hom_{\mcal{C}}\prs{{f_1^\op \circ f_2^\op}, G\prs{g_2 \circ g_1}}
+&=
+\hom_{\mcal{C}}\prs{{f_2 \circ f_1}^\op, G\prs{g_2 \circ g_1}}
+\\&=
+\hom_{\mcal{C}}\prs{{f_2 \circ f_1}^\op, G\prs{g_2 \circ g_1}}
+\\&=
+\hom_{\mcal{C}}\prs{\prs{\prs{f_2} \circ {f_1}}^\op, G\prs{g_2 \circ g_1}}\prs{h}
+\\&=
+\hom_{\mcal{C}}\prs{{f_2}^\op, G\prs{g_2}} \circ \hom_{\mcal{C}}\prs{{f_1}^\op, G\prs{g_2}}
+\end{align*}
+where the last equality is due to \eqref{lemma:hom_functor}.
+\end{itemize}
+\end{proof}
+
+
+\begin{lemma}\label{lemma:adjunction_criterion}
+Let $L \colon \mcal{C} \to \mcal{D}$ and $R \colon \mcal{D} \to \mcal{C}$ be functors. Then $L$ is left-adjoint to $R$ if and only if there's a natural isomorphism
+\[\alpha \colon \hom_{\mcal{D}}\prs{L\prs{-}, -} \riso \hom_{\mcal{C}}\prs{-,R\prs{-}} \text{.}\]
+\end{lemma}
+
+\begin{proof}
+\begin{itemize}
+\item Assume that $L$ is left-adjoint to $R$, and let
+\[\Phi_{X,Y} \colon \hom_{\mcal{D}}\prs{L\prs{X}, Y} \riso \hom_{\mcal{C}}\prs{X,R\prs{Y}}\]
+be bijections satisfying the conditions in the exercise.
+Let $\alpha \colon \hom_{\mcal{D}}\prs{L\prs{-}, -} \to \hom_{\mcal{C}}\prs{-,R\prs{-}}$, given by $\alpha_{X,Y} \ceq \Phi_{X,Y}$ as above, which we show is a natural transformation.
+
+To show $\alpha$ is natural we have to show that
+\[
+\begin{tikzcd}
+\hom_{\mcal{D}}\prs{L\prs{X_1}, Y_1} \arrow[r, "\Phi_{X_1,Y_1}"] \arrow[d, swap, "\hom_{\mcal{D}}\prs{L\prs{f^\op}, g}"] & \hom_{\mcal{C}}\prs{X_1, R\prs{Y_1}} \arrow[d, "\hom_{\mcal{C}}\prs{f^\op, R\prs{g}}"] \\
+\hom_{\mcal{D}}\prs{L\prs{X_2}, Y_2} \arrow[r, "\Phi_{X_2,Y_2}"] & \hom_{\mcal{C}}\prs{X_2, R\prs{Y_2}}
+\end{tikzcd}
+\]
+commutes for any $X,X_2 \in \mcal{C}$, $Y,Y_2 \in \mcal{D}$ and $\prs{f^\op, g} \colon \prs{X_1, Y_1} \to \prs{X_2, Y_2}$ in $\mcal{C}^\op \times \mcal{C}$.
+Opening the definition of $\hom_{\mcal{D}}, \hom_{\mcal{C}}$ we need to show commutativity of the following.
+\[
+\begin{tikzcd}
+\hom_{\mcal{D}}\prs{L\prs{X_1}, Y_1} \arrow[r, "\Phi_{X_1,Y_1}"] \arrow[d, swap, "g \circ \prs{-} \circ L\prs{f}"] & \hom_{\mcal{C}}\prs{X_1, R\prs{Y_1}} \arrow[d, "R\prs{g} \circ \prs{-} \circ f"] \\
+\hom_{\mcal{D}}\prs{L\prs{X_2}, Y_2} \arrow[r, "\Phi_{X_2,Y_2}"] & \hom_{\mcal{C}}\prs{X_2, R\prs{Y_2}}
+\end{tikzcd}
+\]
+%
+We can decompose each vertical map so that this is equivalent to commutativity of the large square in the following.
+\begin{equation}\label{equation:adjunction}
+\begin{tikzcd}
+\hom_{\mcal{D}}\prs{L\prs{X_1}, Y_1} \arrow[r, "\Phi_{X_1,Y_1}"] \arrow[d, swap, "g \circ \prs{-}"] & \hom_{\mcal{C}}\prs{X_1, R\prs{Y_1}} \arrow[d, "R\prs{g} \circ \prs{-}"]
+\\
+\hom_{\mcal{D}}\prs{L\prs{X_1}, Y_2} \arrow[r, "\Phi_{X_1,Y_2}"] \arrow[d, swap, "\prs{-} \circ L\prs{f}"] & \hom_{\mcal{C}}\prs{X_1, R\prs{Y_2}} \arrow[d, "\prs{-} \circ f"]
+\\
+\hom_{\mcal{D}}\prs{L\prs{X_2}, Y_2} \arrow[r, "\Phi_{X_2,Y_2}"] & \hom_{\mcal{C}}\prs{X_2, R\prs{Y_2}}
+\end{tikzcd}
+\end{equation}
+
+The smaller squares are both commutative, the bottom one by the first condition on $\Phi_{X,Y}$ and the top by the second condition. Hence the bigger square is commutative, so $\alpha$ is a natural transformation, hence thus a natural isomorphism.
+
+\item Assume There's a natural isomorphism
+\[\alpha \colon \hom_{\mcal{D}}\prs{L\prs{-}, Y} \riso \hom_{\mcal{C}}\prs{-,R\prs{-}}\]
+and let $\Phi_{X,Y} = \alpha_{X,Y}$.
+Since $\alpha$ is natural, we have by the above equivalence that the large square in \eqref{equation:adjunction} commutes for all $f,g$. Taking $Y = Y_1 = Y_2$ and $g = \id_Y$ the large square is exactly the bottom one which therefore commutes.
+Taking $X = X_1 = X_2$ and $f = \id_{X}$, the large square is the same as the top one which therefore commutes.
+Commutativity of these squares is equivalent to the equation conditions on $\Phi_{X,Y}$, and $\Phi_{X,Y} = \alpha_{X,Y}$ is a bijection for all $X,Y $ since $\alpha$ is an isomorphism.
+
+Hence $\Phi_{X,Y}$ satisfies all the conditions, so $L$ is left-adjoint to $R$.
+\end{itemize}
+\end{proof}
+
+\begin{lemma}\label{lemma:composition_of_adjoints}
+Let $L_i$ be left adjoints to $R_i$ in the following.
+\[
+\begin{tikzcd}
+\mcal{C} \arrow[r, swap, shift right = 3pt, "R_1"] & \mcal{D} \arrow[r, swap, shift right = 3pt, "R_2"] \arrow[l, shift right = 3pt, swap, "L_1"] & \mcal{E} \arrow[l, swap, shift right = 3pt, "L_2"]
+\end{tikzcd}
+\]
+Then $L_1 \circ L_2$ is left-adjoint to $R_2 \circ R_1$.
+\end{lemma}
+
+\begin{proof}
+%TODO fill in via (co)unit (see adjoint functors on wikipedia)
+\end{proof}
+
+Denote $\catname{LieGrp}, \catname{LieAlg}$ the respective categories of Lie groups and algebras, with Lie group homomorphisms and Lie algebra homomorphisms. Denote by $\catname{LieGrp}_{\mrm{sc}}$ the subcategory of simply-connected Lie groups within $\catname{LieGrp}$.
+
+The essential image of $\tilde{\Gamma}$ is contained in $\catname{LieGrp}_{\mrm{sc}}$, hence it factors as $\iota \circ \hat{\Gamma}$ where $\iota \colon \catname{LieGrp}_{\mrm{sc}} \rmono \catname{LieGrp}$ is the embedding, and we've seen that $\hat{\Gamma}$ is an equivalence of categories.
+Let $\Lie_0 \colon \catname{LieGrp}_{\mrm{sc}} \to \catname{LieAlg}$ be the restriction of $\Lie$ to $\catname{LieGrp}_{\mrm{sc}}$, which is the inverse to $\hat{\Gamma}$ as seen in class. 
+
+\begin{lemma}
+
+\end{lemma}
+
 \end{solution}
 
 \end{document}

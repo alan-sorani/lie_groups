@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  25 JAN 2021 11:58
+This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  27 JAN 2021 01:42
  restricted system commands enabled.
 **lie_groups.tex
 (./lie_groups.tex
@@ -1666,13 +1666,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 7104.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33849 strings out of 481302
+ 33850 strings out of 481302
  100000,1144653 words of node,token memory allocated
- 4695 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 7 sub_mlist, 1 glyph, 1548 a
-ttribute, 62 glue_spec, 518 attribute_list, 2 write nodes
-   avail lists: 1:1,2:2416,3:268,4:92,5:954,6:96,7:3648,8:103,9:1120,10:5,11:8
- 49362 multiletter control sequences out of 65536+200000
+ 4725 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 9 sub_mlist, 1 glyph, 1557 a
+ttribute, 62 glue_spec, 521 attribute_list, 2 write nodes
+   avail lists: 1:1,2:2416,3:272,4:92,5:954,6:96,7:3691,8:103,9:1120,10:5,11:8
+ 49363 multiletter control sequences out of 65536+200000
  130 fonts using 9895755 bytes
  68i,24n,88p,935b,1294s stack positions out of 5000i,500n,10000p,200000b,50000s
 <//?/c:/users/eladt/appdata/local/programs/miktex/fonts/opentype/public/lm/lmrom
@@ -1709,7 +1709,7 @@ ers/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm
 lic/amsfonts/symbols/msbm7.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/rsfs/rsfs7.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/hoekwater/stmary10.pfb>
-Output written on lie_groups.pdf (61 pages, 680150 bytes).
+Output written on lie_groups.pdf (61 pages, 679975 bytes).
 
 PDF statistics: 1059 PDF objects out of 1200 (max. 8388607)
  492 named destinations out of 1000 (max. 131072)
