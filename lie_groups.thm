@@ -229,28 +229,86 @@
 \contentsline {theorem}{{משפט}{4.3.{2}}{\textenglish {Peter-Weyl}}}{51}{theorem.4.3.2}%
 \contentsline {remark}{{הערה}{4.3.{3}}{}}{51}{theorem.4.3.3}%
 \contentsline {remark}{{הערה}{4.3.{4}}{}}{51}{theorem.4.3.4}%
-\contentsline {example}{{דוגמה}{4.3.{5}}{}}{51}{theorem.4.3.5}%
-\contentsline {definition}{{הגדרה}{4.3.{6}}{}}{51}{theorem.4.3.6}%
-\contentsline {remark}{{הערה}{4.3.{7}}{}}{52}{theorem.4.3.7}%
-\contentsline {definition}{{הגדרה}{4.3.{8}}{מידת האר}}{52}{theorem.4.3.8}%
-\contentsline {theorem}{{משפט}{4.3.{9}}{האר}}{52}{theorem.4.3.9}%
+\contentsline {theorem}{{משפט}{4.3.{5}}{}}{51}{theorem.4.3.5}%
 \contentsline {proof}{{הוכחה}{30}{}}{52}{proof.30}%
-\contentsline {remark}{{הערה}{4.3.{10}}{}}{52}{theorem.4.3.10}%
-\contentsline {example}{{דוגמה}{4.3.{11}}{}}{52}{theorem.4.3.11}%
-\contentsline {example}{{דוגמה}{4.3.{12}}{}}{52}{theorem.4.3.12}%
-\contentsline {example}{{דוגמה}{4.3.{13}}{}}{52}{theorem.4.3.13}%
+\contentsline {remark}{{הערה}{4.3.{6}}{}}{52}{theorem.4.3.6}%
+\contentsline {example}{{דוגמה}{4.3.{7}}{}}{52}{theorem.4.3.7}%
+\contentsline {definition}{{הגדרה}{4.3.{8}}{}}{52}{theorem.4.3.8}%
+\contentsline {remark}{{הערה}{4.3.{9}}{}}{52}{theorem.4.3.9}%
+\contentsline {definition}{{הגדרה}{4.3.{10}}{מידת האר}}{52}{theorem.4.3.10}%
+\contentsline {theorem}{{משפט}{4.3.{11}}{האר}}{52}{theorem.4.3.11}%
+\contentsline {proof}{{הוכחה}{31}{}}{52}{proof.31}%
+\contentsline {remark}{{הערה}{4.3.{12}}{}}{53}{theorem.4.3.12}%
+\contentsline {example}{{דוגמה}{4.3.{13}}{}}{53}{theorem.4.3.13}%
 \contentsline {example}{{דוגמה}{4.3.{14}}{}}{53}{theorem.4.3.14}%
-\contentsline {theorem}{{משפט}{4.3.{15}}{}}{53}{theorem.4.3.15}%
-\contentsline {proof}{{הוכחה}{31}{}}{53}{proof.31}%
-\contentsline {remark}{{הערה}{4.3.{16}}{}}{53}{theorem.4.3.16}%
-\contentsline {theorem}{{משפט}{4.3.{17}}{משפט הקירוב של ויירשטראס}}{53}{theorem.4.3.17}%
-\contentsline {theorem}{{משפט}{4.3.{18}}{סטון-ויירשטראס}}{53}{theorem.4.3.18}%
-\contentsline {definition}{{הגדרה}{4.3.{19}}{חבורה אלגברית ממשית}}{53}{theorem.4.3.19}%
-\contentsline {theorem}{{משפט}{4.3.{20}}{}}{53}{theorem.4.3.20}%
-\contentsline {proof}{{הוכחה}{32}{}}{54}{proof.32}%
-\contentsline {definition}{{הגדרה}{4.4.{1}}{סגור זריצקי}}{54}{theorem.4.4.1}%
-\contentsline {remark}{{הערה}{4.4.{2}}{}}{54}{theorem.4.4.2}%
-\contentsline {definition}{{הגדרה}{4.4.{3}}{סגור יחסי}}{54}{theorem.4.4.3}%
-\contentsline {example}{{דוגמה}{4.4.{4}}{}}{54}{theorem.4.4.4}%
-\contentsline {lemma}{{למה}{4.4.{5}}{}}{54}{theorem.4.4.5}%
+\contentsline {example}{{דוגמה}{4.3.{15}}{}}{53}{theorem.4.3.15}%
+\contentsline {example}{{דוגמה}{4.3.{16}}{}}{53}{theorem.4.3.16}%
+\contentsline {theorem}{{משפט}{4.3.{17}}{}}{53}{theorem.4.3.17}%
+\contentsline {proof}{{הוכחה}{32}{}}{53}{proof.32}%
+\contentsline {remark}{{הערה}{4.3.{18}}{}}{53}{theorem.4.3.18}%
+\contentsline {theorem}{{משפט}{4.3.{19}}{משפט הקירוב של ויירשטראס}}{54}{theorem.4.3.19}%
+\contentsline {theorem}{{משפט}{4.3.{20}}{סטון-ויירשטראס}}{54}{theorem.4.3.20}%
+\contentsline {definition}{{הגדרה}{4.3.{21}}{חבורה אלגברית ממשית}}{54}{theorem.4.3.21}%
+\contentsline {theorem}{{משפט}{4.3.{22}}{}}{54}{theorem.4.3.22}%
 \contentsline {proof}{{הוכחה}{33}{}}{54}{proof.33}%
+\contentsline {definition}{{הגדרה}{4.4.{1}}{סגור זריצקי}}{55}{theorem.4.4.1}%
+\contentsline {remark}{{הערה}{4.4.{2}}{}}{55}{theorem.4.4.2}%
+\contentsline {definition}{{הגדרה}{4.4.{3}}{סגור יחסי}}{55}{theorem.4.4.3}%
+\contentsline {example}{{דוגמה}{4.4.{4}}{}}{55}{theorem.4.4.4}%
+\contentsline {lemma}{{למה}{4.4.{5}}{}}{55}{theorem.4.4.5}%
+\contentsline {proof}{{הוכחה}{34}{}}{55}{proof.34}%
+\contentsline {remark}{{הערה}{4.4.{6}}{}}{55}{theorem.4.4.6}%
+\contentsline {example}{{דוגמה}{4.4.{7}}{}}{55}{theorem.4.4.7}%
+\contentsline {exercise}{{תרגיל}{13}{}}{56}{exercise.13}%
+\contentsline {remark}{{הערה}{4.4.{8}}{}}{56}{theorem.4.4.8}%
+\contentsline {remark}{{הערה}{4.4.{9}}{}}{56}{theorem.4.4.9}%
+\contentsline {example}{{דוגמה}{4.4.{10}}{}}{56}{theorem.4.4.10}%
+\contentsline {remark}{{הערה}{4.5.{1}}{}}{56}{theorem.4.5.1}%
+\contentsline {definition}{{הגדרה}{4.6.{1}}{חבורה רדוקטיבית}}{57}{theorem.4.6.1}%
+\contentsline {example}{{דוגמה}{4.6.{2}}{}}{57}{theorem.4.6.2}%
+\contentsline {remark}{{הערה}{4.6.{3}}{}}{57}{theorem.4.6.3}%
+\contentsline {remark}{{הערה}{4.6.{4}}{}}{57}{theorem.4.6.4}%
+\contentsline {remark}{{הערה}{4.6.{5}}{}}{57}{theorem.4.6.5}%
+\contentsline {definition}{{הגדרה}{4.7.{1}}{אלגברת לי רדוקטיבית}}{57}{theorem.4.7.1}%
+\contentsline {remark}{{הערה}{4.7.{2}}{}}{57}{theorem.4.7.2}%
+\contentsline {example}{{דוגמה}{4.7.{3}}{}}{57}{theorem.4.7.3}%
+\contentsline {fact}{{עובדה}{4.7.{4}}{}}{58}{theorem.4.7.4}%
+\contentsline {remark}{{הערה}{4.7.{5}}{}}{58}{theorem.4.7.5}%
+\contentsline {proposition}{{טענה}{4.7.{6}}{}}{58}{theorem.4.7.6}%
+\contentsline {proof}{{הוכחה}{35}{}}{58}{proof.35}%
+\contentsline {proposition}{{טענה}{4.7.{7}}{}}{58}{theorem.4.7.7}%
+\contentsline {proof}{{הוכחה}{36}{}}{58}{proof.36}%
+\contentsline {remark}{{הערה}{4.7.{8}}{}}{58}{theorem.4.7.8}%
+\contentsline {remark}{{הערה}{4.7.{9}}{}}{58}{theorem.4.7.9}%
+\contentsline {definition}{{הגדרה}{4.8.{1}}{אלגברת לי פשוטה}}{59}{theorem.4.8.1}%
+\contentsline {definition}{{הגדרה}{4.8.{2}}{אלגברת לי פשוטה למחצה}}{59}{theorem.4.8.2}%
+\contentsline {corollary}{{מסקנה}{4.8.{3}}{}}{59}{theorem.4.8.3}%
+\contentsline {proof}{{הוכחה}{37}{}}{59}{proof.37}%
+\contentsline {corollary}{{מסקנה}{4.8.{4}}{}}{59}{theorem.4.8.4}%
+\contentsline {definition}{{הגדרה}{4.8.{5}}{תבנית \textenglish {Killing}}}{59}{theorem.4.8.5}%
+\contentsline {remark}{{הערה}{4.8.{6}}{}}{59}{theorem.4.8.6}%
+\contentsline {theorem}{{משפט}{4.8.{7}}{קריטריון \textenglish {Cartan}}}{59}{theorem.4.8.7}%
+\contentsline {proof}{{הוכחה}{38}{}}{59}{proof.38}%
+\contentsline {definition}{{הגדרה}{4.8.{8}}{הומומורפיזם של אלגבראות לי}}{59}{theorem.4.8.8}%
+\contentsline {notation}{{סימון}{4.8.{9}}{}}{60}{theorem.4.8.9}%
+\contentsline {remark}{{הערה}{4.8.{10}}{}}{60}{theorem.4.8.10}%
+\contentsline {proposition}{{טענה}{4.8.{11}}{}}{60}{theorem.4.8.11}%
+\contentsline {corollary}{{מסקנה}{4.8.{12}}{}}{60}{theorem.4.8.12}%
+\contentsline {proof}{{הוכחה}{39}{}}{60}{proof.39}%
+\contentsline {proposition}{{טענה}{4.8.{13}}{}}{60}{theorem.4.8.13}%
+\contentsline {proof}{{הוכחה}{40}{}}{60}{proof.40}%
+\contentsline {remark}{{הערה}{4.8.{14}}{}}{60}{theorem.4.8.14}%
+\contentsline {corollary}{{מסקנה}{4.8.{15}}{}}{60}{theorem.4.8.15}%
+\contentsline {proposition}{{טענה}{4.8.{16}}{}}{60}{theorem.4.8.16}%
+\contentsline {proof}{{הוכחה}{41}{}}{60}{proof.41}%
+\contentsline {theorem}{{משפט}{4.8.{17}}{\textenglish {Weyl}}}{60}{theorem.4.8.17}%
+\contentsline {proposition}{{טענה}{4.8.{18}}{}}{60}{theorem.4.8.18}%
+\contentsline {corollary}{{מסקנה}{4.8.{19}}{}}{61}{theorem.4.8.19}%
+\contentsline {observation}{{הבחנה}{4.8.{20}}{}}{61}{theorem.4.8.20}%
+\contentsline {theorem}{{משפט}{4.8.{21}}{}}{61}{theorem.4.8.21}%
+\contentsline {corollary}{{מסקנה}{4.8.{22}}{}}{61}{theorem.4.8.22}%
+\contentsline {example}{{דוגמה}{4.8.{23}}{}}{61}{theorem.4.8.23}%
+\contentsline {example}{{דוגמה}{4.8.{24}}{}}{61}{theorem.4.8.24}%
+\contentsline {example}{{דוגמה}{4.8.{25}}{}}{61}{theorem.4.8.25}%
+\contentsline {remark}{{הערה}{4.8.{26}}{}}{61}{theorem.4.8.26}%
+\contentsline {example}{{דוגמה}{4.8.{27}}{}}{61}{theorem.4.8.27}%

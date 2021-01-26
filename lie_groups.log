@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  14 JAN 2021 10:43
+This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  25 JAN 2021 11:58
  restricted system commands enabled.
 **lie_groups.tex
 (./lie_groups.tex
@@ -1478,14 +1478,6 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 73
 .
 
 (C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/latex/stmaryrd/ustmry.fd)
-luaotfload | db : Reload initiated (formats: otf,ttf,ttc); reason: "Font stmary1
-0 not found.".
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
 
 (C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
@@ -1523,18 +1515,11 @@ LaTeX Font Info:    Font shape `TU/OpenSansHebrew(0)/bx/n' in size <10> not avai
 lable
 (Font)              Font shape `TU/OpenSansHebrew(0)/b/n' tried instead on input
  line 2.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.)
+ [3])
 \tf@toc=\write5
 
 \openout5 = lie_groups.toc
- [3] [4
-
-]
+ [4]
 \bbl@ensure@hebrew {פרק} 1.
 LaTeX Font Info:    Font shape `TU/OpenSansHebrew(0)/bx/n' in size <20.74> not a
 vailable
@@ -1555,7 +1540,9 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 168.
 (C:/Users/EladT/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-[5] [6]
+[5
+
+] [6]
 LaTeX Font Info:    Font shape `TU/OpenSansHebrew(0)/bx/it' in size <10> not ava
 ilable
 (Font)              Font shape `TU/OpenSansHebrew(0)/b/it' tried instead on inpu
@@ -1609,11 +1596,7 @@ nput line 1960.
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 2417.
 
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate.
-luaotfload | resolve : sequence of 3 lookups yielded nothing appropriate. [28]
-Missing character: There is no [ (U+005B) in font stmary10!
-Missing character: There is no [ (U+005B) in font stmary10!
- [29] [30]
+[28] [29] [30]
 Overfull \hbox (7.40166pt too wide) in paragraph at lines 2728--2734
 []\TU/OpenSansHebrew(0)/m/it/10 בהינתן חבורת מטריצות $\OML/cm
 m/m/it/10 G$ \TU/OpenSansHebrew(0)/m/it/10 קיימת התאמה חד־חד ע
@@ -1636,10 +1619,7 @@ t/10 X$ \TU/OpenSansHebrew(0)/m/n/10 מספיק נחמד אפשר לבנות
 nSansHebrew(0)/m/n/10 , כלומר כיסוי כאשר $[]$ פשוט־קשר.
  []
 
-[40]
-Missing character: There is no [ (U+005B) in font stmary10!
-Missing character: There is no [ (U+005B) in font stmary10!
- [41]
+[40] [41]
 Overfull \hbox (28.6385pt too wide) in paragraph at lines 4228--4236
 []\TU/OpenSansHebrew(0)/m/n/10 נוכל להגדיר קטגוריה $\OMS/cmsy/
 m/n/10 C$ \TU/OpenSansHebrew(0)/m/n/10 עם אובייקטים $[]$, מורפ
@@ -1653,7 +1633,7 @@ m/n/10 C$ \TU/OpenSansHebrew(0)/m/n/10 עם אובייקטים $[]$, מורפ
 ]
 \bbl@ensure@hebrew {פרק} 4.
 [45] [46]
-Overfull \hbox (6.84056pt too wide) in paragraph at lines 4912--4921
+Overfull \hbox (6.84056pt too wide) in paragraph at lines 4910--4919
 []\TU/OpenSansHebrew(0)/m/n/10 אפשר לחשוב על שדות וקטורי
 ים כאופרטורים דיפרנציאליים. בפרט עבור 2 שדו
 ת וקטוריים $\OML/cmm/m/it/10 X; Y$ \TU/OpenSansHebrew(0)/m/n/10 מו
@@ -1661,68 +1641,77 @@ Overfull \hbox (6.84056pt too wide) in paragraph at lines 4912--4921
 מסתבר שהאופרטור־$\OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 
  []
 
-[47] [48] [49] [50] [51] [52] [53]
+[47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57]
+
+Package amsfonts Warning: Obsolete command \frak; \mathfrak should be used inste
+ad on input line 6576.
+
+[58] [59] [60]
 \tf@thm=\write6
 
 \openout6 = lie_groups.thm
- [54]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 6103.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 6103.
+ [61]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 7104.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 7104.
  (./lie_groups.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 6103.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 6103.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 7104.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 7104.
 Package rerunfilecheck Info: File `lie_groups.out' has not changed.
-(rerunfilecheck)             Checksum: F9339CCA52E93071F6D6E2BE99D5F7DC;7965.
+(rerunfilecheck)             Checksum: 7818960C28AF57A8654029F501912F27;9255.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 6103.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 7104.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33762 strings out of 481302
+ 33849 strings out of 481302
  100000,1144653 words of node,token memory allocated
- 4255 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 7 sub_mlist, 1 glyph, 1383 a
-ttribute, 62 glue_spec, 463 attribute_list, 2 write nodes
-   avail lists: 1:1,2:2436,3:268,4:84,5:833,6:87,7:3648,8:103,9:1120,10:5,11:8
- 49353 multiletter control sequences out of 65536+200000
- 128 fonts using 9383979 bytes
+ 4695 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 7 sub_mlist, 1 glyph, 1548 a
+ttribute, 62 glue_spec, 518 attribute_list, 2 write nodes
+   avail lists: 1:1,2:2416,3:268,4:92,5:954,6:96,7:3648,8:103,9:1120,10:5,11:8
+ 49362 multiletter control sequences out of 65536+200000
+ 130 fonts using 9895755 bytes
  68i,24n,88p,935b,1294s stack positions out of 5000i,500n,10000p,200000b,50000s
 <//?/c:/users/eladt/appdata/local/programs/miktex/fonts/opentype/public/lm/lmrom
-an10-bolditalic.otf><//?/c:/users/eladt/appdata/local/programs/miktex/fonts/open
-type/public/lm/lmroman12-bold.otf><C:/Users/EladT/AppData/Local/Microsoft/Window
-s/Fonts/opensanshebrew-bolditalic.ttf><//?/c:/users/eladt/appdata/local/programs
-/miktex/fonts/opentype/public/lm/lmroman10-italic.otf><C:/Users/EladT/AppData/Lo
-cal/Microsoft/Windows/Fonts/opensanshebrew-italic.ttf><//?/c:/users/eladt/appdat
-a/local/programs/miktex/fonts/opentype/public/lm/lmroman10-regular.otf><C:/Users
-/EladT/AppData/Local/Microsoft/Windows/Fonts/opensanshebrew-bold.ttf><C:/Users/E
-ladT/AppData/Local/Microsoft/Windows/Fonts/opensanshebrew-regular.ttf><C:/Users/
-EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
-:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmmi5.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmmib10.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/EladT/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/EladT/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/EladT/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/EladT/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/
-EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb
-><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler
-/eufm7.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/latxfont/line10.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/symbols/msam10.pfb><C:/Users/EladT/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/EladT/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm5.pfb><C:/Users/EladT/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/U
-sers/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs7.pfb>
-Output written on lie_groups.pdf (54 pages, 607739 bytes).
+an10-bold.otf><//?/c:/users/eladt/appdata/local/programs/miktex/fonts/opentype/p
+ublic/lm/lmromanslant10-regular.otf><//?/c:/users/eladt/appdata/local/programs/m
+iktex/fonts/opentype/public/lm/lmroman10-bolditalic.otf><//?/c:/users/eladt/appd
+ata/local/programs/miktex/fonts/opentype/public/lm/lmroman12-bold.otf><C:/Users/
+EladT/AppData/Local/Microsoft/Windows/Fonts/opensanshebrew-bolditalic.ttf><//?/c
+:/users/eladt/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman10-i
+talic.otf><C:/Users/EladT/AppData/Local/Microsoft/Windows/Fonts/opensanshebrew-i
+talic.ttf><//?/c:/users/eladt/appdata/local/programs/miktex/fonts/opentype/publi
+c/lm/lmroman10-regular.otf><C:/Users/EladT/AppData/Local/Microsoft/Windows/Fonts
+/opensanshebrew-bold.ttf><C:/Users/EladT/AppData/Local/Microsoft/Windows/Fonts/o
+pensanshebrew-regular.ttf><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmex10.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/EladT/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/EladT/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/EladT/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/EladT
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/User
+s/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C
+:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.
+pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmsy5.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy7.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/euler/eufm10.pfb><C:/Users/EladT/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/euler/eufm7.pfb><C:/Users/EladT/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/EladT/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Us
+ers/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm
+10.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/symbols/msbm5.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/symbols/msbm7.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/rsfs/rsfs7.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/hoekwater/stmary10.pfb>
+Output written on lie_groups.pdf (61 pages, 680150 bytes).
 
-PDF statistics: 915 PDF objects out of 1000 (max. 8388607)
- 414 named destinations out of 1000 (max. 131072)
- 360 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1059 PDF objects out of 1200 (max. 8388607)
+ 492 named destinations out of 1000 (max. 131072)
+ 400 words of extra memory for PDF output out of 10000 (max. 100000000)
 

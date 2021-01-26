@@ -4871,8 +4871,6 @@ $X\prs{f} \colon M \to \mbb{R}$
 ואז
 \[\text{.} X\prs{f} \prs{p} = \sum_{i \in [n]} a_i\prs{p} \frac{\del f}{\del x_i}\prs{p}\]
 
-%TODO fill in? (28.12)
-
 %LECTURE 31.12.2020
 
 \begin{definition}[מרחב משיק]
@@ -5578,7 +5576,92 @@ $G^\circ = \set{e}$.
 
 %LECTURE 11.01.2021
 
-%TODO fill in
+תהי
+$G$
+חבורת לי קומפקטטית ויהי
+\[i \colon G \rmono \mrm{GL}_n\prs{k}\]
+שיכון עבור
+$k \in \set{\mbb{R}, \mbb{C}}$,
+שקיים לפי
+\textenglish{Peter-Weyl}.
+מקומפקטיות נובע
+$G \cong i\prs{G}$
+וכי
+$i\prs{G} \leq \mrm{GL}_n\prs{k}$
+היא סגורה.
+לכן נניח מעכשיו כי
+$G \leq \mrm{GL}_n\prs{k}$
+תת־חבורה סגורה.
+
+\begin{remark}
+יש שיכונים
+$\mrm{GL}_n\prs{\mbb{R}} \leq \mrm{GL}_n\prs{\mbb{C}}$
+וגם
+$\mrm{GL}_n\prs{\mbb{C}} \leq \mrm{GL}_{2n}\prs{\mbb{R}}$.
+למשל, יש שיכון
+\begin{align*}
+\mrm{GL}_n\prs{\mbb{C}} &\to \mrm{GL}_{2n}\prs{\mbb{R}} \\
+\text{.} a_{kj} + b_{kj} &\mapsto \pmat{a_{kj} & - b_{kj} \\ b_{kj} & a_{k_j}}
+\end{align*}
+
+מתקיים גם
+\begin{align*}
+O\prs{n} &= \mrm{GL}_n\prs{\mbb{R}} \cap U\prs{n} \leq \mrm{GL}_n\prs{\mbb{C}} \\
+\text{.} U\prs{n} &= \mrm{GL}_n\prs{\mbb{C}} \cap O\prs{2n} \leq \mrm{GL}_{2n}\prs{\mbb{R}}
+\end{align*}
+\end{remark}
+
+\begin{theorem}\label{theorem:main_compact_groups}
+חבורות לי קומפקטיות הן בדיוק תת־חבורות לי של
+$O\prs{n}$
+עבור
+$n \in \mbb{N}$.
+\end{theorem}
+
+\begin{proof}
+\begin{description}
+\item[עבור
+$G$
+סופית:]
+נחשוב על
+$G \leq \mrm{GL}\prs{V}$
+כאשר
+$V$
+מרחב וקטורי סוף־מימדי ממשי.
+ניקח מכפלה פנימית עליו
+$\trs{,}$.
+נגדיר תבנית בילינארית
+\begin{align*}
+B \colon V \times V &\to \mbb{R} \\
+\text{.} \prs{v,w} &\mapsto \sum_{g \in G} \trs{g\prs{V}, g\prs{w}}
+\end{align*}
+זאת מכפלה פנימית כי
+$B\prs{v,v}$
+סכום של מספרים אי־שליליים שאחד מהם
+$\trs{v,v}$.
+
+מתקיים
+\begin{align*}
+\forall g \in G \colon B\prs{g\prs{v}, g\prs{w}} &= \sum_{h \in G} \trs{h\prs{g\prs{v}} h\prs{g\prs{w}}}
+\\&= \sum_{h \in G} \trs{h\prs{v}, h\prs{w}}
+\\&= B\prs{v,w}
+\end{align*}
+ולכן
+$B$
+היא
+$G$%
+־אינווריאנטית.
+אם נקבע בסיס אורתונורמלי ל־%
+$B$
+ונזהה לפי
+$V \cong \mbb{R}^n$
+נקבל
+\[B\prs{g\prs{v}, w} = B\prs{v, g^{-1}\prs{w}}\]
+ואז
+$G \cong G' \leq O\prs{n}$.
+\end{description}
+\end{proof}
+
 
 \begin{remark}
 עבור
@@ -5647,7 +5730,7 @@ $fg\prs{x} \ceq f\prs{g^{-1} \cdot x}$
 לכל חבורת לי קיימת מידת האר שמאלית והיא יחידה עד כדי סקלר חיובי.
 \end{theorem}
 
-\begin{proof} %TODO previous theorem that I have to fill in
+\begin{proof} \ref{theorem:main_compact_groups}
 כמו במקקרה הסופי, ניקח
 \[\text{.} B\prs{v,w} \ceq m\prs{f_{v,w}}\]
 כאשר עבור
@@ -5843,9 +5926,8 @@ $\pi\prs{g}$
 אפשר לעשות זאת בדרך אחרת.
 עבור
 $v^* \in V^*$
-%TODO fill in
 נביט בפונקציה
-\[v^* \mapsto m\prs{f_{v,v^*}}\]
+\[w \colon v^* \mapsto m\prs{f_{v,v^*}}\]
 כשמתקיים
 $f_{v,v^*}\prs{g} = v^*\prs{\pi\prs{g} v}$.
 הגדרנו העתקה לינארית
@@ -5860,7 +5942,18 @@ $V$.
 $v^*\prs{w} = m\prs{f_{v,v^*}}$.
 זה מגדיר את
 \[\text{.} w = \int_G \pi\prs{g} v \diff g\]
-%TODO
+
+עבור
+$v^* \in V^*$
+מתקיים
+\begin{align*}
+v^*\prs{\pi\prs{h} w} &= \prs{v^* \circ \pi\prs{h}}\prs{w}
+\\&= m\prs{f_{v,v^* \circ \pi\prs{h}}}
+\\&= m\prs{f_{v,v^*}^h}
+\\&= v^*\prs{w}
+\end{align*}
+ואז
+$\pi\prs{h}w = w$.
 
 \begin{theorem}[משפט הקירוב של ויירשטראס]
 פונקציה ממשית רציפה
@@ -6096,8 +6189,916 @@ $y$
 אז
 $H_{\mbb{C}} \cdot y^{-1}$
 סגורה זריצקי.
+מ־%
+$H \cdot H_{\mbb{C}} \subseteq H_{\mbb{C}}$
+נובע
+$H y \subseteq H_{\mbb{C}}$
+ולכן
+$H \subseteq H_{\mbb{C}} y^{-1}$.
+אז מכך ש־%
+$H_{\mbb{C}} \cdot y^{-1}$
+סגורה זריצקי נובע
+$H_{\mbb{C}} \subseteq H_{\mbb{C}} y^{-1}$.
+נקבל
+$H_{\mbb{C}}y \subseteq H_{\mbb{C}}$
+ולכן
+$H_{\mbb{C}} \cdot H_{\mbb{C}} \subseteq H_{\mbb{C}}$,
+מה שמראה סגירות לכפל.
 
-%TODO continue next lecture
+כעת,
+$H = H^{-1} \subseteq H_{\mbb{C}}^{-1}$
+לכן
+$H_{\mbb{C}} \subseteq H_{\mbb{C}}^{-1}$
+ולכן
+$H_{\mbb{C}} = H_{\mbb{C}}^{-1}$.
 \end{proof}
+
+%LECTURE 18.1
+
+\begin{remark}
+אפשר לחשוב על
+$\mrm{GL}_n\prs{\mbb{C}}$
+כקבוצה סגורה זריצקי ב־%
+$M_{n+1}\prs{\mbb{C}}$,
+ואז
+$\bar{G}^{\mbb{C}} = G_{\mbb{C}}$.
+\end{remark}
+
+אפשר לעשות אותו דיון עם
+$\mbb{R}$
+(או כל שדה אחר) ולקבל
+עבור
+$G \leq \mrm{GL}_n\prs{\mbb{R}}$
+חבורה
+$G \leq G_{\mbb{R}} \leq \mrm{GL}_n\prs{\mbb{R}}$.
+אם נביט בשיכון
+$G \leq \mrm{GL}_n\prs{\mbb{R}} \leq \mrm{GL}_n\prs{\mbb{C}}$
+נקבל
+\[\text{.} G \leq G_{\mbb{R}} \leq G_{\mbb{C}}\]
+אז
+$I = I_{\mbb{R}}\prs{G} \subseteq A_{\mbb{R}}^{n,n}$.
+
+ראינו קודם שעבור
+$G \leq \mrm{GL}_n\prs{\mbb{R}}$
+קומפקטית מתקיים
+$G = G_{\mbb{R}}$.
+
+\begin{example}
+\begin{enumerate}
+\item מתקיים
+\[O\prs{n}_{\mbb{C}} = O_n\prs{\mbb{C}} = \set{A \in \mrm{GL}_n\prs{\mbb{C}}}{A A^t = I}\]
+וזאת אינה חבורה קומפקטית.
+\item הרבה דוגמאות מוכרות מוגדרות כחבורות אלגבריות, עבור שדות שונים.
+למשל,
+\begin{align*}
+\mrm{SL}_n\prs{\mbb{R}}_{\mbb{C}} &= \mrm{SL}_n\prs{\mbb{C}} \\
+\text{.}\mrm{Sp}_n\prs{\mbb{R}}_{\mbb{C}} &= \mrm{Sp}_n\prs{\mbb{C}}
+\end{align*}
+\end{enumerate}
+\end{example}
+
+\begin{exercise}
+עבור
+\[O\prs{n,k} = \set{A \in \mrm{GL}_{n+k}\prs{\mbb{R}}}{A I_{n,k} A^t = I_{n,k}}\]
+כאשר
+$I_{n,k} = \pmat{I_n & 0 \\ 0 & - I_k}$
+מתקיים
+\[\text{.} O\prs{n,k}_{\mbb{C}} \cong O_n\prs{\mbb{C}}\]
+\end{exercise}
+
+\begin{remark}
+יש חבורות אלגבריות ממשיות שונות עם אותו המרכוב. למשל,
+\[\text{.}S^1_{\mbb{C}} = \mrm{GL}_1\prs{\mbb{C}} = \mrm{GL}_1\prs{\mbb{R}}_{\mbb{C}}\]
+\end{remark}
+
+\begin{remark}
+באופן כללי,
+$G_{\mbb{C}}$
+לא תלויה בשיכון, עד כדי איזומורפיזם.
+\end{remark}
+
+\begin{example}
+מתקיים
+\[S^1 = U\prs{1} \leq \mrm{GL}_1\prs{\mbb{C}} \leq \mrm{GL}_2\prs{\mbb{R}}\]
+ובשיכון שראינו
+\[\text{.} i\prs{I\prs{1}} = \mrm{SO}\prs{2} = \set{\pmat{a & b \\ - b & a}}{a^2 + b^2 = 1}\]
+נקבל
+\[\text{.}I\prs{\mrm{SO}\prs{2}} = \set{r_{1,1}^2 + r_{1,2}^2 = 1, r_{1,1} = r_{2,2}, r_{1,2} = -r_{2,1}}\]
+בשיכון
+$U\prs{1} \rmono \mrm{GL}_2\prs{\mbb{R}} \leq \mrm{GL}_2\prs{\mbb{C}}$
+אם נבצע שינוי לינארי
+\[x = a+ib, \quad y = a-ib\]
+נקבל
+\[\text{.} a^2 + b^2 = 1 \leftrightarrow xy = 1\]
+זה מתרחב להסבר אלגברי לכך שמתקיים
+\[\text{.} U\prs{n}_{\mbb{C}} = \mrm{GL}_n\prs{\mbb{C}}\]
+\end{example}
+
+\section{חזרה לחבורות קומפקטיות}
+
+תהי
+$G \leq \mrm{GL}_n\prs{\mbb{R}}$
+קומפקטית.
+ראינו שאפשר להניח
+$G \leq \mrm{O}\prs{n}$
+עד כדי איזומורפיזם.
+אז
+$G = G_{\mbb{R}}$
+ומתקיים
+$G_{\mbb{C}} \leq O\prs{n}_{\mbb{C}} = O_n\prs{\mbb{C}}$.
+
+מתקיים
+\[\text{.} O_n\prs{\mbb{C}} \cap U\prs{n} = \set{A \in M_n\prs{\mbb{C}}}{\hat{A} = \prs{A^t}^{-1} = A} = \mrm{O}\prs{n}\]
+נובע מכך כי
+$G_{\mbb{C}} \cap U\prs{n} = G$.
+
+יתרה מכך, אם
+$p \in I_{\mbb{C}}\prs{G} \leq A_{\mbb{C}}^{n,n}$,
+לכל
+$g \in G \leq \mrm{GL}_{n\prs{\mbb{R}}}$
+מתקיים
+\[\bar{p}\prs{g} = \overline{p\prs{g}} = \bar{0} = 0\]
+לכן
+$\bar{p} \in I_{\mbb{C}}\prs{G}$.
+לכן לכל
+$h \in G_{\mbb{C}}$
+מתקיים
+\[p\prs{\bar{h}} = \overline{\bar{p}\prs{h}} = \bar{0} = 0\]
+לכן
+$\hat{h} \in G_{\mbb{C}}$.
+נקבל כי
+$G_{\mbb{C}}$
+סגורה תחת הצמדת מטריצות.
+
+מכך נובע גם שאם
+$h \in G_{\mbb{C}}$
+אז
+$\hat{h}^t = h^* \in G_{\mbb{C}}$,
+כי יודעים ש־%
+$G_{\mbb{C}} \leq O_n\prs{\mbb{C}}$.
+לכן
+$h^t = h^{-1} \in G_{\mbb{C}}$.
+לסיכום, הצמדה מרוכבת
+$\sigma\prs{A} = \prs{A^*}^{-1}$
+מצטמצמת להומומורפיזם
+$G_{\mbb{C}} \to G_{\mbb{C}}$
+שהיא אינוולוציה, ומתקייה
+\[\text{.} G_{\mbb{C}}^\sigma = \set{g \in G_{\mbb{C}}}{\sigma\prs{g} = g} = G_{\mbb{C}} \cap U\prs{n} = G\]
+
+\begin{remark}
+באופן כללי ניתן להניח
+$G \leq U\prs{n}$.
+עדיין מתקיים
+$G_{\mbb{C}} \leq \mrm{GL}_n\prs{\mbb{C}}$.
+עדיין מתקיים במקרה זה
+$G_{\mbb{C}} \leq \mrm{GL}_n\prs{\mbb{C}}$
+ו־%
+$G_{\mbb{C}}$
+עדיין סגורה תחת
+$\sigma$.
+גם מתקיים
+$G^\sigma_{\mbb{C}} = G_{\mbb{C}} \cap U\prs{n} = G$.
+\end{remark}
+
+\section{חבורות רדוקטיביות}
+
+\begin{definition}[חבורה רדוקטיבית]
+תהי
+$G \leq \mrm{GL}_n\prs{\mbb{C}}$.
+נגדיר כי
+$G$
+חבורה אלגברית רדוקטיבית אם היא סגורה תחת
+$A \mapsto A^*$
+או איזומורפית לחבורה כזאת.
+\end{definition}
+
+ראינו שעבור
+$G$
+קומפקטית,
+$G_{\mbb{C}}$
+אלגברית מרוכבת רדוקטיבית.
+
+\begin{example}
+\begin{enumerate}
+\item $\mrm{GL}_n\prs{\mbb{C}}$
+\item $\mrm{SL}_n\prs{\mbb{C}}$
+\item $\mrm{SO}_n\prs{\mbb{C}}$
+\item נסמן
+\[\mrm{Sp}_n\prs{\mbb{C}} = \set{X \in \mrm{GL}_{2n}\prs{\mbb{C}}}{X^t J + JX = 0} = \set{X = \pmat{A & B \\ C & D}}{A^t = -D, B^t = B, C^t = C}\]
+כאשר
+$J = \pmat{0 & I_n \\ -I_n & 0}$,
+ונקרא לה החבורה הסימפלקטית.
+\item תהי
+\[\text{.}G = \set{\pmat{A & 0 \\ 0 & B} \in \mrm{GL}_{n+k}\prs{\mbb{C}}}{\det\prs{AB} = 1}\]
+\item חוץ מהמשפחות הנ"ל יש 
+\end{enumerate}
+\end{example}
+
+%TODO fill in
+
+%LECTURE 25.1.2021
+
+\begin{remark}
+מרכוב הוא שקילות קטגורית בין הקטגוריה של חבורות לי קומפקטיות מעל
+$\mbb{R}$
+לבין זאת של חבורות לי אלגבריות מרוכבות רדוקטיביות (ומורפיזמים שלהן כיריעות מרוכבות).
+
+לא הגדרנו את
+$\phi_{\mbb{C}} \colon G_{\mbb{C}} \to H_{\mbb{C}}$.
+\end{remark}
+
+\begin{remark}
+יכולנו לא לדון בגיאומטריה אלגברית.
+תהי
+$G$
+קומפקטית קשירה ומשוכנת כמו קודם ב־%
+$O\prs{n}$
+או
+$U\prs{n}$.
+נכתוב
+$\mfrak{g} = \Lie\prs{G}$
+כאשר
+$i\mfrak{g} \cap \mfrak{g} = \set{0}$.
+יכולנו להגדיר
+$\mfrak{g}_{\mbb{C}} \ceq \mfrak{g} \oplus i \mfrak{g}$.
+באופן כללי יותר, עבור אלגברת לי
+$\mfrak{g}$
+נוכל לבנות
+\[\text{.} \mfrak{g}_{\mbb{C}} \ceq \mbb{C} \tensor_{\mbb{R}} \mfrak{g}\]
+
+אז נוכל לקחת
+\[G_{\mbb{C}} \ceq \Gamma\prs{\mfrak{g}_{\mbb{C}}} \leq \mrm{GL}_n\prs{\mbb{C}}\]
+וראינו שזה בהכרח המרכוב כפי שהגדרנו אותו.
+\end{remark}
+
+\begin{remark}
+עבור
+$G \leq \mrm{GL}_n\prs{\mbb{R}}$
+שאינה קומפקטית, לא תמיד נקבל
+$G_{\mbb{C}}$
+שבלתי־תלויה בשיכון.
+\end{remark}
+
+\section{אלגבראות לי של חבורות קומפקטיות}
+
+ראינו שקומפקטיות היא תכונה די חזקה. נרצה לשאול האם אפשר לאפיין קומפקטיות של
+$G$
+בעזרת תכונות של
+$\mfrak{g} \ceq \Lie\prs{G}$.
+נרצה לשאול גם האם אפשר לסווג אלגבראות לי של חבורות קומפקטיות.
+
+אצלנו
+$\Lie\prs{G}$
+הייתה מרחב וקטורי ממשי, אבל אפשר לדבר גם על אלגבראות לי מרוכבות.
+נסתכל על אלגברת לי
+$\mfrak{g}$
+מעל
+$\mbb{F} \in \set{\mbb{R}, \mbb{C}}$.
+
+נזכיר שתת־מרחב
+$\mfrak{a} \leq \mfrak{g}$
+נקרא אידאל אם
+$\brs{\mfrak{a}, \mfrak{g}} \subseteq \mfrak{a}$.
+
+נכתוב
+$\mfrak{g} = \mfrak{g}_1 \oplus \mfrak{g}_2$
+אם יש פירוק כמרחבים וקטוריים ו־%
+$g_1, g_2$
+תת־אלגבראות.
+אם
+$\mfrak{g} = \mfrak{g}_1 \oplus \mfrak{g}_2$
+כאשר
+$\mfrak{g}_1, \mfrak{g}_2 \ideal \mfrak{g}$,
+מתקיים
+\[\text{.}\brs{\prs{X, 0}, \prs{0,Y}} = \prs{\brs{X,0}, \brs{0,Y}} = \prs{0,0} = 0\]
+
+\begin{definition}[אלגברת לי רדוקטיבית]
+אלגברת לי
+$\mfrak{g}$
+תיקרא
+\emph{רדוקטיבית}
+אם לכל אידאל
+$\mfrak{a} \ideal \mfrak{g}$
+קיים אידאל
+$\mfrak{b} \ideal \mfrak{g}$
+כך ש־%
+$\mfrak{g} = \mfrak{a} \oplus \mfrak{b}$.
+\end{definition}
+
+\begin{remark}
+עבור
+$V$
+מרחב וקטורי ו־%
+$W \leq V$
+הדבר הטבעי לעשות במקום לקחת משלום הוא להסתכל על
+$\quot{V}{W}$.
+אבל, אם
+$V$
+מרחב מכפלה פנימית זה איזומורפי ל־%
+$W^\perp \leq V$.
+נחשוב על אלגבראות לי רדוקטיביות כאנלוג לאלגבראות לי.
+\end{remark}
+
+\begin{example}
+תהי
+\[\mfrak{g} = \set{\pmat{* & * \\ 0 & *} \in M_2\prs{\mbb{R}}}\]
+ויהי
+\[\text{.}\mfrak{a} = \set{\pmat{0 & * \\ 0 & 0} \in M_2\prs{\mbb{R}}}\]
+אפשר לבדוק שאין משלים ישר ל־%
+$\mfrak{a}$.
+\end{example}
+
+תהי
+$\mfrak{g}$
+אלגברת לי רדוקטיבית. ניקח
+$\mfrak{a}_1 \leq \mfrak{g}$
+אידאל מינימלי שונה מאפס.
+נכתוב
+$\mfrak{g} = \mfrak{a}_1 \oplus \mfrak{b}$
+ונמשיך וניקח
+$\mfrak{a}_2 \leq \mfrak{b}$
+אידאל מינימלי.
+אז
+$\mfrak{g} = \mfrak{a}_2 \oplus \mfrak{b}'$
+(בדקו או תקנו).
+
+נבחר
+\[\mfrak{g} = \mfrak{a}_2 \oplus \mfrak{b}' = \mfrak{a}_2 \oplus \prs{\mfrak{b}' \oplus \mfrak{a}_1} \oplus \prs{\mfrak{b}' \cap \mfrak{b}} = \mfrak{a}_1 \oplus \mfrak{a}_2 \oplus \prs{\mfrak{b} \cap \mfrak{b}}\]
+ונמשיך כל כדי לקבל
+\[\mfrak{g} \cong \mfrak{a}_1 \oplus \ldots \oplus \mfrak{a}_k\]
+כאשר
+$\mfrak{a}_i$
+אידאלים מינימליים.
+
+\begin{fact}
+הפירוק הנ"ל יחיד עד כדי איזומורפיזם.
+\end{fact}
+
+\begin{remark}
+יכולנו להגדיר באופן שקול שאלגברת לי רדוקטיבית היא סכום ישר של אלגבראות לי שאין להן אידאלים לא טריוויאליים.
+
+אלו לא בדיוק אלגבראות לי פשוטות למחצה כי ל־%
+$\mbb{F}$
+אין אידאלים לא טריוויאליים, אבל היא אבלית ולכן אינה פשוטה.
+\end{remark}
+
+\begin{proposition}
+תהי
+$G$
+חבורת לי קומפקטית. אז
+$\Lie\prs{G}$
+רדוקטיבית.
+\end{proposition}
+
+\begin{proof}
+תהי
+$\mfrak{g} = \Lie\prs{G}$
+ויהי
+\[\text{.} \Ad_{\mfrak{g}} \colon G \to \mrm{GL}\prs{\mfrak{g}}\]
+אז
+$\Ad_{\mfrak{g}}\prs{G}$
+חבורת לי קומפקטית.
+לכן קיימת מכפלה פנימית על
+$\mfrak{g}$
+כמרחב ממשי כך שמתקיים
+\[\text{.} \Ad_{\mfrak{g}}\prs{G} \leq O_{\trs{\cdot,\cdot}}\prs{\mfrak{g}}\]
+אז
+\begin{align*}
+\ad\prs{\mfrak{g}} = \Lie\prs{\Ad_{\mfrak{g}}\prs{G}} \leq O_{\trs{\cdot,\cdot}}\prs{\mfrak{g}} \cong \Lie\prs{O\prs{n}}
+\end{align*}
+ולכל
+$X,Y,Z \in \mfrak{g}$
+נקבל
+\begin{align*}
+\text{.} \trs{\ad\prs{X}\prs{Y}, Z} = \trs{Y, -\ad\prs{X}\prs{Z}}
+\end{align*}
+עבור אידאל
+$\frak{a} \leq \mfrak{g}$
+מתקיים
+$\ad\prs{\mfrak{g}}\prs{\mfrak{a}} \subseteq \mfrak{a}$.
+ניקח
+$\mfrak{a}^\perp \leq \mfrak{g}$
+להיות המשלים האורתוגונלי ביחס למכפלה הפנימית
+$\trs{\cdot,\cdot}$.
+נקבל
+\[\text{.} \ad\prs{\mfrak{g}}\prs{\mfrak{a}^{\perp}} \subseteq \mfrak{a}^\perp\]
+אז
+$\mfrak{g} = \mfrak{a} \oplus \mfrak{a}^\perp$
+פירוק לאידאלים.
+\end{proof}
+
+\begin{proposition}
+תהי
+$\mfrak{g} \leq M_n\prs{\mbb{C}}$
+אלגברת לי שסגורה תחת
+$X \mapsto X^*$.
+אז
+$\mfrak{g}$
+רדוקטיבית.
+\end{proposition}
+
+\begin{proof}
+יהי
+$\mfrak{a} \ideal \mfrak{g}$
+אידאל.
+אפשר להגדיר על
+$M_n\prs{\mbb{C}}$
+מכפלה פנימית
+\[\text{.} \trs{X,Y} = \fcases{\Re\prs{\tr\prs{X Y^*}} & \mbb{F} = \mbb{R} \\ \tr\prs{X Y^*} & \mbb{F} = \mbb{C}}\]
+זאת מצטמצמת למכפלה פנימית גם על
+$\mfrak{g}$.
+מתקיים
+\begin{align*}
+\trs{\ad\prs{Z} X, Y} &= \tr\prs{ZXY^* - XZY^*}
+\\&= \tr\prs{XY^*Z - XZY^*}
+\\&= \tr\prs{X \brs{Y^*, Z}}
+\\&= \tr\prs{X \brs{Y,Z^*}^*}
+\\&= \trs{X, -\ad\prs{Z^*}\prs{Y}}
+\end{align*}
+ומסיימים כמו בהוכחה הקודמת על ידי לקיחת
+$\mfrak{a}^\perp$.
+\end{proof}
+
+\begin{remark}
+עבור
+$G$
+אלגברית מרוכבת רדוקטיבית, נקבל שגם
+$\Lie\prs{G}$
+רדוקטיבית.
+
+ההיך למעשה גם נכון. עבור
+$\mfrak{g}$
+מרוכבת רדוקטיבית יש
+$G$
+אלגברית מרוכבת רדוקטיבית כך ש־%
+$\mfrak{g} = \Lie\prs{G}$.
+\end{remark}
+
+\begin{remark}
+אם נסתכל על חבורת לי אבלית, למשל
+$G = \prs{S^1}^n$,
+נקבל אלגברת לי אבלית, במקרה שלנו
+$\Lie\prs{\prs{S^1}^n} \cong \mbb{R}^n$.
+כאן זאת אלגברת לי רדוקטיבית כי כל תת־מרחב הוא אידאל, אבל
+$\Lie\prs{\prs{\mbb{R}^n, +}} \cong \mbb{R}^n$.
+אין סיכוי לזהות את החבורה מאלגברת לי שלה.
+\end{remark}
+
+\section{אלגבראות פשוטות־למחצה ותבנית
+\textenglish{Killing}}
+
+\begin{definition}[אלגברת לי פשוטה]
+אלגברת לי
+$\mfrak{g}$
+תיקרא
+\emph{פשוטה}
+אם היא לא אבלית ואין לה אידאלים לא טריוויאליים.
+\end{definition}
+
+\begin{definition}[אלגברת לי פשוטה למחצה]
+אלגברת לי
+$\mfrak{g}$
+נקראת
+\emph{פשוטה למחצה}
+אם היא איזומורפית לסכום ישר
+$\mfrak{g} \cong \mfrak{a}_1 \oplus \ldots \oplus \mfrak{a}_k$
+כך שכל
+$\mfrak{a}_i$
+פשוטה.
+\end{definition}
+
+\begin{corollary}
+אם
+$\mfrak{g}$
+רדוקטיבית, אפשר לכתוב
+$\mfrak{g} = \mfrak{g}_{\mrm{ss}} \oplus Z\prs{\mfrak{g}}$
+כאשר
+$\mfrak{g}_{\mrm{ss}}$
+פשוטה למחצה וכאשר
+\[\text{.} Z\prs{\mfrak{g}} = \set{X \in \mfrak{g}}{\brs{X,\mfrak{g}} = 0}\]
+\end{corollary}
+
+\begin{proof}
+נכתוב
+\[\mfrak{g} \cong \mfrak{a}_1 \oplus \ldots \oplus \mfrak{a}_k \oplus \mfrak{a}_{k+1} \oplus \ldots \oplus \mfrak{a}_n\]
+כאשר
+$\mfrak{a}_i$
+לא אבלי כאשר
+$i \leq k$
+ואיזומורפי ל־%
+$\mbb{F}$
+עבור
+$i > k$.
+מתקיים
+\[Z\prs{\mfrak{g}} = \bigoplus_{i \in [n]} Z\prs{\mfrak{g}} \cap \mfrak{a}_i\]
+ו־%
+$Z\prs{\mfrak{g}} \cap \mfrak{a}_i \ideal \mfrak{a}_i$.
+נקבל
+\begin{align*}
+\text{.} Z\prs{\mfrak{g}} \cap \mfrak{a}_i = \fcases{\mfrak{a}_i & i > k \\ \set{0} & i \leq k}
+\end{align*}
+נכתוב
+$Z\prs{g} = \bigoplus_{i > k} \mfrak{a}_i$
+וגם
+\[\text{.} \mfrak{g}_{\mrm{ss}} = \bigoplus_{i \in [k]} \mfrak{a}_i\]
+\end{proof}
+
+\begin{corollary}
+$\mfrak{g}$
+פשוטה למחצה אם ורק אם
+$\mfrak{g}$
+רדוקטיבית וגם
+$\text{.} Z\prs{\mfrak{g}} = \set{0}$
+\end{corollary}
+
+\begin{definition}[תבנית
+\textenglish{Killing}]
+עבור אלגברת לי
+$\mfrak{g}$
+נגדיר תבנית בילינארית סימטרית
+\begin{align*}
+B_{\mfrak{g}} \colon \mfrak{g} \times \mfrak{g} &\to \mbb{F} \\
+\text{.}\prs{X,Y} &\mapsto \tr\prs{\ad\prs{X} \ad\prs{Y}}
+\end{align*}
+\end{definition}
+
+\begin{remark}
+מתקיים
+\begin{align*}
+B_{\mfrak{g}}\prs{\brs{Z,X}, Y} &= \tr\prs{\brs{\ad\prs{Z}, \ad\prs{X}} \ad\prs{Y}}
+\\&= B_{\mfrak{g}}\prs{X, \brs{Y,Z}}
+\end{align*}
+ובפרט
+\[\text{.}\mrm{rad}\prs{\mfrak{g}} \ceq \set{X \in \mfrak{g}}{B_{\mfrak{g}\prs{X,\mfrak{g}} = 0}} \ideal \mfrak{g}\]
+\end{remark}
+
+\begin{theorem}[קריטריון
+\textenglish{Cartan}]
+$\mfrak{g}$
+פשוטה למחצה אם ורק אם
+$\mrm{rad}\prs{\mfrak{g}} = \set{0}$,
+כלומר אם ורק אם
+$B_{\mfrak{g}}$
+לא־מנוונת.
+\end{theorem}
+
+\begin{proof}
+אם
+$B_{\mfrak{g}}$
+היא תבנית לא־מנוונת נוכיח ש־%
+$\mfrak{g}$
+רדוקטיבית באותה טכניקה כמו בהוכחות הקודמות, עם שימוש בתבנית
+$B_{\mfrak{g}}$.
+מכך ש־%
+$Z\prs{\mfrak{g}} \leq \mrm{rad}\prs{\mfrak{g}}$
+נובע
+$Z\prs{g} = \set{0}$.
+
+בכיוון ההפוך מספיק להוכיח עבור
+$\mfrak{g}$
+פשוטה שמתקיים
+$\mrm{rad}\prs{\mfrak{g}} \in \set{0, \mfrak{g}}$
+כלומר ש־%
+$B_{\mfrak{g}} \neq 0$,
+מה שלא נעשה.
+\end{proof}
+
+נזכיר כי עבור אלגברת לי
+$\mfrak{g}$
+מתקיים
+$\ad\prs{\mfrak{g}} \leq \endo\prs{\mfrak{g}}$.
+נסמן
+\[G_{\ad}\prs{\mfrak{g}} \ceq \Gamma\prs{\ad\prs{\mfrak{g}}} \leq \mrm{GL}\prs{\mfrak{g}}\]
+ואז
+$\Lie\prs{G_{\ad}\prs{\mfrak{g}}} = \ad\prs{\mfrak{g}}$.
+ראינו שלכל
+$G$
+קשירה כך שמתקיים
+$\Lie\prs{G} = \mfrak{g}$
+מתקיים גם
+\[\text{.} \quot{G}{Z\prs{G}} \cong G_{\ad}\prs{\mfrak{g}}\]
+אז מתקיים
+\[\text{.} G_{\ad}\prs{\mfrak{g}} = \Ad_{\mfrak{g}}\prs{G}\]
+
+\begin{definition}[הומומורפיזם של אלגבראות לי]
+תהיינה
+$\mfrak{g}, \mfrak{h}$
+אלגבראות לי.
+$\phi \colon \mfrak{g} \to \mfrak{h}$
+יקרא הומומורפיזם של אלגבראות לי אם הוא לינארי וגם
+$\brs{\phi\prs{X}, \phi\prs{Y}} = \phi\prs{\brs{X,Y}}$
+לכל
+$X,Y \in \mfrak{g}$.
+\end{definition}
+
+\begin{notation}
+נסמן
+$\aut\prs{\mfrak{g}} = \hom\prs{\mfrak{g}, \mfrak{g}}$
+ונקרא לאיברי קבוצה זאת אוטומורפיזמים של
+$\mfrak{g}$.
+\end{notation}
+
+\begin{remark}
+$\aut\prs{\mfrak{g}}$
+חבורה סגורה זריצקי.
+\end{remark}
+
+\begin{proposition}
+עבור
+$\mfrak{g}$
+פשוטה למחצה מתקיים
+$G_{\ad}\prs{\mfrak{g}} = \aut\prs{\mfrak{g}}^\circ$.
+\end{proposition}
+
+\begin{corollary}
+עבור
+$\mfrak{g}$
+פשוטה למחצה מתקיים
+$Z\prs{\mfrak{g}} = \set{0}$
+ולכן
+$\mfrak{g} \cong \ad\prs{\mfrak{g}}$.
+לכן כל
+$G$
+עם
+$\mfrak{g} \cong \Lie\prs{G}$
+היא כיסוי של
+$\aut\prs{\mfrak{g}}^\circ$.
+\end{corollary}
+
+\begin{proof}
+יהי
+\[\mrm{Der}\prs{\mfrak{g}} \ceq \set{\delta \colon \mfrak{g} \to \mfrak{g}}{\delta\brs{X,Y} = \brs{\delta X, Y} + \brs{X, \delta Y}} \leq \endo\prs{\mfrak{g}}\]
+אוסף הדריבציות על
+$\mfrak{g}$.
+
+ראינו בתרגיל בית שמתקיים
+$\mrm{Der}\prs{\mfrak{g}} = \Lie\prs{\aut\prs{\mfrak{g}}}$
+וגם
+$\ad\prs{\mfrak{g}} \leq \mrm{Der}\prs{\mfrak{g}}$.
+אם נראה שוויון נקבל
+\[\text{.} \Gamma\prs{\ad\prs{\mfrak{g}}} = \aut\prs{\mfrak{g}}^\circ\]
+
+תהי
+$\delta \in \mrm{Der}\prs{\mfrak{g}}$
+ויהי
+$v_{\delta} \in \mfrak{g}^*$.
+אז
+\[\text{.} \forall Y \in \mfrak{g} \colon v_\delta\prs{Y} = \tr\prs{\delta \circ \ad\prs{Y}}\]
+ניתן לבדוק כי מתקיים
+$\brs{\delta, \ad\prs{Y}} = \ad\prs{\delta\prs{Y}}$.
+מאי־ניוון של
+$B_{\mfrak{g}}$
+קיים
+$X \in \mfrak{g}$
+כך ש־%
+$v_{\delta}\prs{Y} = B_{\mfrak{g}}\prs{X,Y}$.
+אז
+$v_\delta = B_{\mfrak{g}}\prs{X, \cdot}$.
+
+לכן מתקיים
+\begin{align*}
+B_{\mfrak{g}}\prs{\ad\prs{X}\prs{Y},Z} &= B_{\mfrak{g}}\prs{X, \brs{Y,Z}}
+\\&= v_{\delta} \prs{\brs{Y,Z}}
+\\&= \tr\prs{\brs{\delta, \ad\prs{Y}} \ad\prs{Z}}
+\\&= \tr\prs{\ad\prs{\delta\prs{Y}} \ad\prs{Z}}
+\\&= B_{\mfrak{g}}\prs{\delta\prs{Y}, Z}
+\end{align*}
+ומאי־ניוון נקבל
+$\ad\prs{X}\prs{Y} = \delta\prs{Y}$
+כלומר
+$\ad\prs{X} = \delta$.
+אז
+\[\text{.} \ad\prs{\mfrak{g}} = \mrm{Der}\prs{\mfrak{g}}\]
+\end{proof}
+
+\subsection{חזרה לחבורות קומפקטיות}
+
+\begin{proposition}
+תהי
+$G$
+חבורת לי קומפקטית. עבור
+$\mfrak{g} = \Lie\prs{G}$
+מתקיים כי
+$B_{\mfrak{g}}$
+מוגדרת אי־חיובית.
+כלומר, היא שקולה לתבנית שמוגדרת על ידי מטריצה
+$\mrm{diag}\prs{-1, \ldots, -1, 0, \ldots, 0}$.
+\end{proposition}
+
+\begin{proof}
+יהי
+$X \in \mfrak{g}$.
+ראינו ש־%
+$\ad\prs{X}^t = -\ad\prs{X}$.
+אז
+\[\prs{i \ad\prs{X}}^* = i \ad\prs{X}\]
+ולכן
+$i \ad \prs{X}$
+הרמיטית.
+אז
+\[-\prs{\ad\prs{X}}^2 = \prs{i \ad \prs{X}}\prs{i \ad\prs{X}}^*\]
+מוגדרת אי־שלילית.
+אז
+$B_{\mfrak{g}}\prs{X,X} \leq 0$.
+\end{proof}
+
+\begin{remark}
+אם
+$\mfrak{g} = \mfrak{g}_1 \oplus \mfrak{g}_2$
+אפשר לכתוב
+$B_{\mfrak{g}} = B_{\mfrak{g}_1} \oplus B_{\mfrak{g}_2}$,
+כלומר
+\[\text{.} B_{\mfrak{g}}\prs{\prs{X_1, X_2}, \prs{Y_1, Y_2}} = B_{\mfrak{g}_1}\prs{X_1, Y_1} + B_{\mfrak{g}_2} \prs{X_2, Y_2}\]
+\end{remark}
+
+\begin{corollary}
+תהי
+$G$
+קומפקטית ותהי
+\[\text{.} \mfrak{g} = \Lie\prs{G} = Z\prs{\mfrak{g}} \oplus \mfrak{g}_{\mrm{ss}}\]
+אז
+$B_{\mfrak{g}_{\mrm{ss}}}$
+אינה מנוונת, ולכן מוגדרת שלילית.
+
+בפרט, אם
+$G$
+קומפקטית ו־%
+$\mfrak{g} = \Lie\prs{G}$
+פשוטה למחצה, אז
+$B_{\mfrak{g}}$
+מוגדרת שלילית.
+\end{corollary}
+
+\begin{proposition}
+עבור
+$\mfrak{g}$
+פשוטה למחצה, אם
+$B_{\mfrak{g}}$
+מוגדרת שלילית,
+$G_{\ad}\prs{\mfrak{g}}$
+קומפקטית.
+\end{proposition}
+
+\begin{proof}
+נסמן
+$\trs{x,y} = -B_{\mfrak{g}}\prs{x,y}$.
+זאת מכפלה פנימית על
+$\mfrak{g}$
+ומתקיים
+$\ad\prs{\mfrak{g}} \leq \Lie\prs{O_{\trs{\cdot,\cdot}}}$.
+אז
+$G_{\ad}\prs{\mfrak{g}} \leq O_{\trs{\cdot,\cdot}}$
+וזאת תת־חבורה סגורה ולכן קומפקטית.
+\end{proof}
+
+\begin{theorem}[\textenglish{Weyl}]
+עבור
+$\mfrak{g}$
+פשוטה למחצה עם
+$G_{\mrm{ad}}\prs{\mfrak{g}}$
+קומפקטית,
+$\pi_1\prs{G_{\ad}\prs{\mfrak{g}}}$
+סופית.
+\end{theorem}
+
+\begin{proposition}
+כל
+$G$
+עם
+$\mfrak{g} \cong \Lie\prs{G}$
+היא כיסוי
+$\phi \colon G \to G_{\mrm{ad}}\prs{\mfrak{g}}$
+עם
+$\ker \phi$
+סופי.
+אז
+$G$
+קומפקטית.
+\end{proposition}
+
+\begin{corollary}
+עבור
+$G$
+חבורת לי קשירה עם
+$\mfrak{g} = \Lie\prs{G}$
+וגם
+$Z\prs{\mfrak{g}} = \set{0}$
+מתקיים כי
+$G$
+קומפקטית אם ורק אם
+$B_{\mfrak{g}}$
+מוגדרת שלילית.
+\end{corollary}
+
+לסיכום, תהי
+$\mfrak{g}$
+פשוטה־למחצה עם
+$B_{\mfrak{g}}$
+מוגדרת שלילית. הכיסוי פשוט־הקשר
+$G_{\mrm{sc}}\prs{\mfrak{g}}$
+של
+$G_{\ad}\prs{\mfrak{g}}$
+הוא קומפקטי (ממשפט \textenglish{Weyl}).
+אז אפשר לכתוב
+\[\mfrak{g} = \biguplus_{i \in \brs{\ell}} \mfrak{g}_i\]
+עבור
+$\mfrak{g}_i$
+פשוטות.
+אז
+\[G_{\mrm{sc}}\prs{\mfrak{g}} \cong \prod_{i \in \brs{\ell}} G_{\mrm{sc}}\prs{\mfrak{g}_i}\]
+מרחב פשוט־קשר כמכפלה של כאלו, מהיחידות.
+
+אם
+$G$
+חבורת לי קומפקטית קשירה כללית, ניתן לכתוב
+\[\Lie\prs{G} \cong Z\prs{\Lie\prs{G}} \oplus \bigoplus_{i \in \brs{\ell}} \mfrak{g}_i\]
+כאשר
+$\dim Z\prs{\mfrak{g}} = m$
+ו־%
+$\mfrak{g}_i$
+פשוטות.
+יהי
+\[\text{.} \tilde{G} \to G\]
+הכיסוי האוניברסלי.
+מתקיים
+\[\text{.} \tilde{G} \cong \mbb{R}^m \times \prod_{i \in \brs{\ell}} G_{\mrm{sc}}\prs{\mfrak{g}_i}\]
+אז
+$G$
+מנה של
+$\tilde{G}$
+כזו ב־%
+$Z \leq Z\prs{\tilde{G}}$
+דיסקרטית.
+
+נשארנו עם סיווג
+$\mfrak{g}$
+פשוטות עבורן
+$B_{\mfrak{g}}$
+מוגדרת־שלילית.
+
+\begin{observation}
+עבור
+$\mfrak{g}$
+ממשית מתקיים
+\[\text{.} \rest{B_{\mfrak{g}_{\mbb{C}}}}{\mfrak{g}} = B_{\mfrak{g}}\]
+אז
+$\mfrak{g}$
+פשוטה־למחצה אם ורק אם
+$\mfrak{g}_{\mbb{C}}$
+פשוטה־למחצה.
+\end{observation}
+
+\begin{theorem}
+לכל
+$\mfrak{g}$
+מרוכבת פשוטה־למחצה קיימת
+$\mfrak{g}_0$
+פשוטה־למחצה עם
+$B_{\mfrak{g}_0}$
+מוגדרת־שלילית כך שמתקיים
+$\prs{\mfrak{g}_0}_{\mbb{C}} = \mfrak{g}$.
+\end{theorem}
+
+\begin{corollary}
+אם נדע לסווג את
+$\mfrak{g}$
+אלגבראות לי מרוכבות פשוטות־למחצה, נדע מהן כל חבורות לי הקומפקטיות הקשירות, עד כדי כיסויים.
+\end{corollary}
+
+\begin{example}
+$\mrm{SU}\prs{n}$
+פשוטת־קשר עם אלגברת לי פשוטה.
+\end{example}
+
+\begin{example}
+$\mrm{SO}\prs{n}$
+עם אלגברת לי פשוטה.
+\end{example}
+
+\begin{example}
+$\mrm{Sp}\prs{n}$
+פשוטת קשר ועם אלגברת לי פשוטה.
+\end{example}
+
+\begin{remark}
+עד כדי כיסויים, אלה כל החבורות הקשירות הקומפקטיות ה"קלאסיות" עם אלגברת לי פשוטה. יש עוד 5 אלגברות לי פשוטות שיש להן חבורה קומפקטית.
+\end{remark}
+
+\begin{example}
+על מרחב־ממשי
+$8$%
+־מימדי
+$V$
+אפשר להגדיר העתקה
+$* \colon V \times V \to V$
+שנותן ־%
+$V$
+מבנה של אלגברה לא־אסוציאטיבית שנקראת האוקטוניונים.
+נגדיר
+\[\text{.} G = \set{A \in \mrm{GL}\prs{V}}{A\prs{v} * A\prs{w} = A\prs{v * w}}\]
+חבורה זאת מסומנת
+$G_2$
+והיא חבורת האוטומורפיזמים של האוקטוניונים.
+\end{example}
 
 \end{document}

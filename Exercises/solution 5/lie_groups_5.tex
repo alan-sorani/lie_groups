@@ -1,0 +1,177 @@
+\documentclass[10pt]{article}
+
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+%%%%%%%%%
+% Maths %
+%%%%%%%%%
+
+\usepackage{math-fonts}
+\usepackage{math-graphics}
+\usepackage{math-symbols}
+\usepackage{math-theorems}
+
+%%%%%%%%%
+% Title %
+%%%%%%%%%
+
+\title{Lie Groups --- Exercise Page \#5}
+\author{Elad Tzorani}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\setcounter{section}{1}
+
+\begin{exercise}%1
+Show that equivalence of categories is an equivalence relation on the collection of categories.
+\end{exercise}
+
+\begin{solution}%1
+\begin{description}
+\item[Reflexivity:]
+Let $\mcal{C}$ be a category, there's a functor $\id_{\mcal{C}}$ acting as the identity on all objects and morphisms.
+Specifically, $\id_{\mcal{C}}$ is bijective on $\hom$-sets and is essentially surjective, since for all $x \in \ob\prs{\mcal{C}}$ we have $X \cong X = \id_{\mcal{C}}\prs{X}$.
+\item[Transitivity:]
+Let $\mcal{C}, \mcal{D}, \mcal{E}$ be three categories and let $F \colon \mcal{C} \to \mcal{D}$ and $G \colon \mcal{D} \to \mcal{E}$ be equivalences of categories.
+
+Let $X,Y \in \ob\prs{\mcal{C}}$.
+We have
+\begin{align*}
+\hom_{\mcal{C}}\prs{X,Y} \underset{F_{X,Y}}{\riso} \hom_{\mcal{D}}\prs{F\prs{X}, F\prs{Y}} \underset{G_{F\prs{X}, F\prs{Y}}}{\riso} \hom_{\mcal{E}}\prs{GF\prs{X}, GF\prs{Y}}
+\end{align*}
+so $\prs{GF}_{X,Y} = G_{F\prs{X},F\prs{Y}} \circ F_{X,Y}$ is a bijection as a composition of bijections since $F,G$ are equivalences of categories. Hence $\prs{GF}_{X,Y}$ is a bijection so $GF$ is fully-faithful.
+
+Let $Z \in \mcal{E}$. $G$ is an equivalence of categories and is therefore essentially-surjective. Hence there's $Y \in \mcal{D}$ such that $G\prs{Y} \cong Z$. $F$ is an equivalence of categories hence there's $X \in \mcal{C}$ such that $F\prs{X} \cong Y$.
+
+\begin{lemma}
+A functor sends isomorphisms to isomorphisms.
+\end{lemma}
+\begin{proof}
+Let $\mcal{C},\mcal{D}$ be categories, let $\phi \in \hom_{\mcal{C}}\prs{X,Y}$ be an isomorphism, and let $F \colon \mcal{C} \to \mcal{D}$ be a functor.
+We have
+\[\id_{F\prs{Y}} = F\prs{\id_{Y}} = F\prs{\phi \phi^{-1}} = F\prs{\phi} \circ F\prs{\phi^{-1}}\]
+and similarly $F\prs{\phi^{-1}} \circ F\prs{\phi} = \id_{F\prs{X}}$, so $F\prs{\phi^{-1}} = F\prs{\phi}^{-1}$, so $F\prs{\phi}$ is invertible and thus an isomorphism in $\mcal{D}$.
+\end{proof}
+
+We conclude from the lemma that $G\prs{F\prs{X}} \cong G\prs{Y}$ so $\prs{G \circ F}\prs{X} = G\prs{F\prs{X}} \cong Z$, which means $G \circ F$ is essentially surjective.
+
+\item[Symmetry:]
+Let $F \colon \mcal{C} \to \mcal{D}$ be an equivalence of categories.
+We construct a functor $G \colon \mcal{D} \to \mcal{C}$ by taking $Y \in \ob\prs{\mcal{D}}$ to any $X \in \ob\prs{\mcal{C}}$ such that $F\prs{X} \cong Y$ (which we can do thanks to the axiom of choice). Let $f \in \hom_{\mcal{D}}\prs{Y,Y'}$ and let $X = G\prs{Y}, X' = G\prs{Y'}$. Since $F$ is fully-faithful we have $\hom_{\mcal{C}}\prs{X,X'} \cong \hom_{\mcal{D}}\prs{Y, Y'}$ so there's $\tilde{f} \in \hom_{\mcal{C}}\prs{X,X'}$ such that $f = F\prs{\tilde{f}}$. Define $G\prs{f} = \tilde{f}$.
+
+We have to show $G$ is functorial and an equivalence of categories.
+
+\begin{description}
+\item[Functorial:]
+Let $Y \in \ob\prs{\mcal{D}}$ and let $X = G\prs{Y}$. We have $\id_Y = F\prs{\id_X}$ hence by definition $G\prs{\id_Y} = \id_X = \id_{G\prs{Y}}$.
+
+Let $f \in \hom_{\mcal{D}}\prs{Y, Y'}$ and $g \in \hom_{\mcal{D}}\prs{Y', Y''}$, we want to show $G\prs{g \circ f} = G\prs{g} \circ G\prs{f}$. By definition, $G\prs{g \circ f}$ is the unique morphism such that $F\prs{G\prs{g \circ f}} = g \circ f$. However,
+\[F\prs{G\prs{g} \circ G\prs{f}} = F\prs{G\prs{g}} \circ F\prs{G\prs{f}} = g \circ f\]
+by the same property and by functoriality of $F$. Hence
+\[F\prs{G\prs{g} \circ G\prs{f}} = F\prs{G\prs{g \circ f}} \text{,}\]
+but since $F$ is faithful this implies $G\prs{g} \circ G\prs{f} = G\prs{g \circ f}$.
+
+\item[Fully-Faithful:]
+For $Y,Y' \in \ob\prs{\mcal{D}}$ and $X = G\prs{Y}, X' = G\prs{Y'}$ we have by definition $G_{Y,Y'} = F_{X,X'}^{-1}$, hence $G_{Y,Y'} \colon \hom_{\mcal{D}}\prs{Y,Y'} \to \hom_{\mcal{C}}\prs{G\prs{Y}, G\prs{Y'}}$ is bijective.
+
+\item[Essentially-Surjective:]
+Let $X \in \ob\prs{\mcal{C}}$. Let $Y = F\prs{X}$ and let $X' = G\prs{Y}$. We want to show $X \cong X'$.
+We have a bijection $F_{X,X'} \colon \hom_{\mcal{C}}\prs{X,X'} \riso \hom_{\mcal{D}}\prs{Y,Y}$ hence there's $f \in \hom_{\mcal{C}}\prs{X,X'}$ such that $F\prs{f} = \id_Y$. Similarly, swapping roles between $X,X'$ there's $g \in \hom_{\mcal{C}}\prs{X',X}$ such that $F\prs{g} = \id_Y$. We get
+\begin{align*}
+F\prs{f \circ g} &= F\prs{f} \circ F\prs{g} = \id_Y \circ \id_Y = \id_Y = F\prs{\id_{X'}} \\
+F\prs{g \circ f} &= F\prs{g} \circ F\prs{f} = \id_Y \circ \id_Y = \id_Y = F\prs{\id_{X}}
+\end{align*}
+and since $F$ is faithful this implies $f \circ g = \id_{X'}$ and $g \circ f = \id_X$, which together implies $g = f^{-1}$, so $f \colon X \riso X'$ is an isomorphism, as required.
+\end{description}
+\end{description}
+\end{solution}
+
+\begin{exercise}[Adjoint Functors]%2
+Let $\mcal{C}, \mcal{D}$ be categories. A pair $\prs{L,R}$ with $L \colon \mcal{C} \to \mcal{D}$ and $R \colon \mcal{D} \to \mcal{C}$ is called \emph{adjoint} (where $L$ is called \emph{left-adjoint to $R$} and $R$ \emph{right-adjoint to $L$}) if for any $X \in \ob\prs{\mcal{C}}, Y \in \ob\prs{\mcal{D}}$ there is a bijection
+\[\hom_{\mcal{D}} \prs{L\prs{X}, Y} \underset{\Phi_{X,Y}}{\riso} \hom_{\mcal{C}}\prs{X, R\prs{Y}}\]
+such that
+\begin{align*}
+\Phi_{X_1, Y_1}\prs{h \circ L\prs{f}} &= \Phi_{X_2, Y_1}\prs{h} \circ f
+\Phi_{X_2, Y_2}\prs{g \circ h} = R\prs{g} \circ \Phi_{X_2, Y_1}\prs{h}
+\end{align*}
+for all
+\begin{align*}
+f &\in \hom_{\mcal{C}}\prs{X_1, X_2},\\
+g &\in \hom_{\mcal{D}}\prs{Y_1, Y_2},\\
+h &\in \hom_{\mcal{D}}\prs{F\prs{X_2}, Y_1} \text{.}
+\end{align*}
+
+Show that an equivalence of categories $F \colon \mcal{C} \to \mcal{D}$ always has a right-adjoint and a left-adjoint functor.
+\end{exercise}
+
+\begin{solution}%2
+Let $F \colon \mcal{C} \to \mcal{D}$ be an equivalence of categories. By the previous exercise there's an equivalence of categories $G \colon \mcal{D} \to \mcal{C}$, which we show is a left-adjoint and a right-adjoint to $F$.
+
+\begin{description}
+\item[Right-Adjoint:]
+We have to construct a bijection 
+\[\Phi_{X,Y} \colon \hom_{\mcal{D}}\prs{F\prs{X}, Y} \riso \hom_{\mcal{C}}\prs{X, G\prs{Y}} \text{.}\]
+By definition of $G$ we have $F \circ G = \id_{\mcal{D}}$, so
+Define
+\[\Phi_{X,Y} = G_{F\prs{X}, Y}\]
+which is a bijection because $G$ is an equivalence of categories.
+
+For
+\begin{align*}
+f &\in \hom_{\mcal{C}}\prs{X_1, X_2},\\
+g &\in \hom_{\mcal{D}}\prs{Y_1, Y_2},\\
+h &\in \hom_{\mcal{D}}\prs{F\prs{X_2}, Y_1}
+\end{align*}
+we get
+\begin{align*}
+\Phi_{X_1, Y_1}\prs{h \circ F\prs{f}} &= G\prs{h \circ F\prs{f}} = G\prs{h} \circ GF\prs{f} = G\prs{h} \circ f = \Phi_{X_2, Y_1}\prs{h} \circ f \\
+\Phi_{X_2, Y_2}\prs{g \circ h} &= G\prs{g \circ h} = G\prs{g} \circ G\prs{h} = G\prs{g} \circ \Phi_{X_2, Y_1}\prs{h} \text{,}
+\end{align*}
+hence $\Phi_{X,Y}$ satisfies the required properties, so $G$ is right-adjoint to $F$.
+
+\item[Left-Adjoint:]
+Define $\Phi_{X,Y} = F_{G\prs{X}, Y}$ which is a bijection since $F$ is an equivalence of categories.
+
+Let
+\begin{align*}
+f &\in \hom_{\mcal{D}}\prs{X_1, X_2},\\
+g &\in \hom_{\mcal{C}}\prs{Y_1, Y_2},\\
+h &\in \hom_{\mcal{C}}\prs{F\prs{X_2}, Y_1} \text{.}
+\end{align*}
+We have
+\begin{align*}
+\Phi_{X_1, Y_1}\prs{h \circ G\prs{f}} &= F\prs{h \circ G\prs{f}} = F\prs{h} \circ FG\prs{f} = F\prs{h} \circ f = \Phi_{X_2, Y_1}\prs{h} \circ f  \\
+\Phi_{X_2, Y_2}\prs{g \circ h} &= F\prs{g \circ h} = F\prs{g} \circ F\prs{h} = F\prs{g} \circ \Phi_{X_2, Y_1}\prs{h} \text{,}
+\end{align*}
+so $\Phi$ satisfies the required properties, so $G$ is a left-adjoint to $F$.
+\end{description}
+\end{solution}
+
+\newcommand{\LieGrp}{\catname{LieGrp}}
+\newcommand{\LieAlg}{\catname{LieAlg}}
+\newcommand{\Lie}{\mrm{Lie}}
+\begin{solution}%3
+Denote $\catname{LieGrp}, \catname{LieAlg}$ the respective categories of Lie groups and algebras, with Lie group homomorphisms and Lie algebra homomorphisms.
+
+We find a natural isomorphism \[\Phi \colon \hom_{\LieGrp}\prs{\tilde{\Gamma}\prs{-}, -} \riso \hom_{\LieAlg}\prs{-, \Lie\prs{-}} \text{.}\]
+I.e. for any $\mfrak{g} \in \LieAlg$ and $H \in \LieGrp$ we construct a bijection
+\begin{align*}
+\Phi_{\mfrak{g},H} \colon \hom_{\LieGrp}\prs{\tilde{\Gamma}\prs{\mfrak{g}}, H} \riso \hom_{\LieAlg}\prs{\mfrak{g}, \Lie\prs{H}}
+\end{align*}
+such that the diagram
+\[
+\begin{tikzcd}
+\hom_{\LieGrp}\prs{\tilde{\Gamma}\prs{\mfrak{g}_2}, G_1} \arrow[r, "\Phi_{\mfrak{g}_2, G_1}"] \arrow[d, swap, "g \circ \prs{-} \circ \tilde{\Gamma}\prs{f}"] & \hom\prs{\mfrak{g}_2, \Lie\prs{G_1}} \arrow[d, "\Lie\prs{g} \circ \prs{-} \circ f"] \\
+\hom_{\LieGrp}\prs{\tilde{\Gamma}\prs{\mfrak{g}_1}, G_2} \arrow[r, "\Phi_{\mfrak{g}_1, G_2}"] & \hom\prs{\mfrak{g}_1, \Lie\prs{G_2}}
+\end{tikzcd}
+\]
+commutes for any $f \colon \mfrak{g}_1 \to \mfrak{g}_2$ in $\LieAlg$ and any $g \colon G_1 \to G_2$ in $\LieGrp$. The latter description matches our definition of an adjunction since one can take $f = \id_{X_2}$ or $g = \id_{Y_1}$ to get the desired equations.
+
+%TODO continue
+\end{solution}
+
+\end{document}

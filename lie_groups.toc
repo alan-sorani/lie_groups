@@ -48,9 +48,14 @@
 \contentsline {section}{\numberline {4.3}חבורות לי קומפקטיות}{51}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}דוגמאות}{51}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}מוטיבציה}{51}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}גיאומטריה אלגברית}{52}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}עוד על מידות האר}{53}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}אלגבריות של חבורות קומפקטיות}{53}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.3}גיאומטריה אלגברית}{53}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}עוד על מידות האר}{54}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}אלגבריות של חבורות קומפקטיות}{54}{subsection.4.3.5}%
 \babel@toc {english}{}
 \babel@toc {hebrew}{}
-\contentsline {section}{\numberline {4.4}קומפלקסיפיקציה של חבורות אלגבריות}{54}{section.4.4}%
+\contentsline {section}{\numberline {4.4}קומפלקסיפיקציה של חבורות אלגבריות}{55}{section.4.4}%
+\contentsline {section}{\numberline {4.5}חזרה לחבורות קומפקטיות}{56}{section.4.5}%
+\contentsline {section}{\numberline {4.6}חבורות רדוקטיביות}{57}{section.4.6}%
+\contentsline {section}{\numberline {4.7}אלגבראות לי של חבורות קומפקטיות}{57}{section.4.7}%
+\contentsline {section}{\numberline {4.8}אלגבראות פשוטות־למחצה ותבנית \foreignlanguage {english}{Killing}}{59}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}חזרה לחבורות קומפקטיות}{60}{subsection.4.8.1}%
