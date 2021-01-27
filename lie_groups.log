@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  27 JAN 2021 01:42
+This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.7) (format=lualatex 2020.9.3)  27 JAN 2021 03:42
  restricted system commands enabled.
 **lie_groups.tex
 (./lie_groups.tex
@@ -1620,7 +1620,7 @@ nSansHebrew(0)/m/n/10 , כלומר כיסוי כאשר $[]$ פשוט־קשר.
  []
 
 [40] [41]
-Overfull \hbox (28.6385pt too wide) in paragraph at lines 4228--4236
+Overfull \hbox (28.6385pt too wide) in paragraph at lines 4237--4245
 []\TU/OpenSansHebrew(0)/m/n/10 נוכל להגדיר קטגוריה $\OMS/cmsy/
 m/n/10 C$ \TU/OpenSansHebrew(0)/m/n/10 עם אובייקטים $[]$, מורפ
 יזמים $[] [] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ; [] [] \OT1/cmr/m/n/10
@@ -1628,12 +1628,12 @@ m/n/10 C$ \TU/OpenSansHebrew(0)/m/n/10 עם אובייקטים $[]$, מורפ
 /cmr/m/n/10 =
  []
 
-[42] [43] [44
-
-]
+[42] [43] [44]
 \bbl@ensure@hebrew {פרק} 4.
-[45] [46]
-Overfull \hbox (6.84056pt too wide) in paragraph at lines 4910--4919
+[45
+
+] [46]
+Overfull \hbox (6.84056pt too wide) in paragraph at lines 4919--4928
 []\TU/OpenSansHebrew(0)/m/n/10 אפשר לחשוב על שדות וקטורי
 ים כאופרטורים דיפרנציאליים. בפרט עבור 2 שדו
 ת וקטוריים $\OML/cmm/m/it/10 X; Y$ \TU/OpenSansHebrew(0)/m/n/10 מו
@@ -1644,33 +1644,33 @@ Overfull \hbox (6.84056pt too wide) in paragraph at lines 4910--4919
 [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57]
 
 Package amsfonts Warning: Obsolete command \frak; \mathfrak should be used inste
-ad on input line 6576.
+ad on input line 6585.
 
 [58] [59] [60]
 \tf@thm=\write6
 
 \openout6 = lie_groups.thm
  [61]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 7104.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 7104.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 7113.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 7113.
  (./lie_groups.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 7104.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 7104.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 7113.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 7113.
 Package rerunfilecheck Info: File `lie_groups.out' has not changed.
 (rerunfilecheck)             Checksum: 7818960C28AF57A8654029F501912F27;9255.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 7104.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 7113.
 )
 
 Here is how much of LuaTeX's memory you used:
  33850 strings out of 481302
  100000,1144653 words of node,token memory allocated
- 4725 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 9 sub_mlist, 1 glyph, 1557 a
-ttribute, 62 glue_spec, 521 attribute_list, 2 write nodes
+ 4733 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 4 dir, 2 glue, 4 kern, 9 sub_mlist, 1 glyph, 1560 a
+ttribute, 62 glue_spec, 522 attribute_list, 2 write nodes
    avail lists: 1:1,2:2416,3:272,4:92,5:954,6:96,7:3691,8:103,9:1120,10:5,11:8
  49363 multiletter control sequences out of 65536+200000
  130 fonts using 9895755 bytes
@@ -1709,7 +1709,7 @@ ers/EladT/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm
 lic/amsfonts/symbols/msbm7.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/rsfs/rsfs7.pfb><C:/Users/EladT/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/hoekwater/stmary10.pfb>
-Output written on lie_groups.pdf (61 pages, 679975 bytes).
+Output written on lie_groups.pdf (61 pages, 681004 bytes).
 
 PDF statistics: 1059 PDF objects out of 1200 (max. 8388607)
  492 named destinations out of 1000 (max. 131072)

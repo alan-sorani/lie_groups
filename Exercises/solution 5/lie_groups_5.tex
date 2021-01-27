@@ -91,7 +91,7 @@ and since $F$ is faithful this implies $f \circ g = \id_{X'}$ and $g \circ f = \
 \end{description}
 \end{solution}
 
-\begin{exercise}[Adjoint Functors]%2
+\begin{exercise}[Adjoint Functors] \label{exercise:adjoint_equivalence} %2
 Let $\mcal{C}, \mcal{D}$ be categories. A pair $\prs{L,R}$ with $L \colon \mcal{C} \to \mcal{D}$ and $R \colon \mcal{D} \to \mcal{C}$ is called \emph{adjoint} (where $L$ is called \emph{left-adjoint to $R$} and $R$ \emph{right-adjoint to $L$}) if for any $X \in \ob\prs{\mcal{C}}, Y \in \ob\prs{\mcal{D}}$ there is a bijection
 \[\hom_{\mcal{D}} \prs{L\prs{X}, Y} \underset{\Phi_{X,Y}}{\riso} \hom_{\mcal{C}}\prs{X, R\prs{Y}}\]
 such that
@@ -370,18 +370,31 @@ Then $L_1 \circ L_2$ is left-adjoint to $R_2 \circ R_1$.
 \end{lemma}
 
 \begin{proof}
-%TODO fill in via (co)unit (see adjoint functors on wikipedia)
+%TODO fill in via two squares
 \end{proof}
 
 Denote $\catname{LieGrp}, \catname{LieAlg}$ the respective categories of Lie groups and algebras, with Lie group homomorphisms and Lie algebra homomorphisms. Denote by $\catname{LieGrp}_{\mrm{sc}}$ the subcategory of simply-connected Lie groups within $\catname{LieGrp}$.
 
 The essential image of $\tilde{\Gamma}$ is contained in $\catname{LieGrp}_{\mrm{sc}}$, hence it factors as $\iota \circ \hat{\Gamma}$ where $\iota \colon \catname{LieGrp}_{\mrm{sc}} \rmono \catname{LieGrp}$ is the embedding, and we've seen that $\hat{\Gamma}$ is an equivalence of categories.
-Let $\Lie_0 \colon \catname{LieGrp}_{\mrm{sc}} \to \catname{LieAlg}$ be the restriction of $\Lie$ to $\catname{LieGrp}_{\mrm{sc}}$, which is the inverse to $\hat{\Gamma}$ as seen in class. 
+Let $\Lie_0 \colon \catname{LieGrp}_{\mrm{sc}} \to \catname{LieAlg}$ be the restriction of $\Lie$ to $\catname{LieGrp}_{\mrm{sc}}$.
 
-\begin{lemma}
+Let $U \colon \catname{LieGrp} \to \catname{LieGrp}_{\mrm{sc}}$ take a Lie group to its universal cover. For a group homomorphism $\phi \colon G \to H$ let $U\prs{\phi}$ be obtained as follows.
+%TODO define U on morphisms
 
+\begin{remark}\label{adjoint_1}
+We know $\hat{\Gamma}, \Lie_0$ form an equivalence between $\catname{LieAlg}$ and $\catname{LieGrp}_{\mrm{sc}}$, hence by the solution to exercise \ref{exercise:adjoint_equivalence} $\hat{\Gamma}$ is left-adjoint to $\Lie_0$.
+\end{remark}
+
+\begin{lemma}\label{adjoint_2}
+$\iota$ is left-adjoint to $U$.
 \end{lemma}
 
+\begin{proof}
+%TODO fill in
+\end{proof}
+
+We clearly have $\tilde{\Gamma} = \iota \circ \hat{\Gamma}$ and we have $\Lie = \Lie_0 \circ U$ since $G, \tilde{G}$ have the same Lie algebra (the covering map $p \colon \tilde{G} \to G$ induces an isomorphism $\diff p \colon \Lie\prs{\tilde{G}} \riso \Lie\prs{G}$).
+By \eqref{lemma:composition_of_adjoints}, \eqref{adjoint_1} and \eqref{adjoint_2} we get that $\tilde{\Gamma}$ is left-adjoint to $\Lie$, as required.
 \end{solution}
 
 \end{document}
